@@ -1,0 +1,40 @@
+h1 { 
+	color:yellow;
+	display:block; 
+	/*background: purple;*/
+}
+
+p{
+	display:inline-block;
+	color: #0ff;
+	padding-bottom: 10px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.container{
+	background: url(https://lh3.googleusercontent.com/xs0zOWSmdFHMJexWt64nT9gDfOOlSh7aASqhG7SaaJ82w81V_cJYEi0xcRjijJcCuXN64wKWymT9idrVClkcdZGvwiVnBGqtuKUphWJZ0Lgsv3PzoPpS24mjCKxSeK4WBMB6U9fiaglMJzlqAt2KoiEXKfTfOcS0NdZJF8FohUzliOkA7zVPVsdqJVZQ_a-oWa3kurspyBOSqkpF9uf6AFaSOD1tkmGm4m_JkULOVdWxnPCUGxdS6_yrRHhGr9uf9nUsEygtmwp29JQw-Ivz4N_5lgXGuyyhNmzMSxzQYXoG9RYyyyemkK5lmCU-8o-1zoyq40n9TUedJTEaBNvZZnAo3Dki0revil8Ncs3WqN1Pe74rMFYeqAIxvnW4wuFpI0QN9-yrsHj89fOjpgx_A_mv-L9OsapPDHa-9FqCd_dTPKY3bLflqidqeuhXf84G7pSFutm56mq1puVujHb9Em5zuk38_k0W6KaUMX2UYoDnyM35-7ffHbe0sfYn2EBEkJKVycMTHPtS1xvx7g6XxthFQa_mMwtwjPmbm_0NjQ1fdmHIwmOeR2CQ1TrTGP00GOKE=w594-h446-no);
+	/*background-position: 100% 45%;*/
+    /*background-size: 100%;*/
+    height: 100vh;
+	/*width: 100vh;*/
+	font-size: 60px;
+	font-weight: 900;
+	background-position: center;
+	background-size: cover;
+
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	text-align: center;
+
+}
+
+h2{
+	background: purple;
+}
+
+.article{
+	max-width: 600px;
+	margin: 0 auto;
+}

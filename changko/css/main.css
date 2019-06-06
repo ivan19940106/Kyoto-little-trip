@@ -271,8 +271,8 @@ li{
 	
 	#menu-trigger {
 		display: block;
-		position: relative;
-		top: 15px;
+		position: fixed;
+		top: 160px;
 		right: 20px;
 		z-index: 10;
 	}
@@ -306,6 +306,7 @@ li{
 	.nav ul {
 		position: relative;
 		top: 50%;
+		padding: 0;
 		text-align: center;
 		transform: translate(0, -50%);
 	}
@@ -339,6 +340,10 @@ li{
 
 @media(max-width: 547px){
 	
+	#menu-trigger {
+		top: 190px;
+	}
+	
 	h1.title-name {
 		position: relative;
 		margin: 0;
@@ -353,6 +358,10 @@ li{
 }
 
 @media(max-width: 355px){
+	
+	#menu-trigger {
+		top: 160px;
+	}
 	
 	h1.title-name {
 		position: relative;

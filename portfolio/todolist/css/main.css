@@ -1,0 +1,64 @@
+h1.title {
+	margin: 10px;
+	font-weight: 300;
+	font-size: 1.7em;
+	letter-spacing: 2px;
+	color: #df7599;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.container {
+	padding: 30px;
+	margin: 0 auto;
+	max-width: 700px;
+	text-align: center;
+	width: 100%;
+}
+
+ul {
+	position: relative;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+li {
+	line-height: 3;
+	border-bottom: 1px solid #ccc;
+	font-weight: 300;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+	color: #df7599;
+	text-align: left;
+}
+
+li button {
+	position: absolute;
+	right: 10px;
+	line-height: 3;
+}
+
+button {
+	color: #553c8b;
+	/*border: none;*/
+}
+
+#todo-list [type="text"] {
+	display: none;
+}
+
+#todo-list .editing .content {
+	display: none;
+}
+
+#todo-list .editing [type="text"] {
+	display: inline;
+}
+
+/*#todo-list [data-action="delete"] {
+	display: none;
+}
+
+#todo-list:hover [data-action="delete"] {
+	display: inline;
+}*/

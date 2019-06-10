@@ -11,9 +11,11 @@ $(document).ready(function(){
 	});
 	
 	//update
-	$('#todo-list').on('dblclick','li',function(e){
-		$(this).addClass('editing');
-		$(this).find('[type="text"]').focus();
+	$('#todo-list').on('dblclick tap','li',function(e){
+		if (event.type === 'dblclick' || event.type === 'tap'){
+			$(this).addClass('editing');
+			$(this).find('[type="text"]').focus();
+		}
 	});
 	
 	$('#todo-list').on('blur keyup','[type="text"]',function(e){

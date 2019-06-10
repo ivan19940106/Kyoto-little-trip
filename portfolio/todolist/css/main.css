@@ -34,8 +34,9 @@ li {
 
 li button {
 	position: absolute;
+	top: 1em;
 	right: 10px;
-	line-height: 3;
+	line-height: normal;
 }
 
 button {
@@ -62,3 +63,47 @@ button {
 #todo-list:hover [data-action="delete"] {
 	display: inline;
 }*/
+
+@media(max-width: 375px) {
+	
+	h1.title{
+		font-size: 1.2em;
+	}
+	
+	.container {
+		padding: 10px;
+		max-width: 320px;
+	}
+	
+	li {
+		font-size: .9em;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,6 +11,25 @@ $(document).ready(function(){
 		$('#todo-list').append(cloneTodo);
 	});
 	
+	// var li = {
+	// 	checkbox:'<input type="checkbox">',
+	// 	todoItem:'<span class="content">todo item</span>',
+	// 	input:'<input type="text" value="todo item">',
+	// 	button:'<a href="#" data-action="delete"><i class="icon-trash-1"></i></a>'
+	// };
+	//
+	// $('#add-todo').click(function(e){
+	// 	e.preventDefault();
+	// 	var newItem = prompt('Plz add a todo item.');
+	// 	var checkbox = li.checkbox;
+	// 	var todoItem = li.todoItem;
+	// 	todoItem.html(newItem);
+	// 	var input = li.input;
+	// 	var button = li.button;
+	// 	var newTodo = '<li>'+ checkbox + todoItem + input + button +'</li>';
+	// 	$('#todo-list').append(newTodo);
+	// });
+	
 	//update
 	$('#todo-list').on('dblclick click','li',function(e){
 			$(this).addClass('editing');

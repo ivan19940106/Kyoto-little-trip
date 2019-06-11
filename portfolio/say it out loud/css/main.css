@@ -51,6 +51,7 @@ h3.subtitle {
 	letter-spacing: 1.5px;
 	text-transform: capitalize;
 	color: gray;
+	position: static;
 }
 
 .input {

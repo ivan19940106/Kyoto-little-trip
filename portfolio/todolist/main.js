@@ -2,6 +2,7 @@ $(document).ready(function(){
 	
 	//create
 	$('#add-todo').click(function(e){
+		e.preventDefault();
 		var todoItem = prompt('Plz add a todo item.');
 		var cloneTodo = $('#todo-list li').eq(0).clone();
 		cloneTodo.find('[type="checkbox"]').prop('checked',false);
@@ -11,7 +12,7 @@ $(document).ready(function(){
 	});
 	
 	//update
-	$('#todo-list').on('dblclick tap','li',function(e){
+	$('#todo-list').on('dblclick click','li',function(e){
 			$(this).addClass('editing');
 			$(this).find('[type="text"]').focus();
 	});
@@ -26,6 +27,7 @@ $(document).ready(function(){
 	
 	//delete
 	$('#todo-list').on('click','[data-action="delete"]',function(e){
+		e.preventDefault();
 		var result = confirm('Are you sure?');
 		if(result){
 			$(this).closest('li').remove();

@@ -32,14 +32,14 @@ li {
 	text-align: left;
 }
 
-li button {
+li a {
 	position: absolute;
 	top: 1em;
 	right: 10px;
 	line-height: normal;
 }
 
-button {
+a {
 	color: #553c8b;
 	/*border: none;*/
 }

@@ -25,6 +25,15 @@ $(document).ready(function(){
 		}
 	});
 	
+	//strike out to-do item
+	$('#todo-list').on('click','[type="checkbox"]',function(e){
+		if ($(this).prop('checked')==true){
+			$(this).siblings('.content').addClass('done');
+		} else{
+			$(this).siblings('.content').removeClass('done');
+		}
+	});
+	
 	//delete
 	$('#todo-list').on('click','[data-action="delete"]',function(e){
 		e.preventDefault();

@@ -39,6 +39,10 @@ li a {
 	line-height: normal;
 }
 
+li span.done {
+	text-decoration: line-through;
+}
+
 a {
 	color: #553c8b;
 	/*border: none;*/

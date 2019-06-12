@@ -4,11 +4,13 @@ $(document).ready(function(){
 	$('#add-todo').click(function(e){
 		e.preventDefault();
 		var todoItem = prompt('Plz add a todo item.');
-		var cloneTodo = $('#todo-list li').eq(0).clone();
-		cloneTodo.find('[type="checkbox"]').prop('checked',false);
-		cloneTodo.find('.content').html(todoItem);
-		cloneTodo.find('[type="text"]').val(todoItem);
-		$('#todo-list').append(cloneTodo);
+		if (todoItem !== null){
+			var cloneTodo = $('#todo-list li').eq(0).clone();
+			cloneTodo.find('[type="checkbox"]').prop('checked',false);
+			cloneTodo.find('.content').html(todoItem);
+			cloneTodo.find('[type="text"]').val(todoItem);
+			$('#todo-list').append(cloneTodo);
+		}
 	});
 	
 	//update

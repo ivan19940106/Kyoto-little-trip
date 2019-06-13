@@ -10,7 +10,7 @@ $(document).ready(function(){
 			} else{
 				var cloneTodo = $('#todo-list li').eq(0).clone();
 				cloneTodo.find('[type="checkbox"]').prop('checked',false);
-				cloneTodo.find('.content').html(todoItem);
+				cloneTodo.find('.content').removeClass('done').html(todoItem);
 				cloneTodo.find('[type="text"]').val(todoItem);
 				$('#todo-list').append(cloneTodo);
 			}

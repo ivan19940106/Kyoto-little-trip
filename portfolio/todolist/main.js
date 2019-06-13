@@ -44,7 +44,7 @@ $(document).ready(function(){
 	$('#todo-list').on('click','[data-action="delete"]',function(e){
 		e.preventDefault();
 		var result = confirm('Are you sure?');
-		if(result){
+		if(result && $('#todo-list li').length > 1){
 			$(this).closest('li').remove();
 		}
 	});

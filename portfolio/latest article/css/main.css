@@ -65,7 +65,7 @@ li{
 	top: 50%;
 	left: 50%;
 	width: 280px;
-	height: 466px;
+	height: 460px;
 	border: 2px solid;
 	border-color: white;
 	transform: translate(-50%, -50%);
@@ -130,7 +130,7 @@ li{
 	
 	.arrows {
 		position: absolute;
-		top: 84%;
+		top: 78%;
 		left: 50%;
 		transform: translate(-50%, 0);
 	}

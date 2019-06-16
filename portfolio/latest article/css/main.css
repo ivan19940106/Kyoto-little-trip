@@ -113,34 +113,34 @@ li{
 }
 
 @media (max-width: 767px){
-	
+
 	.col-4 {
 		float: none;
 		width: 100%;
 	}
-	
+
 	.titles {
 		position: relative;
 	}
-	
+
 	.card {
 		width: 260px;
 		height: 410px;
 	}
-	
+
 	.arrows {
 		position: absolute;
 		top: 78%;
 		left: 50%;
 		transform: translate(-50%, 0);
 	}
-	
+
 	.arrows a {
 		position: static;
 		display: inline-block;
 		text-align: center;
 	}
-	
+
 }
 
 

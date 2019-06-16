@@ -7,7 +7,7 @@ $(document).ready(function(e){
 		var w = 280-10*i;
 		var z = -1*i;
 		
-		$('#card-set li').eq(i).find('.card').css({'top':t +'px','background-color':'','width': w + 'px','z-index':z});
+		$('#card-set li').eq(i).find('.card').css({'top':t +'px','background-color':'','width': w + 'px','z-index':5 + z});
 		
 	};
 	
@@ -26,7 +26,6 @@ $(document).ready(function(e){
 
 		clickCounter();
 		$('#card-set li').eq(clicks).find('.card').fadeOut(400);
-		console.log(clicks);
 
 	});
 
@@ -45,7 +44,6 @@ $(document).ready(function(e){
 
 		clickCounter();
 		$('#card-set li').eq(clicks).find('.card').fadeIn(400);
-		console.log(clicks);
 
 	});
 	

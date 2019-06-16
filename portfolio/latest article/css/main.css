@@ -1,0 +1,171 @@
+body {
+  background-color: #fcf9ec;
+}
+
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.container {
+	position: relative;
+	margin: 0 auto;
+	max-width: 900px;
+	height: 750px;
+}
+
+ul{
+	margin: 0;
+}
+
+li{
+	list-style-type: none;
+}
+
+.col-4 {
+	float: left;
+	width: 33.333333333%;
+}
+
+.titles {
+	position: absolute;
+	top: 40%;
+	margin: 10px;
+	text-align: center;
+	font-weight: 200;
+	letter-spacing: 2px;
+	font-size: 12px;
+	color: #211717;
+	text-transform: capitalize;
+}
+
+.title {
+	margin: auto;
+	max-width: 200px;
+	padding: 10px 0;
+	border-bottom: 1px solid #211717;
+}
+
+.arrows {
+	position: absolute;
+	top: 43%;
+	right: 20%;
+	margin: 10px;
+}
+
+.arrows a {
+	display: block;
+	font-size: 24px;
+	color: #211717;
+}
+
+.card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 280px;
+	height: 468px;
+	border: 2px solid;
+	border-color: white;
+	transform: translate(-50%, -50%);
+	background-color: #7189bf;
+	border-radius: 6px;
+}
+
+.color-bar {
+	position: relative;
+	top: 3px;
+	width: 30%;
+	border: 3px solid #ff487e;
+}
+
+.card img {
+	display: block;
+}
+
+.card .text {
+	margin: 16px auto 6px;
+	padding: 0 5%;
+}
+
+.card .title-article {
+	text-align: center;
+	font-weight: 300;
+	font-size: 16px;
+	color: white;
+	text-decoration: none;
+}
+
+.card .preview {
+	font-weight: 300;
+	font-size: 9px;
+	color: white;
+}
+
+.card .read-more {
+	text-align: right;
+	font-weight: 300;
+	font-size: 9px;
+	color: white;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+
+@media (max-width: 767px){
+	
+	.col-4 {
+		float: none;
+		width: 100%;
+	}
+	
+	.titles {
+		position: relative;
+	}
+	
+	.card {
+		
+	}
+	
+	.arrows {
+		position: absolute;
+		top: 84%;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	
+	.arrows a {
+		position: static;
+		display: inline-block;
+		text-align: center;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

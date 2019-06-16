@@ -12,52 +12,42 @@ $(document).ready(function(e){
 	};
 	
 	//next card
-	var times = -1;
+	var clicks = -1;
 	$('.next').click(function(e){
 		event.preventDefault();
 
 		function clickCounter(){
-			times = times +1;
-			if(times > 5){
-				times = 5;
+			clicks = clicks +1;
+			if(clicks > 5){
+				clicks = 5;
 			}
-			return times;
+			return clicks;
 		};
 
 		clickCounter();
-		$('#card-set li').eq(times).find('.card').fadeOut(400);
+		$('#card-set li').eq(clicks).find('.card').fadeOut(400);
+		console.log(clicks);
 
 	});
+
 
 	//previous card
 	$('.prev').click(function(e){
 		event.preventDefault();
 
 		function clickCounter(){
-			times = times -1;
-			if(times < -1){
-				times = -1;
+			clicks = clicks -1;
+			if(clicks < -1){
+				clicks = -1;
 			}
-			return times;
+			return clicks;
 		};
 
 		clickCounter();
-		$('#card-set li').eq(times).find('.card').fadeIn(400);
+		$('#card-set li').eq(clicks).find('.card').fadeIn(400);
+		console.log(clicks);
 
 	});
-
-// var click = 0;
-// $('.prev, .next').mouseover(function(e){
-// 	e.preventDefault();
-// 	$('.next').click(function(e){
-// 		click = click +1;
-// 	});
-// 	$('.prev').click(function(e){
-// 		if(click >= 0){
-// 			click = click -1;
-// 		}
-// 	});
-// 	console.log(click);
-// });
+	
 	
 });

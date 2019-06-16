@@ -124,7 +124,8 @@ li{
 	}
 	
 	.card {
-		
+		width: 260px;
+		height: 434px;
 	}
 	
 	.arrows {

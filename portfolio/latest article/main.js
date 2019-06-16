@@ -3,11 +3,11 @@ $(document).ready(function(e){
 	//arrange cards
 	for(var i = 0; i<6; i++){
 		
-		var h = 374-14*i;
+		var t = 374-14*i;
 		var w = 280-10*i;
 		var z = -1*i;
 		
-		$('#card-set li').eq(i).find('.card').css({'top':h +'px','background-color':'','width': w + 'px','z-index':z});
+		$('#card-set li').eq(i).find('.card').css({'top':t +'px','background-color':'','width': w + 'px','z-index':z});
 		
 	};
 	

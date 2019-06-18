@@ -1,0 +1,315 @@
+body {
+	background-image: url(../images/hoshizora.jpg);
+	background-repeat: repeat;
+	background-size: 100%;
+}
+
+.space div {
+	animation-name: scale;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	transform-origin: 47% center;
+}
+
+.space .voyager {
+	z-index: 1;
+	position: fixed;
+	top: 57%;
+	width: 20%;
+	height: auto;
+	animation-name: go-through;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+.space .voyager.reverse {
+	z-index: 1;
+	position: fixed;
+	top: 57%;
+	width: 20%;
+	height: auto;
+	animation-name: go-through-re;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+.voyager img {
+	width: 100%;
+	height: auto;
+}
+
+.sun {
+	position: fixed;
+	top: 10%;
+	width: 30%;
+	height: auto;
+}
+
+.sun img {
+	width: 100%;
+	height: auto;
+}
+
+.mercury {
+	position: fixed;
+	top: 20%;
+	left: 30%;
+	width: 3%;
+	height: auto;
+}
+
+.mercury img {
+	width: 100%;
+	height: auto;
+}
+
+.venus {
+	position: fixed;
+	top: 27%;
+	left: 32%;
+	width: 6%;
+	height: auto;
+}
+
+.venus img {
+	width: 100%;
+	height: auto;
+}
+
+.earth {
+	position: fixed;
+	top: 30%;
+	left: 40%;
+	width: 9%;
+	height: auto;
+}
+
+.earth img {
+	width: 100%;
+	height: auto;
+}
+
+.mars {
+	position: fixed;
+	top: 47%;
+	left: 51%;
+	width: 6%;
+	height: auto;
+}
+
+.mars img {
+	width: 100%;
+	height: auto;
+}
+
+.jupiter {
+	position: fixed;
+	top: 10%;
+	left: 60%;
+	width: 15%;
+	height: auto;
+}
+
+.jupiter img {
+	width: 100%;
+	height: auto;
+}
+
+.saturn {
+	position: fixed;
+	top: 55%;
+	left: 60%;
+	width: 27%;
+	height: auto;
+}
+
+.saturn img {
+	width: 100%;
+	height: auto;
+}
+
+.uranus {
+	position: fixed;
+	top: 24%;
+	left: 77%;
+	width: 12%;
+	height: auto;
+}
+
+.uranus img {
+	width: 100%;
+	height: auto;
+}
+
+.neptune {
+	position: fixed;
+	top: 37%;
+	left: 87%;
+	width: 9%;
+	height: auto;
+}
+
+.neptune img {
+	width: 100%;
+	height: auto;
+}
+
+.pluto {
+	position: fixed;
+	top: 77%;
+	left: 95%;
+	width: 4%;
+	height: auto;
+}
+
+.pluto img {
+	width: 100%;
+	height: auto;
+}
+
+.dog {
+	position: fixed;
+	top: 74%;
+	left: 95%;
+	width: 4%;
+	height: auto;
+}
+
+.dog img {
+	width: 100%;
+	height: auto;
+}
+
+@media(max-width:768px){
+	
+	.dog {
+		position: fixed;
+		top: 76%;
+		left: 95%;
+		width: 4%;
+		height: auto;
+	}
+
+	.dog img {
+		width: 100%;
+		height: auto;
+	}
+	
+}
+
+@keyframes scale {
+	
+	25% {
+	
+		transform:scale(1.4);
+	
+	}
+	
+	50% {
+	
+		transform:scale(1.1);
+	
+	}
+	
+	75% {
+	
+		transform:scale(1.2);
+	
+	}
+	
+	100% {
+	
+		transform:scale(1);
+	
+	}
+	
+}
+
+@keyframes go-through {
+	
+	/*from {left:-10%;}
+
+	to {left:130%;}*/
+	
+	0% {
+	
+		left:-10%;
+		top:67%;
+	
+	}
+	
+	25% {
+	
+		left:25%;
+		top:57%;
+	
+	}
+	
+	50% {
+	
+		left:50%;
+		top:77%;
+	
+	}
+	
+	75% {
+	
+		left:75%;
+		top:67%;
+	
+	}
+	
+	100% {
+	
+		left:110%;
+		top:50%;
+	
+	}
+	
+}
+
+@keyframes go-through-re {
+	
+	from {right:-10%;}
+
+	to {right:130%;}
+	
+	/*0% {
+
+		left:-10%;
+		top:67%;
+
+	}
+
+	25% {
+
+		left:25%;
+		top:57%;
+
+	}
+
+	50% {
+
+		left:50%;
+		top:77%;
+
+	}
+
+	75% {
+
+		left:75%;
+		top:67%;
+
+	}
+
+	100% {
+
+		left:110%;
+		top:50%;
+
+	}*/
+	
+}
+
+
+

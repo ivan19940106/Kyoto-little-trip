@@ -1,3 +1,4 @@
+var clicks = -1;
 $(document).ready(function(e){
 	
 	//arrange cards
@@ -12,7 +13,8 @@ $(document).ready(function(e){
 	};
 	
 	//next card
-	var clicks = -1;
+	
+	
 	$('.next').click(function(e){
 		event.preventDefault();
 

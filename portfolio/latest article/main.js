@@ -1,4 +1,4 @@
-var clicks = -1;
+var clicks = 0;
 $(document).ready(function(e){
 	
 	//arrange cards
@@ -13,21 +13,24 @@ $(document).ready(function(e){
 	};
 	
 	//next card
-	
+	var currentStatus = '';
 	
 	$('.next').click(function(e){
 		event.preventDefault();
-
-		function clickCounter(){
-			clicks = clicks +1;
-			if(clicks > 5){
-				clicks = 5;
+		
+		if(clicks > 4){
+			clicks = 4;
+			$('#card-set li').eq(clicks).find('.card').fadeOut(400);
+		} else {
+			if (currentStatus == 'prev'){
+				$('#card-set li').eq(clicks +1).find('.card').fadeOut(400);
+			} else{
+				$('#card-set li').eq(clicks).find('.card').fadeOut(400);
+				clicks = clicks +1;
 			}
-			return clicks;
-		};
-
-		clickCounter();
-		$('#card-set li').eq(clicks).find('.card').fadeOut(400);
+		}
+		currentStatus = 'next';
+		console.log('next' + clicks)
 
 	});
 
@@ -35,17 +38,20 @@ $(document).ready(function(e){
 	//previous card
 	$('.prev').click(function(e){
 		event.preventDefault();
-
-		function clickCounter(){
-			clicks = clicks -1;
-			if(clicks < -1){
-				clicks = -1;
-			}
-			return clicks;
-		};
-
-		clickCounter();
-		$('#card-set li').eq(clicks).find('.card').fadeIn(400);
+		
+		if(clicks <= 0){
+			clicks = 0;
+			$('#card-set li').eq(clicks).find('.card').fadeIn(400);
+		} else {
+			if (currentStatus == 'next'){
+				$('#card-set li').eq(clicks -1).find('.card').fadeIn(400);
+			} else {
+				$('#card-set li').eq(clicks).find('.card').fadeIn(400);
+				clicks = clicks -1;
+			} 
+		}
+		currentStatus = 'prev';
+		console.log('prev' + clicks)
 
 	});
 	

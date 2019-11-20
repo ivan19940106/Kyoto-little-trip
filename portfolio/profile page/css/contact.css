@@ -1,0 +1,23 @@
+.content {
+    width: 100%;
+    max-width: 480px;
+    margin: 15px auto;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+}
+
+label, span, button {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input {
+    margin-left: 15px;
+}
+
+span {
+    line-height: 30px;
+}

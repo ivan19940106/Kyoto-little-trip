@@ -1,0 +1,32 @@
+.profile, .content {
+    float: left;
+}
+
+.profile {
+    border: 1px solid #1d4d4f;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: translate(0, -50%);
+    box-shadow: 2px 3px 35px 2px black;
+}
+
+.profile img {
+    height: 100%;
+    transform: scale(1.1);
+}
+
+.content {
+    margin: 50px 70px;
+    color: #594a4e;
+}
+
+h1 {
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 50px;
+}
+
+table, tr, td {
+    padding: 10px;
+    border: 1px solid #1d4d4f;
+}

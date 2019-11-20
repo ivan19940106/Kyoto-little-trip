@@ -1,0 +1,125 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.nav {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0;
+    padding: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+ul, ul a {
+    text-transform: capitalize;
+    color: #594a4e;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul.nav li, ul.nav ul {
+    float: left;
+    display: inline-block;
+}
+
+.about, .contact, .social-media {
+    margin: 30px 10px;
+}
+
+.about:hover, .contact:hover {
+    color: #357376;
+    border-bottom: 1px solid #357376;
+}
+
+li.about {
+    margin-left: 200px;
+}
+
+ul.nav ul {
+    position: relative;
+    padding-bottom: 40px;
+}
+
+li.fb {
+    position: absolute;
+    top: 60px;
+    right: 33px;
+}
+
+li.ig {
+    position: absolute;
+    top: 90px;
+    right: 28px;
+}
+
+.nav li.fb, .nav li.ig {
+    display: none;
+}
+
+ul.nav ul:hover {
+    color: #357376;
+}
+
+ul.nav ul:hover li.fb {
+    display: block;
+}
+
+ul.nav ul:hover li.ig {
+    display: block;
+}
+
+li.fb:hover {
+    border-bottom: 1px solid #357376;
+}
+
+li.ig:hover {
+    border-bottom: 1px solid #357376;
+}
+
+.banner {
+    background-image: url("https://i.imgur.com/Ed5m2Fo.jpg");
+    width: 100%;
+    height: 268px;
+    background-position: 50% 84%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+div.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #1d4d4f;
+    position: relative;
+}
+
+.copyright {
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-transform: capitalize;
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+}

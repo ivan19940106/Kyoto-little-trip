@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./images/logo-square.png" type="image/png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Noto+Sans+JP|Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/sound tunnel.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <title>Atelier Koco. Ordering</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper clearfix">
+                <div class="logo"><a href="./index.html" class="home"><img src="./images/logo.png" alt="logo" id="logo"></a></div>
+                <h1 class="koco"><a href="./index.html">atelier koco.</a></h1>
+                <div id="lan"><a href="#" class="en">english</a>/<a href="#" class="mandarin">正體中文</a>/<a href="#" class="nihongo">日本語</a></div>
+        </div>
+        <div class="menu">
+                <i class="icon-menu hamburger"></i>
+                <i class="icon-cancel-outline cross hide-menu"></i>
+            </div>
+        <nav class="nav">
+            <ul class="clearfix">
+                <li><a href="./models.html" class="models">models</a></li>
+                <li><a href="./gallery.html" class="gallery">gallery</a></li>
+                <li><a href="./ordering.html" class="ordering">ordering</a></li>
+                <li><a href="./sound tunnel.html" class="sound-tunnel">sound tunnel</a></li>
+                <li><a href="./dashboard.html" class="dashboard">dashboard</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-menu">
+            <div id="hamburger-menu"></div>
+            <div id="hamburger-menu"></div>
+            <div id="hamburger-menu"></div>
+        </button>
+    </header>
+
+    
+
+    <div class="container">
+
+        <div class="social-media">
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100000301162192" class="fb" target="_blank"><i class="icon-facebook"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCPK9Gd35H4xKvhwOxLBdq0A?view_as=subscriber" class="yt" target="_blank"><i class="icon-youtube"></i></a></li>
+                    <li><a href="https://twitter.com/Ivan19940106" class="tw" target="_blank"><i class="icon-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/ivan19940106/" class="ig" target="_blank"><i class="icon-instagram"></i></a></li>
+                </ul>
+        </div>
+
+        <h3 class="title">pick up some notes!</h3>
+        <div class="canvas">
+            <img src="./images/pick.jpg" alt="pick" class="pick">
+            <div class="panel">
+                <form action="#" method="POST" id="require" enctype="multipart/form-data">
+                    <div class="info"><img src="./images/square/craving.jpg" alt="capa" class="capa"><p class="choose">選擇客製項目與調性聆聽聲響</p></div>
+                    <div class="price"><img src="./images/square/headstock.jpeg" alt="price" class="price">
+                        <p class="model">
+                            <label for="model">或是選擇型號</label>
+                            <select name="model" id="model">
+                                <option value="Carrera SJ" selected>Carrera SJ</option>
+                                <option value="Carrera DS">Carrera DS</option>
+                                <option value="Carrera DL">Carrera DL</option>
+                                <option value="Carrera 000">Carrera 000</option>
+                                <option value="Carrera 0-14">Carrera 0-14</option>
+                                <option value="Dolphin I">Dolphin I</option>
+                                <option value="Dolphin II SJ">Dolphin II SJ</option>
+                                <option value="Dolphin II DL">Dolphin II DL</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="wood"><img src="./images/square/om.jpg" alt="wood" class="wood">
+                        <p class="wood">
+                            <label for="top">top</label>
+                            <select name="wood" id="top">
+                                <option value="spruce" selected>spruce</option>
+                                <option value="maple">maple</option>
+                            </select>
+                            <br><br>
+                            <label for="side-n-back">side & back</label>
+                            <select name="wood" id="side-n-back">
+                                <option value="rosewood" selected>rosewood</option>
+                                <option value="mahogany">mahogany</option>
+                            </select>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="body"><img src="./images/square/pressing.jpg" alt="body" class="body">
+                        <p class="body">
+                            <label for="body">body</label>
+                            <select name="body" id="body">
+                                <option value="dreadnought" selected>dreadnought</option>
+                                <option value="om">OM</option>
+                                <option value="ga">GA</option>
+                                <option value="small-jumbo">small jumbo</option>
+                                <option value="parlor">parlor</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="neck"><img src="./images/square/neck.jpeg" alt="neck" class="neck">
+                        <p class="neck">
+                            <label for="neck">neck</label>
+                            <select name="neck" id="neck">
+                                <option value="normal" selected>normal</option>
+                                <option value="spanish">spanish</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="cutaway"><img src="./images/square/cutaway.jpg" alt="" class="cutaway">
+                        <p class="cutaway">
+                            <label for="cutaway">cutaway</label>
+                            <select name="cutaway" id="cutaway">
+                                <option value="yes" selected>yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="bracing"><img src="./images/square/bracing.jpg" alt="bracing" class="bracing">
+                        <p class="bracing">
+                            <label for="bracing">bracing</label>
+                            <select name="bracing" id="bracing">
+                                <option value="scalloped" selected>scalloped</option>
+                                <option value="parabolic">parabolic</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="inlay"><img src="./images/square/rosette material.jpg" alt="inlay" class="inlay">
+                        <p class="inlay">
+                            <label for="inlay">inlay<br><small>please upload a picture.</small></label>
+                            <input type="file" id="inlay">
+                        </p>
+                    </div>
+                    <div class="go"><img src="./images/square/go.jpeg" alt="go" class="key">
+                        <p class="key">
+                            <label for="key">select a key</label>
+                            <select name="key" id="key">
+                                <option value="C" selected>C</option>
+                                <option value="G">G</option>
+                                <option value="D">D</option>
+                                <option value="A">A</option>
+                                <option value="E">E</option>
+                                <option value="B">B</option>
+                                <option value="F">F</option>
+                            </select>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="pad">
+            <div class="info">
+                <h3 class="title">遠端彈奏我們的吉他吧！</h3><br>
+                <p>&#8227; 按下鍵盤上對應的按鍵，即可發出音符和和弦的聲響。<br>&#8227; 以A調為例：按下Ｕ和Ｃ分別會發出La和B<sup>#</sup>m。<br>&#8227; 在按下和弦後若同時按壓數字鍵，可以對順階和弦做2、4、7、9音的處理。</p>
+            </div>
+            <br>
+            <ul id="keyboard">
+                <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
+                <li class="symbol"><span class="off">sus2</span><span class="on">!</span></li>
+                <li class="symbol"><span class="off">sus4</span><span class="on">@</span></li>
+                <li class="symbol"><span class="off">7th</span><span class="on">#</span></li>
+                <li class="symbol"><span class="off">maj7</span><span class="on">$</span></li>
+                <li class="symbol"><span class="off">add9</span><span class="on">%</span></li>
+                <li class="symbol"><span class="off">9th</span><span class="on">^</span></li>
+                <li class="symbol"><span class="off">sol</span><span class="on">&amp;</span></li>
+                <li class="symbol"><span class="off">la</span><span class="on">*</span></li>
+                <li class="symbol"><span class="off">si</span><span class="on">(</span></li>
+                <li class="symbol"><span class="off">do</span><span class="on">)</span></li>
+                <li class="symbol"><span class="off">-</span><span class="on">_</span></li>
+                <li class="symbol"><span class="off">=</span><span class="on">+</span></li>
+                <li class="delete lastitem">delete</li>
+                <li class="tab">tab</li>
+                <li class="letter">low</li>
+                <li class="letter">oct.</li>
+                <li class="letter">high</li>
+                <li class="letter">sol</li>
+                <li class="letter">la</li>
+                <li class="letter">si</li>
+                <li class="letter">do</li>
+                <li class="letter">re</li>
+                <li class="letter">mi</li>
+                <li class="letter">fa</li>
+                <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
+                <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
+                <li class="symbol lastitem"><span class="off">\</span><span class="on">|</span></li>
+                <li class="capslock">caps lock</li>
+                <li class="letter">A</li>
+                <li class="letter">Bm</li>
+                <li class="letter">C<sup>#</sup>m</li>
+                <li class="letter">D</li>
+                <li class="letter">E</li>
+                <li class="letter">F<sup>#</sup>m</li>
+                <li class="letter">G<sup>#</sup>dim</li>
+                <li class="letter">♭</li>
+                <li class="letter">#</li>
+                <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
+                <li class="symbol"><span class="off">'</span><span class="on">&quot;</span></li>
+                <li class="return lastitem">return</li>
+                <li class="left-shift">diatonic scale</li>
+                <li class="letter">C</li>
+                <li class="letter">Dm</li>
+                <li class="letter">Em</li>
+                <li class="letter">F</li>
+                <li class="letter">G</li>
+                <li class="letter">Am</li>
+                <li class="letter">Bdim</li>
+                <li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
+                <li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
+                <li class="symbol"><span class="off">/</span><span class="on">?</span></li>
+                <li class="right-shift lastitem">shift</li>
+                <li class="space lastitem">&nbsp;</li>
+            </ul>
+        </div>
+
+        <div class="player">
+            <h3 class="title">輸入簡譜，由我們來彈奏</h3>
+            <br>
+            <p>請在第一列輸入數字簡譜（目前只支援4/4拍的簡譜），在第二列輸入和弦名稱，並按下播放鍵。</p>
+            <br>
+            <div class="control-bar">
+                <div class="user-input">
+                    <textarea name="melody" id="" cols="30" rows="2" class="melody">5 3 3 - 4 2 2 - 1 2 3 4 5 5 5
+                    </textarea>
+                    <br>
+                    <textarea name="chords" id="" cols="30" rows="2" class="chords">C       G/B     C       G     
+                    </textarea>
+                </div>
+                <br><br>
+                <a href="#" class="play">
+                    <i class="icon-play-outline"></i>
+                    <!-- <p>&#8227;</p> -->
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="contact" id="contact">
+
+        <div class='box'>
+            <div class='wave -one'></div>
+            <div class='wave -two'></div>
+            <div class='wave -three'></div>
+        </div>
+
+        <h2 class="title">Need more info?
+            <br>
+            Feel free to get in touch.
+        </h2>
+        <br>
+
+        <div class="form-wrapper">
+                <form action="#" method="POST" name="contact-form">
+
+                        <input type="text" placeholder="First Name" required="required" name="first-name" class="first-name">
+                        <input type="text" placeholder="Last Name" required="required" name="last-name" class="last-name">
+                        <br>
+                        <input type="email" placeholder="E-mail" required="required" name="email" class="email">
+                        <input type="tel" placeholder="Mobile Phone Number" required="required" name="phone-number" class="phone-number">
+                        <br>
+                        <br>
+                        <textarea name="message" class="message" cols="10" rows="10" placeholder="Message"></textarea>
+                        <br>
+                        <button type="submit" class="submit">Submit!</button>
+            
+                    </form>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="about-koco">
+            <h3 class="title">about koco.</h3>
+            <ul>
+                <li><a href="./index.html#luthier" class="footer-luthier">luthier</a></li>
+                <li><a href="./index.html#feature-model" class="footer-feature-model">feature model</a></li>
+                <li><a href="./index.html#dealers" class="footer-dealers">dealers</a></li>
+                <li><a href="./index.html#contact" class="footer-contact">contact</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-details">
+                <h3 class="title">contact details</h3>
+            <ul>
+                <li>e-mail: <small><a href="mailto:atelierkoco@luthier.com.tw" target="_blank">atelierkoco@luthier.com.tw</a></small></li>
+                <li>tel: 02-2987-6543</li>
+            </ul>
+        </div>
+
+        <div class="logo-and-copyright">
+            <img src="./images/logo.png" alt="footer-logo" class="footer-logo">
+            <span class="copyright">&copy;&nbsp;all rights reserved</span>
+        </div>
+
+        <div class="recent-photos">
+            <h3 class="title">recent instagram posts</h3>
+            <div class="footer-wrapper">
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

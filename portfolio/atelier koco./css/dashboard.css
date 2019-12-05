@@ -1,0 +1,69 @@
+.nav a.dashboard {
+    color: #a35638;
+    font-weight: 600;
+}
+
+.dealers-dashboard, .sound-tunnel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dealers-dashboard img, .sound-tunnel img {
+    margin-top: 60px;
+    max-width: 600px;
+}
+
+.select {
+    margin: 30px;
+    padding: 40px;
+}
+
+h3.title {
+    margin-bottom: 70px;
+    color: #393e46;
+}
+
+label, select {
+    text-align: left;
+    margin: 15px 0;
+    text-transform: capitalize;
+    color: #393e46;
+}
+
+.dealers-dashboard a.export {
+    display: block;
+    margin-top:240px;
+}
+
+.sound-tunnel a.export {
+    display: block;
+    margin-top:90px;
+}
+
+/* for mobile phone */
+@media(max-width: 375px){
+    .dealers-dashboard, .sound-tunnel {
+        max-width: 90vw;
+        flex-direction: column;
+    }
+    .chart img {
+        width: 100%;
+    }
+    .select {
+        margin: 0;
+        padding: 0;
+    }
+    h3.title {
+        margin: 30px 0;
+    }
+    .dealers-dashboard a.export {
+        display: block;
+        margin-top:40px;
+    }
+    
+    .sound-tunnel a.export {
+        display: block;
+        margin: 40px 0;
+    }
+}

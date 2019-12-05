@@ -1,0 +1,179 @@
+/* ordering-instructions */
+.nav a.ordering {
+    color: #a35638;
+    font-weight: 600;
+}
+
+.ordering-instructions {
+    text-align: center;
+}
+
+.hr {
+    width: 45%;
+    margin: 0 auto;
+    border-bottom: 1px solid #594a4e;
+}
+
+.instructions {
+    margin-top: 30px;
+    margin: 50px auto 0;
+    transform: translate(3%,0);
+    text-transform: capitalize;
+}
+
+.instructions div {
+    float: left;
+    width: 30%;
+    position: relative;
+    margin: 10px;
+}
+
+.instructions img {
+    width: 100%;
+    margin: 10px;
+    filter: brightness(0.7);
+    transition: all 0.5s;
+    position: relative;
+}
+
+.instructions p {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    transform: translate(0,-50%);
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.instructions img:hover {
+    filter: brightness(1);
+}
+
+p.capa {
+    font-size: 16px;
+    left: 18%;
+}
+
+p.price {
+    font-size: 16px;
+    left: 20%;
+}
+
+p.wood {
+    left: 11%;
+}
+
+p.body, p.neck, p.cutaway {
+    left: 28%;
+}
+
+p.bracing {
+    left: 23%;
+}
+
+p.inlay {
+    left: 10%;
+}
+
+p.go {
+    font-size: 16px;
+    left: 11%;
+}
+
+/* check list */
+.canvas {
+    margin-top: 200px;
+    padding: 10px;
+    transform: translate(2%,0);
+}
+
+.canvas .title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.description-box {
+    margin: 50px 70px 30px;
+}
+
+.description-box td {
+    padding: 10px 0;
+    color: #594a4e;
+    border-bottom: 1px solid #fff;
+    font-size: 14px;
+}
+
+button.submit {
+    margin-left: 50%;
+    transform: translate(-57%,0);
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 10px 30px;
+    font-size: 18px;
+}
+
+/* for mobile phone */
+@media(max-width: 375px){
+    h2.title {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+    .instructions {
+        margin-top: 10px;
+        max-width: 90vw;
+        transform: translate(0,0);
+    }
+    .instructions div {
+        width: 45%;
+        margin: 4px;
+    }
+    .instructions img {
+        margin: 5px;
+    }
+    .instructions p {
+        font-size: 16px;
+    }
+    p.capa {
+        font-size: 15px;
+        left: 8%;
+    }
+    p.price {
+        font-size: -16px;
+        left: 12%;
+    }
+    p.wood {
+        left: 8%;
+    }
+    p.body, p.neck, p.cutaway {
+        left: 16%;
+    }
+    p.bracing {
+        left: 12%;
+    }
+    p.inlay {
+        left: 2%;
+    }
+    p.go {
+        font-size: 16px;
+        left: 10%;
+    }
+    .canvas {
+        margin-top: 100px;
+        transform: translate(0,0);
+    }
+    .preview {
+        width: 100%;
+    }
+    .preview img {
+        max-width: 100%;
+    }
+    .check-list {
+        margin-top: 30px;
+    }
+    .description-box {
+        margin: 30px 10px;
+    }
+    .contact {
+        margin-top: 60px;
+    }
+}

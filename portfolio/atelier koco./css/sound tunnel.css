@@ -1,0 +1,308 @@
+/* pick up notes */
+.canvas {
+    margin-top: 70px;
+}
+
+.nav a.sound-tunnel {
+    color: #a35638;
+    font-weight: 600;
+}
+
+h3.title {
+    text-align: center;
+    position: relative;   
+}
+
+.canvas {
+    position: relative;
+    top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+img.pick {
+    max-width: 400px;
+    margin-left: 30px;
+    border-radius: 10px;
+}
+
+.panel {
+    width: 700px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.panel div {
+    float: left;
+    position: relative;
+    margin: 5px;
+}
+
+.panel img {
+    width: 190px;
+    filter: brightness(0.7);
+    transition: all 0.5s;
+    position: relative;
+}
+
+.panel img:hover {
+    filter: brightness(1);
+}
+
+.panel p {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    transform: translate(0,-50%);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+p.choose {
+    font-size: 12px;
+    left: 10%;
+}
+
+p.model {
+    font-size: 12px;
+    left: 22%;
+}
+
+p.wood {
+    left: 6%;
+}
+
+p.body, p.neck, p.cutaway {
+    left: 16%;
+}
+
+p.bracing {
+    left: 13%;
+}
+
+p.inlay {
+    left: 5%;
+}
+
+p.key {
+    left: 18%;
+}
+
+/*keyboard*/
+#pad {
+    margin: 100px auto;
+    width: 688px;
+    font: 71%/1.5 Verdana, Sans-Serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pad .info h3 {
+    font-size: 24px;
+    color: #594a4e;
+}
+
+#pad .info p {
+    font-size: 16px;
+    color: #594a4e;
+}
+
+#write {
+    margin: 0 0 5px;
+    padding: 5px;
+    width: 671px;
+    height: 200px;
+    font: 1em/1.5 Verdana, Sans-Serif;
+    background: #fff;
+    border: 1px solid #f9f9f9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+#keyboard {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#keyboard li {
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #f9f9f9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.capslock, .tab, .left-shift {
+    clear: left;
+}
+#keyboard .tab, #keyboard .delete {
+    width: 70px;
+}
+#keyboard .capslock {
+    width: 80px;
+}
+#keyboard .return {
+    width: 77px;
+}
+#keyboard .left-shift {
+    width: 95px;
+}
+#keyboard .right-shift {
+    width: 109px;
+}
+.lastitem {
+    margin-right: 0;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+#keyboard .space {
+    clear: left;
+    width: 658px;
+}
+.on {
+    display: none;
+}
+#keyboard li:hover {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    border-color: #e5e5e5;
+    cursor: pointer;
+}
+
+/*player*/
+.player {
+    text-align: center;
+    position: relative;
+}
+
+.control-bar {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.control-bar a.play {
+    display: block;
+    width: 120px;
+    height: 30px;
+    color: #fff;
+    background: #594a4e;
+    border: 1px solid #594a4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 4px;
+}
+
+.control-bar a.play:hover {
+    font-weight: bold;
+    border: 2px solid #594a4e;
+}
+
+.control-bar textarea {
+    width: 700px;
+    height: 15px;
+    resize: vertical;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #594a4e;
+    border-radius: 4px;
+}
+
+/* for mobile phone */
+@media(max-width: 375px){
+    h3.title {
+        margin-top: 50px;
+    }
+    .canvas {
+        width: 90vw;
+    }
+    img.pick {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .panel {
+        max-width: 100vw;
+        margin: 0 auto;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    .panel div {
+        width: 45%;
+        margin: 5px;
+    }
+    .panel img {
+        width: 40vw;
+        margin: 5px;
+    }
+    .panel p {
+        text-align: center;
+    }
+    p.choose {
+        font-size: 13px;
+        left: 10%;
+    }
+    p.model {
+        font-size: 13px;
+        left: 18%;
+    }
+    p.wood {
+        left: 10%;
+    }
+    p.body, p.neck, p.cutaway {
+        left: 22%;
+    }
+    p.bracing {
+        left: 18%;
+    }
+    p.inlay {
+        left: 2%;
+    }
+    p.key {
+        font-size: 16px;
+        left: 15%;
+    }
+    #pad {
+        margin: 0;
+        width: 90vw;
+    }
+    #pad .info p {
+        font-size: 15px;
+    }
+    #keyboard {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #keyboard .space {
+        clear: left;
+        width: 100%;
+    }
+    .player {
+        width: 90vw;
+        margin-bottom: 80px;
+    }
+    .player p {
+        font-size: 15px;
+    }
+    .control-bar {
+        width: 100%;
+    }
+    .control-bar textarea {
+        width: 100%;
+    }
+}

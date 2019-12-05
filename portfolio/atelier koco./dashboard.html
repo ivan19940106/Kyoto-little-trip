@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="./images/logo-square.png" type="image/png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Noto+Sans+JP|Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+    <title>Atelier Koco. Ordering</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper clearfix">
+                <div class="logo"><a href="./index.html" class="home"><img src="./images/logo.png" alt="logo" id="logo"></a></div>
+                <h1 class="koco"><a href="./index.html">atelier koco.</a></h1>
+                <div id="lan"><a href="#" class="en">english</a>/<a href="#" class="mandarin">正體中文</a>/<a href="#" class="nihongo">日本語</a></div>
+        </div>
+        <div class="menu">
+            <i class="icon-menu hamburger"></i>
+            <i class="icon-cancel-outline cross hide-menu"></i>
+        </div>
+        <nav class="nav">
+            <ul class="clearfix">
+                <li><a href="./models.html" class="models">models</a></li>
+                <li><a href="./gallery.html" class="gallery">gallery</a></li>
+                <li><a href="./ordering.html" class="ordering">ordering</a></li>
+                <li><a href="./sound tunnel.html" class="sound-tunnel">sound tunnel</a></li>
+                <li><a href="./dashboard.html" class="dashboard">dashboard</a></li>
+            </ul>
+        </nav>
+        <button id="hamburger-menu">
+            <div id="hamburger-menu"></div>
+            <div id="hamburger-menu"></div>
+            <div id="hamburger-menu"></div>
+        </button>
+    </header>
+
+    
+
+    <div class="container">
+
+        <div class="social-media">
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100000301162192" class="fb" target="_blank"><i class="icon-facebook"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCPK9Gd35H4xKvhwOxLBdq0A?view_as=subscriber" class="yt" target="_blank"><i class="icon-youtube"></i></a></li>
+                    <li><a href="https://twitter.com/Ivan19940106" class="tw" target="_blank"><i class="icon-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/ivan19940106/" class="ig" target="_blank"><i class="icon-instagram"></i></a></li>
+                </ul>
+        </div>
+
+        <div class="dealers-dashboard">
+            <div class="chart">
+                <img src="./images/ch1.png" alt="chart">
+            </div>
+
+            <div class="select">
+                <h3 class="title">dealers</h3>
+                <label for="dealer">dealer</label>
+                <select name="dealer" id="dealer">
+                    <option value="my-guitar-friend" selected>吉他好朋友</option>
+                    <option value="dolphin-guitars">Dolphin Guitars</option>
+                </select>
+                <br>
+                <label for="model">model</label>
+                <select name="model" id="model">
+                    <option value="Carrera SJ" selected>Carrera SJ</option>
+                    <option value="Carrera DS">Carrera DS</option>
+                    <option value="Carrera DL">Carrera DL</option>
+                    <option value="Carrera 000">Carrera 000</option>
+                    <option value="Carrera 0-14">Carrera 0-14</option>
+                    <option value="Dolphin I">Dolphin I</option>
+                    <option value="Dolphin II SJ">Dolphin II SJ</option>
+                    <option value="Dolphin II DL">Dolphin II DL</option>
+                </select>
+                <br>
+                <label for="period">period</label>
+                <select name="period" id="period">
+                    <option value="week" selected>weekly</option>
+                    <option value="month">monthly</option>
+                    <option value="half-year">half year</option>
+                    <option value="year">annually</option>
+                </select>
+                <br>
+                <a href="#" class="export"><i class="icon-doc">export excel</i></a>
+            </div>
+        </div>
+
+        <div class="sound-tunnel">
+            <div class="chart">
+                <img src="./images/ch1.png" alt="chart">
+            </div>
+
+            <div class="select">
+                <h3 class="title">sound tunnel</h3>
+                <label for="model">model</label>
+                <select name="model" id="model">
+                    <option value="Carrera SJ" selected>Carrera SJ</option>
+                    <option value="Carrera DS">Carrera DS</option>
+                    <option value="Carrera DL">Carrera DL</option>
+                    <option value="Carrera 000">Carrera 000</option>
+                    <option value="Carrera 0-14">Carrera 0-14</option>
+                    <option value="Dolphin I">Dolphin I</option>
+                    <option value="Dolphin II SJ">Dolphin II SJ</option>
+                    <option value="Dolphin II DL">Dolphin II DL</option>
+                </select>
+                <br>
+                <label for="wood">wood</label>
+                <label for="top">top</label>
+                <select name="wood" id="top">
+                    <option value="spruce" selected>spruce</option>
+                    <option value="maple">maple</option>
+                </select>
+                <br>
+                <label for="side-n-back">side & back</label>
+                <select name="wood" id="side-n-back">
+                    <option value="rosewood" selected>rosewood</option>
+                    <option value="mahogany">mahogany</option>
+                </select>
+                <br>
+                <label for="body">body</label>
+                <select name="body" id="body">
+                    <option value="dreadnought" selected>dreadnought</option>
+                    <option value="om">OM</option>
+                    <option value="ga">GA</option>
+                    <option value="small-jumbo">small jumbo</option>
+                    <option value="parlor">parlor</option>
+                </select>
+                <br>
+                <label for="bracing">bracing</label>
+                <select name="bracing" id="bracing">
+                    <option value="scalloped" selected>scalloped</option>
+                    <option value="parabolic">parabolic</option>
+                </select>
+                <br>
+                <label for="period">period</label>
+                <select name="period" id="period">
+                    <option value="week" selected>weekly</option>
+                    <option value="month">monthly</option>
+                    <option value="half-year">half year</option>
+                    <option value="year">annually</option>
+                </select>
+                <br>
+                <a href="#" class="export"><i class="icon-doc">export excel</i></a>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="contact" id="contact">
+
+        <div class='box'>
+            <div class='wave -one'></div>
+            <div class='wave -two'></div>
+            <div class='wave -three'></div>
+        </div>
+
+        <h2 class="title">Need more info?
+            <br>
+            Feel free to get in touch.
+        </h2>
+        <br>
+
+        <div class="form-wrapper">
+                <form action="#" method="POST" name="contact-form">
+
+                        <input type="text" placeholder="First Name" required="required" name="first-name" class="first-name">
+                        <input type="text" placeholder="Last Name" required="required" name="last-name" class="last-name">
+                        <br>
+                        <input type="email" placeholder="E-mail" required="required" name="email" class="email">
+                        <input type="tel" placeholder="Mobile Phone Number" required="required" name="phone-number" class="phone-number">
+                        <br>
+                        <br>
+                        <textarea name="message" class="message" cols="10" rows="10" placeholder="Message"></textarea>
+                        <br>
+                        <button type="submit" class="submit">Submit!</button>
+            
+                    </form>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="about-koco">
+            <h3 class="title">about koco.</h3>
+            <ul>
+                <li><a href="./index.html#luthier" class="footer-luthier">luthier</a></li>
+                <li><a href="./index.html#feature-model" class="footer-feature-model">feature model</a></li>
+                <li><a href="./index.html#dealers" class="footer-dealers">dealers</a></li>
+                <li><a href="./index.html#contact" class="footer-contact">contact</a></li>
+            </ul>
+        </div>
+
+        <div class="contact-details">
+                <h3 class="title">contact details</h3>
+            <ul>
+                <li>e-mail: <small><a href="mailto:atelierkoco@luthier.com.tw" target="_blank">atelierkoco@luthier.com.tw</a></small></li>
+                <li>tel: 02-2987-6543</li>
+            </ul>
+        </div>
+
+        <div class="logo-and-copyright">
+            <img src="./images/logo.png" alt="footer-logo" class="footer-logo">
+            <span class="copyright">&copy;&nbsp;all rights reserved</span>
+        </div>
+
+        <div class="recent-photos">
+            <h3 class="title">recent instagram posts</h3>
+            <div class="footer-wrapper">
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+                <a href="#"><img src="./images/square/yokogao.jpg" alt="" class="footer-ig" width="60" height="60"></a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+</html>

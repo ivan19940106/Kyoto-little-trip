@@ -1,0 +1,861 @@
+/* basic settings */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Courier New", Courier, monospace, 'Josefin Sans', sans-serif;
+    /* border: 1px solid #000; */
+}
+
+body {
+    background-color: #FCF9EB;
+}
+
+h1, h2, h3, a, ul, li, span {
+    text-transform: capitalize;
+    color: #393e46;
+}
+
+a, ul, li {
+    text-decoration: none;
+    list-style-type: none;
+    color: #393e46;
+}
+
+img {
+    display: block;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* header */
+.header {
+    max-width: 1200px;
+    margin: 20px auto 0;
+}
+
+img#logo {
+    width: 100px;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.koco {
+    margin-left: 70px;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+#lan {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+}
+
+.nav {
+    margin: 10px auto 30px;
+    text-align: center;
+}
+
+.nav li {
+    display: inline-block;
+    padding: 10px 30px;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+
+.hamburger, .cross {
+    display: none;
+}
+
+/* hide menu */
+.hide-menu {
+    display: none;
+}
+
+.social-media {
+    position: fixed;
+    z-index: 2;
+}
+
+.social-media li {
+    padding: 10px;
+    font-size: 25px;
+    position: relative;
+    top: 100px;
+    left: -90px;
+}
+/* hide social media when modal pops up on mobile phone */
+.hide-social-media {
+    z-index: 0;
+}
+
+/* content-home-page */
+.container {
+    position: relative;
+    max-width: 1100px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.canvas {
+    margin-top: 0;
+    min-width: 850px;
+    background-color: #e5c79a;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 6px #393e46;
+}
+
+.canvas a {
+    background-color: #594a4e;
+    border: 1.4px solid #fff;
+    padding: 2px;
+    color: #fff;
+}
+
+.cover {
+    position: relative;
+}
+
+.me {
+    width: 200px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    animation: beats 1.5s cubic-bezier(.17,.67,.94,.43) infinite;
+    transform-origin: 41% 47%;
+}
+
+.cover a.me {
+    background: transparent;
+    border: none;
+}
+
+@keyframes beats {
+	25% {
+		transform:scale(1.2);
+	}
+	50% {
+		transform:scale(1.1);
+	}
+	75% {
+		transform:scale(1.15);
+	}
+	100% {
+		transform:scale(1);
+	}
+}
+
+.cover-image {
+    max-width: 450px;
+    padding: 10px;
+}
+
+.feature-model-btn {
+    position: absolute;
+    top: 230px;
+    left: 200px;
+}
+
+.luthier-btn {
+    position: absolute;
+    top: 330px;
+    left: 150px;
+}
+
+.para {
+    position: relative;
+}
+
+.orchestra {
+    position: relative;
+    top: 20px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: #594a4e;
+    padding: 0 20px;
+    border-left: 2px solid #594a4e;
+}
+
+.all-models-bg {
+    max-width: 100%;
+    padding: 10px;
+    filter: brightness(70%);
+    border-radius: 14px;
+}
+
+.all-models-btn {
+    position: relative;
+    top: -230px;
+    left: 39%;
+}
+
+/* content-about */
+.about {
+    margin-top: 200px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-content: center;
+    text-align: left;
+}
+
+.about .para {
+    max-width: 50%;
+}
+
+.profile-image .profile {
+    max-width: 400px;
+    position: relative;
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 6px #393e46;
+}
+
+.profile-image .working {
+    max-width: 400px;
+    position: relative;
+    top: -240px;
+    left: 280px;
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 6px #393e46;
+}
+
+h3.luthier {
+    position: relative;
+    top: -260px;
+}
+
+h2.title {
+    font-size: 48px;
+    color: #594a4e;
+}
+
+h3.chang-ko {
+    margin-top: 45px;
+}
+
+.quote {
+    max-width: 90%;
+    padding: 0 20px;
+    margin: 30px 0;
+    color: #594a4e;
+    font-size: 14px;
+    border-left: 2px solid #594a4e;
+}
+
+.about-content {
+    padding-top: 25px;
+    line-height: 2.5;
+    font-weight: 300;
+    font-size: 14px;
+    max-width: 80%;
+}
+
+.bg-window {
+    background-image: url("https://i.imgur.com/Eoi8AWV.jpg");
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin-bottom: 0px;
+}
+
+/* feature-model */
+.feature-model-bgimg {
+    width: 100%;
+    margin: 0 auto;
+    /* box-shadow: 2px 2px 6px #393e46; */
+}
+
+.feature-model img {
+    width: 510px;
+    border-radius: 12px;
+    border: 1px solid #fff;
+}
+
+.feature-model {
+    position: absolute;
+    top: -780px;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-model .title {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.view .window {
+    display: flex;
+    flex: 0 0 510px;
+    justify-content: center;
+    align-items: center;
+}
+
+.view .window {
+    width: 510px;
+    height: 680px;
+}
+
+.view .preview {
+    position: relative;
+}
+
+.view .preview img {
+    width: 100px;
+    margin: 10px 0;
+    position: absolute;
+}
+
+.view .preview img.front {
+    top: -620px;
+    left: 450px;
+}
+
+.view .preview img.body {
+    top: -480px;
+    left: 450px;
+}
+
+.view .preview img.fingerboard {
+    top: -340px;
+    left: 450px;
+}
+
+.view .preview img.moon {
+    top: -255px;
+    left: 450px;
+}
+
+.view .preview img.cloud {
+    top: -170px;
+    left: 450px;
+}
+
+.feature-model .para h3 {
+    color: #fff;
+    font-size: 30px;
+    position: relative;
+    top: 100px;
+}
+
+.feature-model .para {
+    margin-left: 100px;
+}
+
+.feature-model .para .desc {
+    color: #fff;
+    position: relative;
+    top: 200px;
+    line-height: 2;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.feature-model .para .all-models-btn {
+    position: relative;
+    top: 300px;
+    left: 37%;
+    background-color: #594a4e;
+    border: 1.4px solid #fff;
+    padding: 2px;
+    color: #fff;
+}
+
+/* dealers */
+.google-map img {
+    max-width: 600px;
+}
+
+.dealers {
+    position: relative;
+    top: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    align-content: center;
+}
+
+.map .title {
+    padding-bottom: 43px;
+    color: #594a4e;
+}
+
+.google-map {
+    border: 2px solid #fff;
+}
+
+.dealers-info {
+    padding-top: 100px;
+    padding-left: 20px;
+}
+
+.dealers h3.title {
+    font-size: 28px;
+    color: #594a4e;
+}
+
+.my-guitar-friend, .dolphin-guitars {
+    padding: 10px;
+    background-color: #e5c79a;
+    line-height: 1;
+    color: #594a4e;
+    box-shadow: .7px .7px 4px #393e46;
+}
+
+.dolphin-guitars {
+    margin-top: 10px;
+}
+
+.dealers .info img {
+    width: 100px;
+    text-align: right;
+    margin: auto 0 auto auto;
+}
+
+/* waves */
+.box {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: -30px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.wave {
+    position: absolute;
+    bottom: 18%;
+    left: -30%;
+    background: #FCF9EB;
+    width: 160%;
+    height: 160vw;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+    animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+    animation: drift 7000ms infinite linear;
+    opacity: .1;
+    background: #f8b195;
+}
+
+@keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+}
+
+/* contact */
+.contact {
+    padding-top: 400px;
+    position: relative;
+    top: 300px;
+    background-color: #e5c79a;
+    padding-bottom: 170px;
+}
+
+.contact h2.title {
+    text-align: center;
+    color: #fff;
+}
+
+.contact .form-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .first-name, .last-name, .email, .phone-number {
+    width: 400px;
+    height: 40px;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    background-color: #e5c79a;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+}
+
+.contact textarea.message {
+    width: 810px;
+    height: 80px;
+    resize: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    background-color: #e5c79a;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 50px;
+}
+
+.contact .submit {
+    margin-left: 50%;
+    transform: translate(-57%,0);
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 10px 30px;
+    font-size: 18px;
+}
+
+/* footer */
+.footer {
+    position: relative;
+    top: 300px;
+    display: flex;
+    justify-content: center;
+    background-color: #e5c79a;
+}
+
+.about-koco, .contact-details, .logo-and-copyright, .recent-photos {
+    line-height: 2;
+    color: #594a4e;
+}
+
+.footer li {
+    list-style-type: circle;
+}
+
+.logo-and-copyright {
+    position: absolute;
+    transform: translate(0,-70px);
+    height: 100%;
+}
+
+.footer .footer-logo {
+    max-width: 150px;
+}
+
+.footer .copyright {
+    position: absolute;
+    transform: translate(-15%,70px);
+    bottom: 0;
+    white-space: nowrap;
+}
+
+.about-koco{
+    transform: translate(-280px,0);
+}
+
+.contact-details {
+    transform: translate(-220px,0);
+    max-width: 200px;
+}
+
+.contact-details small {
+    text-transform: lowercase;
+}
+
+.recent-photos {
+    transform: translate(170px,0);
+    max-width: 280px;
+}
+
+.recent-photos img {
+    margin: 2px;
+    display: inline-block;
+}
+
+.footer-wrapper {
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+/* for mobile phone */
+@media(max-width: 375px){
+    
+    /* hamburger menu */
+    .menu {
+        display: inline-block;
+        position: relative;
+        top: 20px;
+        left: 90%;
+        z-index: 3;
+    }
+	.hamburger, .cross {
+        display: inline-block;
+        position: relative;
+    }
+    /* hide menu trigger */
+    .hide-menu {
+        display: none;
+    }
+    
+    /* content */
+    .container {
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .header {
+        width: 100%;
+        max-width: 100vw;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 0 25px;
+    }
+    .header-wrapper {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+    h1.koco {
+        font-size: 26px;
+        margin-left: 15px;
+    }
+    #lan {
+        display: none;
+    }
+    .nav {
+        display: none;
+        margin-bottom: 50px;
+    }
+    .nav li {
+        display: block;
+        margin: 40px 40px;
+        border-bottom: 1px solid #000;
+    }
+    .social-media {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    .social-media li {
+        position: relative;
+        top: 30px;
+        left: 7px;
+        display: inline-block
+    }
+    .canvas {
+        margin-top: 44px;
+        min-width: 90vw;
+        flex-wrap: wrap;
+    }
+    .cover-image {
+        width: 90vw;
+    }
+    .me {
+        width: 40vw;
+        top: 60px;
+        left: 0;
+    }
+    .feature-model-btn {
+        top: 200px;
+        left: 170px;
+    }
+    .luthier-btn {
+        top: 300px;
+        left: 130px;
+    }
+    .all-models-btn {
+        top: -122px;
+        left: 30%;
+    }
+    .about {
+        margin-top: 130px;
+        min-width: 90vw;
+        flex-wrap: wrap;
+    }
+    .para h2.title {
+        color: #594a4e;
+        text-align: center;
+        font-size: 30px;
+    }
+    .about .para {
+        max-width: 100%;
+        text-align: center;
+    }
+    h3.chang-ko {
+        margin-top: 30px;
+    }
+    .quote {
+        text-align: left;
+    }
+    p.about-content {
+        margin-right: 0;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .profile-image {
+        margin-top: 30px;
+        max-width: 90vw;
+    }
+    .profile-image .profile {
+        max-width: 90vw;
+    }
+    .profile-image .working {
+        margin-top: 30px;
+        max-width: 90vw;
+        top: 0;
+        left: 0;
+    }
+    h3.luthier {
+        top: 10px;
+    }
+    .bg-window {
+        height: auto;
+        margin-top: 100px;
+    }
+    .feature-model {
+        position: relative;
+        top: 30px;
+        max-width: 90vw;
+        flex-wrap: wrap;
+    }
+    .feature-model .title{
+        color: #594a4e;
+        text-align: center;
+        font-size: 30px;
+    }
+    .view .window {
+        max-width: 90vw;
+        height: auto;
+    }
+    .feature-model img {
+        max-width: 90vw;
+    }
+    .view .preview {
+        position: relative;
+    }
+    .view .preview img {
+        width: 20vw;
+        margin: 4px 0;
+        position: absolute;
+    }
+    .view .preview img.front {
+        top: -420px;
+        left: -15px;
+    }
+    .view .preview img.body {
+        top: -315px;
+        left: -15px;
+    }
+    .view .preview img.fingerboard {
+        top: -210px;
+        left: -15px;
+    }
+    .view .preview img.moon {
+        top: -147px;
+        left: -15px;
+    }
+    .view .preview img.cloud {
+        top: -83px;
+        left: -15px;
+    }
+    .feature-model .para {
+        margin: 0 auto;
+    }
+    .feature-model .para h3 {
+        top: 0;
+        margin-top: 30px;
+        color: #594a4e;
+        text-align: center;
+        font-size: 24px;
+    }
+    .feature-model .para .desc{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        top: 0;
+        color: #393e46;
+    }
+    .feature-model .para .all-models-btn {
+        top: 0;
+        left: 0;
+        margin-left: 90px;
+        transform: translate(-50%,0);
+    }
+    .dealers {
+        top: 150px;
+        min-width: 90vw;
+        flex-wrap: wrap;
+    }
+    .dealers .title {
+        color: #594a4e;
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+    .google-map iframe {
+        max-width: 90vw;
+    }
+    .dealers-info {
+        margin: 0;
+        padding: 0;
+        margin-top: 30px;
+    }
+    .contact {
+        padding-top: 200px;
+        padding-bottom: 70px;
+        top: 0;
+    }
+    .box {
+        height: 200px;
+    }
+    .contact h2.title {
+        text-align: center;
+        font-size: 20px;
+        padding: 10px;
+        padding-bottom: 30px;
+    }
+    .contact .form-wrapper {
+        width: 90vw;
+        flex-wrap: wrap;
+    }
+    form {
+        width: 100%;
+    }
+    .contact .first-name, .last-name, .email, .phone-number {
+        width: 100%;
+        height: 40px;
+    }
+    .contact textarea.message {
+        width: 100%;
+        height: 80px;
+    }
+    .footer {
+        top: 0;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .about-koco {
+        transform: translate(0,0);
+        margin-bottom: 30px;
+    }
+    .contact-details {
+        transform: translate(0,0);
+        max-width: 200px;
+        margin-bottom: 30px;
+    }
+    .logo-and-copyright {
+        position: relative;
+        transform: translate(0,0);
+        order: 1;
+        line-height: 3;
+        margin-bottom: 70px;
+    }
+    .recent-photos {
+        transform: translate(0,0);
+        max-width: 90vw;
+        margin-bottom: 50px;
+    }
+}

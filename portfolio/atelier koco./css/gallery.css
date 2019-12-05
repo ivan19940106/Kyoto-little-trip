@@ -1,0 +1,219 @@
+/* gallery canvas */
+.canvas {
+    margin-top: 70px;
+}
+
+.nav a.gallery {
+    color: #a35638;
+    font-weight: 600;
+}
+
+.gallery-wrapper {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.guitars {
+    max-width: 550px;
+    margin: 70px 0;
+    position: relative;
+}
+
+.guitars img {
+    max-width: 500px;
+}
+
+.guitars a {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.atelier {
+    max-width: 550px;
+    margin: 70px 0;
+    position: relative;
+}
+
+.atelier img {
+    max-width: 500px;
+}
+
+.atelier a {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* modal */
+.window {
+    width: 700px;
+    height: 90%;
+    /* background-color: rgb(189, 29, 117); */
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.modal {
+    /* block the modal out */
+    display: none;
+    background-color: #393e46;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* show modal */
+.show-modal {
+    display: block;
+}
+
+/* scroll lock */
+.scroll-lock {
+    overflow: hidden;
+}
+
+.modal a {
+    color: #fff;
+}
+
+.modal img {
+    /* hide all the images */
+    display: none;
+    width: 700px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* button disable sign */
+.modal .btn-disabled {
+    color: #393e46;
+}
+
+.modal .prev {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.modal .next {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+
+/* hide atelier button */
+.btn-hide {
+    display: none;
+}
+
+.modal .prev-atelier {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+.modal .next-atelier {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+}
+
+.modal .close {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+}
+
+/* instagram photo wall */
+.instagram-photo-wall {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.hr {
+    width: 30%;
+    margin: 0 auto;
+    border-bottom: 1px solid #594a4e;
+}
+
+.instagram {
+    margin: 50px auto 0;
+    transform: translate(2%,0);
+}
+
+.instagram img {
+    float: left;
+    width: 30%;
+    margin: 10px;
+}
+
+/* for mobile phone */
+@media(max-width: 375px){
+    .gallery-wrapper {
+        flex-direction: column;
+        margin: 20px 0;
+    }
+    .gallery-wrapper img {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .guitars {
+        margin: 0;
+    }
+    .atelier {
+        margin: 0;
+    }
+    .guitars a {
+        top: 50%;
+    }
+    .atelier a {
+        top: 50%;
+    }
+    .instagram-photo-wall {
+        margin-top: 90px;
+    }
+    h2.title {
+        font-size: 30px;
+    }
+    .instagram {
+        width: 90vw;
+        margin: 30px auto 0;
+        margin-bottom: 60px;
+    }
+    .instagram img {
+        width: 28vw;
+        margin: 2px;
+    }
+    /* modal */
+    .window {
+        width: 90vw;
+        height: 70%;
+    }
+    .modal img {
+        width: 90vw;
+    }
+    .modal .prev {
+        top: 80%;
+    }
+    .modal .next {
+        top: 80%;
+    }
+    .modal .prev-atelier {
+        top: 80%;
+    }
+    .modal .next-atelier {
+        top: 80%;
+    }
+}

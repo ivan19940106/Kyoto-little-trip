@@ -214,7 +214,7 @@ $(document).ready(function(e){
         };
 
         // next card
-        $("div.models-card").on("swiperight",function(e){
+        $("div.models-card, div.models-card img, .models-card-wrapper").on("swiperight",function(e){
             if (swipe >= len) {
                 swipe = len;
             } else {
@@ -224,7 +224,7 @@ $(document).ready(function(e){
         });
 
         // previous card
-        $("div.models-card").on("swipeleft",function(e){
+        $("div.models-card, div.models-card img, .models-card-wrapper").on("swipeleft",function(e){
             if (swipe <= 0) {
                 swipe = 0;
             } else {

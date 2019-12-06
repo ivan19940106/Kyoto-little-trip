@@ -190,6 +190,7 @@
     .controls {
         display: inline-block;
         position: absolute;
-        top: 640px;
+        top: 630px;
+        font-size: 36px;
     }
 }

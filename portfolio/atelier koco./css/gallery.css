@@ -80,7 +80,6 @@
 /* scroll lock */
 .scroll-lock {
     overflow: hidden;
-    position: fixed;
 }
 
 .modal a {

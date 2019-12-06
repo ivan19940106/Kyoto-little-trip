@@ -202,7 +202,7 @@ $(document).ready(function(e){
     //models-card
     if($(window).width() <= 768){
         //cards length
-        var len = $(".models").find('div.models-card').length;
+        var len = $(".model-panel").find('div.models-card').length;
         console.log(len);
 
         // arrange cards
@@ -210,25 +210,25 @@ $(document).ready(function(e){
             var top = 100-14*i;
             var width = 337-10*i;
             var zIndex = len-i;
-            $('.models').find('div.models-card').eq(i).css({ 'top': top + 'px', 'width': width + 'px', 'z-index': zIndex });
+            $('.model-panel').find('div.models-card').eq(i).css({ 'top': top + 'px', 'width': width + 'px', 'z-index': zIndex });
         };
 
         // next card
-        $("div.models-card, div.models-card img, .models-card-wrapper").on("swiperight",function(e){
-            if (swipe >= len) {
-                swipe = len;
+        $(".icon-fast-fw").click(function(e){
+            if (swipe >= len-1) {
+                swipe = len-1;
             } else {
-                $('.models').find('div.models-card').eq(swipe).fadeOut(400);
+                $('.model-panel').find('div.models-card').eq(swipe).fadeOut(400);
                 swipe++;
             }
         });
 
         // previous card
-        $("div.models-card, div.models-card img, .models-card-wrapper").on("swipeleft",function(e){
+        $(".icon-rewind").click(function(e){
             if (swipe <= 0) {
                 swipe = 0;
             } else {
-                $('.models').find('div.models-card').eq(swipe - 1).fadeIn(400);
+                $('.model-panel').find('div.models-card').eq(swipe - 1).fadeIn(400);
                 swipe--;
             }
         });

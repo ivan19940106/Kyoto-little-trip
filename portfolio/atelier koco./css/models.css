@@ -85,6 +85,10 @@
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
 }
 
+.controls {
+    display: none;
+}
+
 /* hide scroll bar for chrome*/
 .models-card-wrapper::-webkit-scrollbar {
     width: 0;
@@ -154,7 +158,7 @@
     .features-block p {
         padding-top: 15px;
     }
-    .models {
+    .model-panel {
         /* margin-top: 120px;
         width: 90vw;
         transform: translate(0,0);
@@ -162,7 +166,7 @@
         margin-top: 120px;
         width: 90vw;
         transform: translate(0,0);
-        margin-bottom: 650px;
+        margin-bottom: 750px;
         display: flex;
         justify-content: center;
     }
@@ -183,5 +187,9 @@
     .models-card-wrapper {
         max-width: 100%;
     }
-    
+    .controls {
+        display: inline-block;
+        position: absolute;
+        top: 640px;
+    }
 }

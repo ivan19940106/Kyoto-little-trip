@@ -42,7 +42,7 @@ label, select {
 }
 
 /* for mobile phone */
-@media(max-width: 375px){
+@media(max-width: 1024px){
     .dealers-dashboard, .sound-tunnel {
         max-width: 90vw;
         flex-direction: column;
@@ -65,5 +65,8 @@ label, select {
     .sound-tunnel a.export {
         display: block;
         margin: 40px 0;
+    }
+    .sound-tunnel {
+        margin-bottom: 70px;
     }
 }

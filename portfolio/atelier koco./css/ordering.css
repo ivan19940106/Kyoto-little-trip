@@ -113,7 +113,7 @@ button.submit {
 }
 
 /* for mobile phone */
-@media(max-width: 375px){
+@media(max-width: 1024px){
     h2.title {
         margin-top: 50px;
         font-size: 30px;
@@ -160,6 +160,7 @@ button.submit {
     .canvas {
         margin-top: 100px;
         transform: translate(0,0);
+        margin-bottom: 120px;
     }
     .preview {
         width: 100%;

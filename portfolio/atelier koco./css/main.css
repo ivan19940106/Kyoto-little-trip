@@ -442,7 +442,7 @@ h3.chang-ko {
     bottom: 18%;
     left: -30%;
     background: #FCF9EB;
-    width: 160%;
+    width: 160vw;
     height: 160vw;
     transform-origin: 50% 48%;
     border-radius: 43%;
@@ -513,6 +513,8 @@ h3.chang-ko {
 .contact .submit {
     margin-left: 50%;
     transform: translate(-57%,0);
+    color: #393e46;
+    background-color: #fff;
     border: 1px solid #fff;
     border-radius: 4px;
     padding: 10px 30px;
@@ -583,7 +585,7 @@ h3.chang-ko {
 }
 
 /* for mobile phone */
-@media(max-width: 375px){
+@media(max-width: 1024px){
     
     /* hamburger menu */
     .menu {
@@ -787,6 +789,7 @@ h3.chang-ko {
         top: 150px;
         min-width: 90vw;
         flex-wrap: wrap;
+        margin-bottom: 240px;
     }
     .dealers .title {
         color: #594a4e;

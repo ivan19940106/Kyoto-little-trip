@@ -115,7 +115,7 @@
     font-size: 12px;
 }
 
-@media(max-width: 375px){
+@media(max-width: 1024px){
     .cover-description-box {
         max-width: 90%;
         margin: 0;
@@ -159,6 +159,7 @@
         margin-top: 120px;
         width: 90vw;
         transform: translate(0,0);
+        margin-bottom: 50px;
     }
     .models-card {
         max-width: 100%;

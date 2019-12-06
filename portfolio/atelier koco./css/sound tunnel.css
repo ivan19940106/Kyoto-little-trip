@@ -225,7 +225,7 @@ p.key {
 }
 
 /* for mobile phone */
-@media(max-width: 375px){
+@media(max-width: 1024px){
     h3.title {
         margin-top: 50px;
     }
@@ -294,7 +294,7 @@ p.key {
     }
     .player {
         width: 90vw;
-        margin-bottom: 80px;
+        margin-bottom: 100px;
     }
     .player p {
         font-size: 15px;

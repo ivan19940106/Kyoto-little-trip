@@ -69,6 +69,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
+    z-index: 3;
 }
 
 /* show modal */
@@ -79,6 +80,7 @@
 /* scroll lock */
 .scroll-lock {
     overflow: hidden;
+    position: fixed;
 }
 
 .modal a {
@@ -160,7 +162,7 @@
 }
 
 /* for mobile phone */
-@media(max-width: 375px){
+@media(max-width: 1024px){
     .gallery-wrapper {
         flex-direction: column;
         margin: 20px 0;
@@ -199,7 +201,8 @@
     /* modal */
     .window {
         width: 90vw;
-        height: 70%;
+        height: 120vw;
+        top: 100px;
     }
     .modal img {
         width: 90vw;

@@ -14,6 +14,7 @@ $(document).ready(function(e){
         $(".social-media").addClass("hide-social-media");
         //show buttons
         $(".modal-guitars img").eq(clicks).show();
+        $(".modal a.prev, .modal a.next").removeClass("btn-hide");
         $(".modal a.prev, .modal a.next").show();
         $(".modal a.close").show();
     });
@@ -86,7 +87,6 @@ $(document).ready(function(e){
         $("body").addClass("scroll-lock");
         $(".social-media").addClass("hide-social-media");
         //show buttons
-        $(".modal a.prev-atelier, .modal a.next-atelier").show();
         $(".modal a.prev-atelier, .modal a.next-atelier").removeClass("btn-hide");
         $(".modal a.prev-atelier, .modal a.next-atelier").show();
         $(".modal a.close").show();

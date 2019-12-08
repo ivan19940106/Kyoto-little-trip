@@ -52,6 +52,7 @@ $(document).ready(function(e){
         } else{
             $(".modal a.prev").removeClass("btn-disabled");
         }
+        console.log(clicks, clicksAtelier);
     });
 
     //previous
@@ -76,6 +77,7 @@ $(document).ready(function(e){
         } else if(clicks>=0){
         $(".modal a.prev").removeClass("btn-disabled");
         }
+        console.log(clicks, clicksAtelier);
     });
 
     //atelier
@@ -126,6 +128,7 @@ $(document).ready(function(e){
         } else{
             $(".modal a.prev-atelier").removeClass("btn-disabled");
         }
+        console.log(clicks, clicksAtelier);
     });
 
     //previous
@@ -150,6 +153,7 @@ $(document).ready(function(e){
         } else if(clicksAtelier>=0){
         $(".modal a.prev-atelier").removeClass("btn-disabled");
         }
+        console.log(clicks, clicksAtelier);
     });
 
     //close modal
@@ -162,7 +166,6 @@ $(document).ready(function(e){
         $(".modal img").hide();
         clicks = 0;
         clicksAtelier = 0;
-        console.log(clicks, clicksAtelier);
     });
 
     //feature model picture switcher

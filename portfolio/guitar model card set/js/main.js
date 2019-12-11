@@ -31,8 +31,8 @@ $("document").ready(function(e){
             if (swipe <= 0) {
                 swipe = 0;
             } else {
-                $('.models-panel').find('div.models-card').eq(swipe - 1).css({'transform': 'rotate(0deg)',
-                'transformOrigin': '50% 100%'}).fadeIn(600);
+                $('.models-panel').find('div.models-card').eq(swipe - 1).fadeIn(600).css({'transform': 'rotate(0deg)',
+                'transformOrigin': '50% 100%'});
                 // $('.models-panel').find('div.models-card').eq(swipe - 1).fadeIn(400);
                 swipe--;
             }

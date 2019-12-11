@@ -1,0 +1,24 @@
+
+.icon-play-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-pause-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-pause { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.icon-fast-fw-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.icon-fast-fw { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
+.icon-rewind-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe805;&nbsp;'); }
+.icon-rewind { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe806;&nbsp;'); }
+.icon-record-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe807;&nbsp;'); }
+.icon-record { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe808;&nbsp;'); }
+.icon-eject-alt-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe809;&nbsp;'); }
+.icon-eject-alt { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80a;&nbsp;'); }
+.icon-play { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80b;&nbsp;'); }
+.icon-stop-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80c;&nbsp;'); }
+.icon-stop { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80d;&nbsp;'); }
+.icon-cancel { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80e;&nbsp;'); }
+.icon-cancel-outline { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe80f;&nbsp;'); }
+.icon-twitter { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf099;&nbsp;'); }
+.icon-menu { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0c9;&nbsp;'); }
+.icon-doc { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0f6;&nbsp;'); }
+.icon-youtube { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf16a;&nbsp;'); }
+.icon-instagram { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf16d;&nbsp;'); }
+.icon-excel { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf1c3;&nbsp;'); }
+.icon-facebook { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf308;&nbsp;'); }

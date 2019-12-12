@@ -148,6 +148,9 @@ table td:first-child {
 }
 
 @media(max-width: 1024px){
+    .subtitle.model {
+        margin-top: 50px;
+    }
     .cover-description-box {
         max-width: 90%;
         margin: 0;

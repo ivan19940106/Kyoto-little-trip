@@ -169,6 +169,9 @@
 
 /* for mobile phone */
 @media(max-width: 1024px){
+    .subtitle.gallery {
+        margin-top: 50px;
+    }
     .gallery-wrapper {
         flex-direction: column;
         margin: 20px 0;

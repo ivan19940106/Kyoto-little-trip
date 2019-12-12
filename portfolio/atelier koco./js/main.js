@@ -2,8 +2,8 @@ var clicks = 0;
 var clicksAtelier = 0;
 var swipe = 0;
 $(document).ready(function(e){
-    // gallery-modal
 
+    //gallery-modal
     //acoustic-guitars
     //show modal
     $(".canvas a.guitars").click(function(e){

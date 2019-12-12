@@ -4,7 +4,15 @@
     font-weight: 600;
 }
 
+.subtitle.ordering {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0 0 20px;
+    color: #393e46;
+}
+
 .ordering-instructions {
+    margin-top: 70px;
     text-align: center;
 }
 
@@ -15,8 +23,7 @@
 }
 
 .instructions {
-    margin-top: 30px;
-    margin: 50px auto 0;
+    margin: 0 auto;
     transform: translate(3%,0);
     text-transform: capitalize;
 }
@@ -87,7 +94,7 @@ p.go {
     transform: translate(2%,0);
 }
 
-.canvas .title {
+.canvas .subtitle {
     text-align: center;
     margin-bottom: 10px;
 }
@@ -116,9 +123,8 @@ button.submit {
 
 /* for mobile phone */
 @media(max-width: 1024px){
-    h2.title {
+    h2.subtitle {
         margin-top: 50px;
-        font-size: 30px;
     }
     .instructions {
         margin-top: 10px;

@@ -11,20 +11,34 @@
     color: #393e46;
 }
 
+.subtitle {
+    text-align: center;
+}
+
+.info {
+    width: 45%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.info li {
+    margin: 10px 0;
+    list-style-type: circle;
+}
+
 .ordering-instructions {
-    margin-top: 70px;
     text-align: center;
 }
 
 .hr {
-    width: 45%;
+    width: 70%;
     margin: 0 auto;
     border-bottom: 1px solid #594a4e;
 }
 
 .instructions {
     margin: 0 auto;
-    transform: translate(3%,0);
+    transform: translate(2%,0);
     text-transform: capitalize;
 }
 
@@ -33,11 +47,11 @@
     width: 30%;
     position: relative;
     margin: 10px;
+    overflow: hidden;
 }
 
 .instructions img {
     width: 100%;
-    margin: 10px;
     filter: brightness(0.7);
     transition: all 0.5s;
     position: relative;
@@ -47,44 +61,15 @@
     position: absolute;
     color: #fff;
     top: 50%;
-    transform: translate(0,-50%);
+    left: 50%;
+    transform: translate(-50%,-50%);
     font-size: 28px;
     font-weight: 500;
 }
 
 .instructions img:hover {
     filter: brightness(1);
-}
-
-p.capa {
-    font-size: 16px;
-    left: 18%;
-}
-
-p.price {
-    font-size: 16px;
-    left: 20%;
-}
-
-p.wood {
-    left: 11%;
-}
-
-p.body, p.neck, p.cutaway {
-    left: 28%;
-}
-
-p.bracing {
-    left: 23%;
-}
-
-p.inlay {
-    left: 10%;
-}
-
-p.go {
-    font-size: 16px;
-    left: 11%;
+    transform: scale(1.2);
 }
 
 /* check list */
@@ -126,44 +111,21 @@ button.submit {
     h2.subtitle {
         margin-top: 50px;
     }
+    .info {
+        width: 90%;
+    }
+    .info li {
+        margin: 5px 0;
+    }
     .instructions {
         margin-top: 10px;
         max-width: 90vw;
         transform: translate(0,0);
     }
     .instructions div {
-        width: 45%;
+        font: none;
+        width: 100%;
         margin: 4px;
-    }
-    .instructions img {
-        margin: 5px;
-    }
-    .instructions p {
-        font-size: 16px;
-    }
-    p.capa {
-        font-size: 15px;
-        left: 8%;
-    }
-    p.price {
-        font-size: -16px;
-        left: 12%;
-    }
-    p.wood {
-        left: 8%;
-    }
-    p.body, p.neck, p.cutaway {
-        left: 16%;
-    }
-    p.bracing {
-        left: 12%;
-    }
-    p.inlay {
-        left: 2%;
-    }
-    p.go {
-        font-size: 16px;
-        left: 10%;
     }
     .canvas {
         margin-top: 100px;

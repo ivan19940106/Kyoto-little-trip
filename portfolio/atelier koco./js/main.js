@@ -3,6 +3,16 @@ var clicksAtelier = 0;
 var swipe = 0;
 $(document).ready(function(e){
 
+    //slider
+    // $('.slick').slick({
+    //     autoplay: true,
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     cssEase: 'linear',
+    //     arrows: false
+    //   });
+
     //gallery-modal
     //acoustic-guitars
     //show modal

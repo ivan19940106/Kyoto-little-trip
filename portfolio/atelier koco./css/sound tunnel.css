@@ -35,6 +35,10 @@ img.pick {
     border-radius: 10px;
 }
 
+.instruction .info {
+    margin-left: 60px;
+}
+
 .panel {
     width: 700px;
     margin-left: 30px;
@@ -45,58 +49,38 @@ img.pick {
 
 .panel div {
     float: left;
+    width: 30%;
     position: relative;
-    margin: 5px;
+    margin: 10px;
+    overflow: hidden;
 }
 
 .panel img {
-    width: 190px;
+    width: 100%;
     filter: brightness(0.7);
     transition: all 0.5s;
     position: relative;
-}
-
-.panel img:hover {
-    filter: brightness(1);
 }
 
 .panel p {
     position: absolute;
     color: #fff;
     top: 50%;
-    transform: translate(0,-50%);
-    font-size: 12px;
-    font-weight: 300;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
 }
 
-p.choose {
-    font-size: 12px;
-    left: 10%;
+.panel img:hover {
+    filter: brightness(1);
+    transform: scale(1.2);
 }
 
-p.model {
-    font-size: 12px;
-    left: 22%;
-}
-
-p.wood {
-    left: 6%;
-}
-
-p.body, p.neck, p.cutaway {
-    left: 16%;
-}
-
-p.bracing {
-    left: 13%;
-}
-
-p.inlay {
-    left: 5%;
-}
-
-p.key {
-    left: 18%;
+.info li {
+    margin: 10px 0;
+    list-style-type: circle;
 }
 
 /*keyboard*/
@@ -258,36 +242,12 @@ p.key {
     .panel p {
         text-align: center;
     }
-    p.choose {
-        font-size: 13px;
-        left: 10%;
-    }
-    p.model {
-        font-size: 13px;
-        left: 18%;
-    }
-    p.wood {
-        left: 10%;
-    }
-    p.body, p.neck, p.cutaway {
-        left: 22%;
-    }
-    p.bracing {
-        left: 18%;
-    }
-    p.inlay {
-        left: 2%;
-    }
-    p.key {
-        font-size: 16px;
-        left: 15%;
-    }
     #pad {
         margin: 0;
         width: 90vw;
     }
-    #pad .info p {
-        font-size: 15px;
+    #pad .info li, .player .info li {
+        margin-left: 20px;
     }
     #keyboard {
         width: 100%;
@@ -300,9 +260,6 @@ p.key {
     .player {
         width: 90vw;
         margin-bottom: 100px;
-    }
-    .player p {
-        font-size: 15px;
     }
     .control-bar {
         width: 100%;

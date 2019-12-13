@@ -228,8 +228,13 @@ a.home {
     border-left: 2px solid #594a4e;
 }
 
-.all-models-bg {
+.all-models {
     max-width: 100%;
+}
+
+.all-models-bg img {
+    margin: 0 auto;
+    width: 100%;
     padding: 10px;
     filter: brightness(70%);
     border-radius: 14px;

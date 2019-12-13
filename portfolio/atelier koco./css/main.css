@@ -137,6 +137,7 @@ a.home {
     display: flex;
     align-items: center;
     box-shadow: 2px 2px 6px #393e46;
+    position: relative;
 }
 
 .canvas a {
@@ -213,10 +214,6 @@ a.home {
     left: 150px;
 }
 
-.para {
-    position: relative;
-}
-
 .orchestra {
     position: relative;
     top: 20px;
@@ -228,7 +225,7 @@ a.home {
     border-left: 2px solid #594a4e;
 }
 
-.all-models {
+.all-models-bg {
     max-width: 100%;
 }
 
@@ -238,6 +235,11 @@ a.home {
     padding: 10px;
     filter: brightness(70%);
     border-radius: 14px;
+    display: none;
+}
+
+.all-models-bg img.second {
+    display: block;
 }
 
 .all-models-btn {

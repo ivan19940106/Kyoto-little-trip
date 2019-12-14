@@ -18,7 +18,7 @@
             <label class="hideControl">Editing:
                 <input type="checkbox" v-model="editing">
                 <select v-model="favoriteType" name="favorite" id="">which's your favorite?
-                    <option v-for="coffee in coffees" value="coffee.name">{{coffee.name}}</option>
+                    <option v-for="coffee in coffees" :value="coffee.name">{{coffee.name}}</option>
                 </select>
             </label>
             <div class="coffeeType" v-for="(coffee,cid) in coffees" :class="{favorite: coffee.name == favoriteType, showMode: !editing}">
@@ -40,7 +40,7 @@
                     </select>
                     <div v-for="type in ingradients">
                         <label for="">{{type}}
-                            <input type="range" v-model="coffee.coffee" min="0" max="100">
+                            <input type="range" v-model="coffee[type]" min="0" max="100">
                         </label>
                     </div>
                 </div>

@@ -20,6 +20,27 @@ $(document).ready(function(e){
     // }
     // slider();
 
+    //log in modal
+    //show modal
+    $(".login").click(function(e){
+        event.preventDefault();
+        window.scrollTo(0,0);
+        $(".log-in-modal").addClass("show-modal");
+        $("body").addClass("scroll-lock");
+        $(".social-media").addClass("hide-social-media");
+        //show buttons
+        $(".log-in-modal a.log-in-close").show();
+    });
+
+    //close modal
+    $("a.log-in-close").click(function(e){
+        event.preventDefault();
+        $(".log-in-modal").removeClass("show-modal");
+        $("body").removeClass("scroll-lock");
+        $(".social-media").removeClass("hide-social-media");
+        $(".log-in-modal a").hide();
+    });
+
     //gallery-modal
     //acoustic-guitars
     //show modal
@@ -253,5 +274,4 @@ $(document).ready(function(e){
             }
         });
     }
-
 });

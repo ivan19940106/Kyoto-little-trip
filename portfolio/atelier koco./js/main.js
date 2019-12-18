@@ -11,7 +11,7 @@ $(document).ready(function(e){
     //     speed: 500,
     //     cssEase: 'linear',
     //     arrows: false
-    //   });
+    // });
 
     //slider with my code
     //images' length

@@ -2,35 +2,23 @@ var clicks = 0;
 var clicksAtelier = 0;
 var swipe = 0;
 $(document).ready(function(e){
-
-    //slider with slick
-    // $('.slick').slick({
-    //     autoplay: true,
-    //     dots: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     cssEase: 'linear',
-    //     arrows: false
-    // });
-
     //slider with my code
     //images' length
-    var imageLength = $(".all-models-bg").find('img').length;
-    console.log(imageLength);
+    // var imageLength = $(".all-models-bg").find('img').length;
+    // console.log(imageLength);
 
-    var nIntervId;
-    var i = 1;
-    console.log(i);
+    // var nIntervId;
+    // var i = 1;
+    // console.log(i);
     
-    function slider(){
-        nIntervId = setInterval(function byTurns(){
-            $(".all-models-bg img").eq((imageLength+i)%imageLength).hide();
-            $(".all-models-bg img").eq((imageLength+i+1)%imageLength).show();
-            i++;
-        },2000);
-    }
-    
-    slider();
+    // function slider(){
+    //     nIntervId = setInterval(function byTurns(){
+    //         $(".all-models-bg img").eq((imageLength+i)%imageLength).hide();
+    //         $(".all-models-bg img").eq((imageLength+i+1)%imageLength).show();
+    //         i++;
+    //     },2000);
+    // }
+    // slider();
 
     //gallery-modal
     //acoustic-guitars

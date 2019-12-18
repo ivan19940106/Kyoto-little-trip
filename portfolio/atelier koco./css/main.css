@@ -149,6 +149,9 @@ a.home {
 
 .cover {
     position: relative;
+    width: 40%;
+    display: inline-block;
+    margin: 0;
 }
 
 .me {
@@ -214,6 +217,11 @@ a.home {
     left: 150px;
 }
 
+.slider {
+    width: 60%;
+    margin: 0;
+}
+
 .orchestra {
     position: relative;
     top: 20px;
@@ -235,7 +243,6 @@ a.home {
     padding: 10px;
     filter: brightness(70%);
     border-radius: 14px;
-    display: none;
 }
 
 .all-models-bg img.second {
@@ -244,7 +251,7 @@ a.home {
 
 .all-models-btn {
     position: relative;
-    top: -230px;
+    top: -260px;
     left: 39%;
 }
 
@@ -736,8 +743,14 @@ h3.chang-ko {
         top: 240px;
         left: 110px;
     }
+    .cover {
+        width: 100%;
+    }
+    .slider {
+        width: 100%;
+    }
     .all-models-btn {
-        top: -122px;
+        top: -156px;
         left: 30%;
     }
     .about {

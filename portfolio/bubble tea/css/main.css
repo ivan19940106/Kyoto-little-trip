@@ -67,6 +67,7 @@ h1 {
     bottom: 0;
     background-color: #801a08;
     overflow: hidden;
+    font-size: 0;
 }
 .ingradients-radius {
     border-radius: 0px 0px 30px 30px;
@@ -80,9 +81,10 @@ h1 {
 .bubbles {
     width: 10px;
     height: 10px;
-    background-color: #594a4e;
+    background-color: #fbc1bc;
     border-radius: 5px;
     display: inline-block;
+    /* border: 0.5px solid #594a4e; */
 }
 .black-tea {
     width: 100%;

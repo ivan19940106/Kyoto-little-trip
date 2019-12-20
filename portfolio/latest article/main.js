@@ -1,8 +1,12 @@
 var clicks = 0;
 $(document).ready(function (e) {
 
+	//length
+	var length = $('#card-set li').find('.card').length;
+	console.log(length);
+
 	// arrange cards
-	for (var i = 0; i < 6; i++) {
+	for (var i = 0; i < length; i++) {
 		var t = 374 - 14 * i;
 		var w = 280 - 10 * i;
 		var z = -1 * i;
@@ -15,8 +19,8 @@ $(document).ready(function (e) {
 	$('.next').click(function (e) {
 		event.preventDefault();
 
-		if (clicks >= 5) {
-			clicks = 5;
+		if (clicks >= length-1) {
+			clicks = length-1;
 		} else {
 			$('#card-set li').eq(clicks).find('.card').fadeOut(400);
 			clicks++;

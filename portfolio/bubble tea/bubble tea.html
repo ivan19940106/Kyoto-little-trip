@@ -24,7 +24,7 @@
                 <div class="beverage">
                     <div class="handle" :class="{top: milkTea.type == 'thermos', straw: milkTea.type == 'paper-cup'}"></div>
                     <div class="cup" :class="[milkTea.type]">
-                        <div class="ingradients" :class="{'ingradients-radius': milkTea.type == 'coffee-cup', 'coffee-cup-height': milkTea.type == 'coffee-cup', 'mug-height': milkTea.type == 'mug'}">
+                        <div class="ingradients" :class="{'ingradients-radius': milkTea.type == 'coffee-cup', 'thermos-height': milkTea.type == 'thermos', 'paper-cup-height': milkTea.type == 'paper-cup', 'coffee-cup-height': milkTea.type == 'coffee-cup', 'mug-height': milkTea.type == 'mug'}">
                             <div class='box'>
                                 <div class='wave -one'></div>
                                 <div class='wave -two'></div>

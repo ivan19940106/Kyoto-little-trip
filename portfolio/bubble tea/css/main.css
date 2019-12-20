@@ -72,6 +72,12 @@ h1 {
 .ingradients-radius {
     border-radius: 0px 0px 30px 30px;
 }
+.thermos-height {
+    max-height: 80px;
+}
+.paper-cup-height {
+    max-height: 85px;
+}
 .coffee-cup-height {
     max-height: 45px;
 }

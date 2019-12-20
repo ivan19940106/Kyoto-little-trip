@@ -14,6 +14,7 @@ $(document).ready(function(e){
             cupTypesChinese: ['自備環保保溫杯', '風味手搖杯', '古典白瓷咖啡杯', '經典馬克杯'],
             accTypes: ['top', 'straw'],
             computed: {
+                //adapt ingradients background color to milkTeas (with Vue.js)
                 // for html .ingradients: :style="{'backgroundColor': getIngradientColor}"
                 getIngradientColor: function(){
                     var ingradientColor = "";
@@ -36,13 +37,15 @@ $(document).ready(function(e){
         }
     });
     window.vm = vm;
+
+    //adapt ingradients background color to milkTeas (with jQuery)
     console.log(vm.milkTeas.length);
     var ingradientColor = "";
     for(var i=0;i<=vm.milkTeas.length;i++){
-        var blackTeaHeight = Number($(".ingradients").eq(i).find(".black-tea").css("height").replace('px',''));
-        var greenTeaHeight = Number($(".ingradients").eq(i).find(".green-tea").css("height").replace('px',''));
-        var milkHeight = Number($(".ingradients").eq(i).find(".milk").css("height").replace('px',''));
-        var foamHeight = Number($(".ingradients").eq(i).find(".foam").css("height").replace('px',''));
+        var blackTeaHeight = Number(($(".ingradients").eq(i).find(".black-tea").css("height")).replace('px',''));
+        var greenTeaHeight = Number(($(".ingradients").eq(i).find(".green-tea").css("height")).replace('px',''));
+        var milkHeight = Number(($(".ingradients").eq(i).find(".milk").css("height")).replace('px',''));
+        var foamHeight = Number(($(".ingradients").eq(i).find(".foam").css("height")).replace('px',''));
         if(blackTeaHeight != 0){
             ingradientColor = '#801a08';
         } else if(greenTeaHeight != 0){
@@ -52,7 +55,29 @@ $(document).ready(function(e){
         } else if(foamHeight != 0){
             ingradientColor = '#eee';
         }
-        return ingradientColor;
+        $(".ingradients").eq(i).css('background-color', ingradientColor);
     }
-    console.log(ingradientColor);
+    //do the ingradients adaption once again when a change is detected
+    $(document).on('change', 'input', function(){
+        console.log('you just adjust the ingradients!');
+        for(var i=0;i<=vm.milkTeas.length;i++){
+            var blackTeaHeight = Number(($(".ingradients").eq(i).find(".black-tea").css("height")).replace('px',''));
+            var greenTeaHeight = Number(($(".ingradients").eq(i).find(".green-tea").css("height")).replace('px',''));
+            var milkHeight = Number(($(".ingradients").eq(i).find(".milk").css("height")).replace('px',''));
+            var foamHeight = Number(($(".ingradients").eq(i).find(".foam").css("height")).replace('px',''));
+            if(blackTeaHeight != 0){
+                ingradientColor = '#801a08';
+            } else if(greenTeaHeight != 0){
+                ingradientColor = '#9dab86';
+            } else if(milkHeight != 0){
+                ingradientColor = '#f7d8bb';
+            } else if(foamHeight != 0){
+                ingradientColor = '#eee';
+            }
+            $(".ingradients").eq(i).css('background-color', ingradientColor);
+        }
+    });
+    // $("input").change(function(){
+    //     console.log('you just adjust the ingradients!');
+    // });
 });

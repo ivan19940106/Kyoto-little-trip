@@ -66,9 +66,16 @@ h1 {
     position: absolute;
     bottom: 0;
     background-color: #801a08;
+    overflow: hidden;
 }
 .ingradients-radius {
     border-radius: 0px 0px 30px 30px;
+}
+.coffee-cup-height {
+    max-height: 45px;
+}
+.mug-height {
+    max-height: 65px;
 }
 .bubbles {
     width: 10px;

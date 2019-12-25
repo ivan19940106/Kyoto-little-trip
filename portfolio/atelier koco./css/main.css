@@ -1009,7 +1009,7 @@ a.log-in-close {
         margin-top: 30px;
     }
     a.log-in-close {
-        margin: 20px;
+        margin: 20px 100px;
     }
     .customer, .owner {
         margin: 40px;

@@ -114,8 +114,8 @@ html, body {
 }
 iframe {
     margin: 30px;
-    max-width: 70vw;
-    max-height: 50vw;
+    max-width: 96vw;
+    max-height: 51vw;
 }
 
 @media(min-width: 1024px){

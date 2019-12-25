@@ -834,6 +834,7 @@ a.log-in-close {
         flex-wrap: wrap;
     }
     .cover-image {
+        max-width: 100%;
         width: 90vw;
     }
     .me {
@@ -896,6 +897,7 @@ a.log-in-close {
     }
     .profile-image .profile {
         max-width: 90vw;
+        margin: 0 auto;
     }
     .profile-image .working {
         margin-top: 30px;
@@ -1075,5 +1077,12 @@ a.log-in-close {
         transform: translate(0,0);
         max-width: 90vw;
         margin-bottom: 50px;
+    }
+}
+
+/* for ipad */
+@media(max-width: 768px) and (min-width: 1024px) {
+    .canvas {
+        background-color: rgb(34, 177, 170);
     }
 }

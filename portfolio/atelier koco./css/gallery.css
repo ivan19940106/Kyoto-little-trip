@@ -181,10 +181,18 @@
         margin: 0 auto;
     }
     .guitars {
+        max-width: 100%;
         margin: 0;
+    }
+    .guitars img {
+        max-width: 100%;
     }
     .atelier {
         margin: 0;
+        max-width: 100%;
+    }
+    .atelier img {
+        max-width: 100%;
     }
     .guitars a {
         top: 50%;

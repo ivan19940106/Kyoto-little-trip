@@ -88,6 +88,10 @@ a.home {
     font-size: 12px;
 }
 
+.lan-selection {
+    display: none;
+}
+
 .nav {
     margin: 30px auto 30px;
     text-align: center;
@@ -161,8 +165,10 @@ a.home {
 .me {
     width: 240px;
     position: absolute;
-    top: 70px;
-    left: -10px;
+    /* top: 70px;
+    left: -10px; */
+    top: 26%;
+    left: -3%;
     animation: upNDown 0.4s infinite alternate;
 }
 
@@ -179,8 +185,10 @@ a.home {
     margin: 0;
     box-shadow: 2px 2px 5px #393e46;
     position: absolute;
-    top: 470px;
-    left: 83px;
+    /* top: 470px;
+    left: 83px; */
+    top: 82%;
+    left: 19%;
     animation: shadowing 0.4s infinite alternate;
 }
 
@@ -211,14 +219,18 @@ a.home {
 
 .feature-model-btn {
     position: absolute;
-    top: 230px;
-    left: 200px;
+    /* top: 230px;
+    left: 200px; */
+    top: 41%;
+    left: 44%;
 }
 
 .luthier-btn {
     position: absolute;
-    top: 310px;
-    left: 150px;
+    /* top: 310px;
+    left: 150px; */
+    top: 56%;
+    left: 32%;
 }
 
 .slider {
@@ -442,9 +454,9 @@ h3.chang-ko {
 }
 
 .feature-model .para .all-models-btn {
-    position: relative;
-    top: 300px;
-    left: 37%;
+    position: absolute;
+    top: 74%;
+    left: 72%;
     background-color: #594a4e;
     border: 1.4px solid #fff;
     padding: 2px;
@@ -532,50 +544,74 @@ h3.chang-ko {
     z-index: 3;
 }
 
-.log-in-window .canvas {
+.log-in-modal h2 {
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.log-in-window {
+    width: 400px;
+    height: 500px;
+    background-color: #eee;
+    position: absolute;
+    transform: translate(-50%,0);
+    box-shadow: 2px 2px 6px #393e46;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide-log-in-window {
+    display: none;
+}
+
+.log-in-modal .canvas {
+    width: 700px;
+    height: 350px;
     margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    opacity: 0.8;
 }
 
 .customer, .owner {
-    margin: 70px;
-}
-
-.log-in-modal form {
-    margin: 10px;
+    margin: 140px;
 }
 
 .log-in-modal input {
     width: 100px;
     height: 40px;
     outline: none;
-    color: #fff;
+    color: #393e46;
     font-size: 18px;
-    background-color: #e5c79a;
+    background-color: #eee;
     border: none;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #393e46;
     margin-bottom: 10px;
 }
 
 .log-in-modal button {
     margin: 10px;
     margin-left: 50px;
-    color: #393e46;
-    background-color: #fff;
-    border: 1px solid #fff;
+    color: #eee;
+    background-color: #594a4e;
+    border: 1px solid #594a4e;
     border-radius: 4px;
     padding: 2px 7px;
     font-size: 15px;
 }
 
 a.log-in-close {
-    margin-left: 70px;
-    color: #393e46;
-    background-color: #fff;
-    border: 1px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translate(-120%,100%);
+    color: #eee;
+    background-color: #594a4e;
+    border: 1px solid #594a4e;
     border-radius: 4px;
     padding: 2px 7px;
     font-size: 15px;
@@ -802,8 +838,16 @@ a.log-in-close {
     #lan {
         /* display: none; */
         top: 94px;
-        left: 20%;
+        left: 50%;
+        transform: translate(-50%,0);
+        right: auto;
         z-index: 3;
+    }
+    .lan-option {
+        display: none;
+    }
+    .lan-selection {
+        display: inline-block;
     }
     .login {
         font-size: 1.2rem;
@@ -821,6 +865,7 @@ a.log-in-close {
         position: relative;
         display: flex;
         justify-content: center;
+        margin-top: 25px;
     }
     .social-media li {
         position: relative;
@@ -839,22 +884,14 @@ a.log-in-close {
     }
     .me {
         width: 40vw;
-        top: 65px;
+        top: 30%;
         left: 0;
     }
     .shadow {
         width: 8vw;
         height: 4vw;
-        top: 330px;
-        left: 61px;
-    }
-    .feature-model-btn {
-        top: 180px;
-        left: 140px;
-    }
-    .luthier-btn {
-        top: 240px;
-        left: 110px;
+        top: 77%;
+        left: 18%;
     }
     .cover {
         width: 100%;
@@ -977,9 +1014,9 @@ a.log-in-close {
         color: #393e46;
     }
     .feature-model .para .all-models-btn {
-        top: 0;
-        left: 0;
-        margin-left: 90px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
         transform: translate(-50%,0);
     }
     .dealers {
@@ -1007,18 +1044,6 @@ a.log-in-close {
         margin: 0;
         padding: 0;
         margin-top: 30px;
-    }
-    a.log-in-close {
-        margin: 20px 100px;
-    }
-    .customer, .owner {
-        margin: 40px;
-    }
-    .customer {
-        order: 1;
-    }
-    .log-in-close {
-        order: 2;
     }
     .contact {
         padding-top: 200px;
@@ -1081,8 +1106,26 @@ a.log-in-close {
 }
 
 /* for ipad */
-@media(max-width: 768px) and (min-width: 1024px) {
-    .canvas {
-        background-color: rgb(34, 177, 170);
+@media(min-width: 1024px) and (max-width: 1280px) {
+    .social-media li {
+        left: -60px;
+    }
+    .container {
+        max-width: 900px;
+    }
+    .cover-image {
+        max-width: 370px;
+    }
+    .slider p.view-all-models {
+        font-size: 6rem;
+    }
+    .profile-image .working {
+        top: 0;
+        left: 0;
+        margin-top: 30px;
+    }
+    .feature-model .para .all-models-btn {
+        top: 95%;
+        left: 76%;
     }
 }

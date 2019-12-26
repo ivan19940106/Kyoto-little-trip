@@ -77,7 +77,7 @@ $(document).ready(function(e){
             $(".ingradients").eq(i).css('background-color', ingradientColor);
         }
     });
-    // $("input").change(function(){
+    // $("input").change(function(e){
     //     console.log('you just adjust the ingradients!');
     // });
 });

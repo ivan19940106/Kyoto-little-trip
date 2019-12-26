@@ -32,6 +32,24 @@ $(document).ready(function(e){
         $(".log-in-modal a.log-in-close").show();
     });
 
+    $("p.owner-swither").click(function(e){
+        TweenMax.to('.log-in-window', 2, {
+            x: 200,
+            ease: Elastic.easeOut
+        });
+        $(".log-in-window-customer").hide();
+        $(".log-in-window-owner").show();
+    });
+
+    $("p.customer-swither").click(function(e){
+        TweenMax.to('.log-in-window', 2, {
+            x: -200,
+            ease: Elastic.easeOut
+        });
+        $(".log-in-window-owner").hide();
+        $(".log-in-window-customer").show();
+    });
+
     //close modal
     $("a.log-in-close").click(function(e){
         event.preventDefault();
@@ -39,6 +57,10 @@ $(document).ready(function(e){
         $("body").removeClass("scroll-lock");
         $(".social-media").removeClass("hide-social-media");
         $(".log-in-modal a").hide();
+        TweenMax.to('.log-in-window', 2, {
+            x: -200,
+            ease: Elastic.easeOut
+        });
     });
 
     //gallery-modal

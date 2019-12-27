@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/fontello.css">
     <link rel="stylesheet" href="./css/dashboard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <title>Atelier Koco. Ordering</title>
@@ -18,7 +19,13 @@
         <div class="header-wrapper clearfix">
                 <div class="logo"><a href="./index.html" class="home"><img src="./images/logo.png" alt="logo" id="logo"></a></div>
                 <h1 class="koco"><a href="./index.html" class="title">atelier koco.</a></h1>
-                <div id="lan"><a href="#" class="login"><i class="icon-user-outline"></i></a> | <a href="#" class="en">english</a>/<a href="#" class="mandarin">正體中文</a>/<a href="#" class="nihongo">日本語</a></div>
+                <div id="lan"><a href="#" class="login"><i class="icon-user-outline log-out"></i></a> | <span class="lan-option"><a href="#" class="en">english</a>/<a href="#" class="mandarin">正體中文</a>/<a href="#" class="nihongo">日本語</a></span>
+                    <select name="lan-selection" id="" class="lan-selection">
+                        <option value="english">english</option>
+                        <option value="mandarin" selected>正體中文</option>
+                        <option value="nihongo">日本語</option>
+                    </select>
+                </div>
         </div>
         <div class="menu">
             <i class="icon-menu hamburger"></i>
@@ -145,6 +152,51 @@
             </div>
         </div>
         
+    </div>
+
+    <div class="log-in-modal">
+        <div class="log-in-window">
+            <div class="log-in-window-customer">
+                    <form action="" name="login">
+                        <h2>個人</h2>
+                        <label for="account">帳號：
+                            <input type="text" class="account-customer" placeholder="Account">
+                        </label>
+                        <br>
+                        <label for="password">密碼：
+                            <input type="password" class="password-customer" placeholder="password">
+                        </label>
+                        <br>
+                        <span class="customer-submit">送出</span>
+                    </form>
+                </div>
+                <div class="log-in-window-owner hide-log-in-window">
+                    <form action="" name="login">
+                        <h2>經銷商</h2>
+                        <label for="account">帳號：
+                            <input type="text" class="account-owner" placeholder="Account">
+                        </label>
+                        <br>
+                        <label for="password">密碼：
+                            <input type="password" class="password-owner" placeholder="password">
+                        </label>
+                        <br>
+                        <span class="owner-submit">送出</span>
+                    </form>
+                </div>
+                <br>
+                <a href="#" class="log-in-close">Close</a>
+            </div>
+        <div class="canvas">
+            <div class="owner">
+                <h2>個人？</h2>
+                <p class="customer-swither">點此登入查看會員資訊</p>
+            </div>
+            <div class="customer">
+                <h2>經銷商？</h2>
+                <p class="owner-swither">點此登入查看數據</p>
+            </div>
+        </div>
     </div>
 
     <div class="contact" id="contact">

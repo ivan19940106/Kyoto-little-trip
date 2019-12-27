@@ -593,7 +593,7 @@ h3.chang-ko {
     margin-bottom: 10px;
 }
 
-.log-in-modal button {
+.log-in-modal .customer-submit, .log-in-modal .owner-submit {
     margin: 10px;
     margin-left: 50px;
     color: #eee;
@@ -1127,5 +1127,24 @@ a.log-in-close {
     .feature-model .para .all-models-btn {
         top: 95%;
         left: 76%;
+    }
+}
+
+/* log-in-modal */
+@media(max-width: 930px){
+    .log-in-modal .canvas {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        min-width: 70vw;
+        width: 30vw;
+        height: 80vh;
+    }
+    .customer, .owner {
+        margin: 15vh 0;
+    }
+    .log-in-window {
+        width: 78vw;
+        height: 36vh;
+        transform: translate(0,-50%);
     }
 }

@@ -35,6 +35,7 @@ $(document).ready(function(e){
     $("p.owner-swither").click(function(e){
         TweenMax.to('.log-in-window', 2, {
             x: 200,
+            y: 0,
             ease: Elastic.easeOut
         });
         $(".log-in-window-customer").hide();
@@ -44,10 +45,124 @@ $(document).ready(function(e){
     $("p.customer-swither").click(function(e){
         TweenMax.to('.log-in-window', 2, {
             x: -200,
+            y: 0,
             ease: Elastic.easeOut
         });
         $(".log-in-window-owner").hide();
         $(".log-in-window-customer").show();
+    });
+
+    if($(window).width() <= 930){
+        $("p.owner-swither").click(function(e){
+            TweenMax.to('.log-in-window', 2, {
+                x: 0,
+                y: 150,
+                ease: Elastic.easeOut
+            });
+            $(".log-in-window-customer").hide();
+            $(".log-in-window-owner").show();
+        });
+    
+        $("p.customer-swither").click(function(e){
+            TweenMax.to('.log-in-window', 2, {
+                x: 0,
+                y: -150,
+                ease: Elastic.easeOut
+            });
+            $(".log-in-window-owner").hide();
+            $(".log-in-window-customer").show();
+        });
+    }
+
+    // log in input
+    //customer
+    var status = 'LOGGED OUT';
+    $(".log-in-window span.customer-submit").click(function(e){
+        e.preventDefault();
+        var customerAccount = $(".account-customer").val();
+        var customerPassword = $(".password-customer").val();
+        if(status == 'LOGGED OUT' && customerAccount == 'yui' && customerPassword == 'yui'){
+            console.log('LOGGED IN');
+            status = 'LOGGED IN';
+            $(".please-log-in").addClass("before-log-in");
+            $(".mine-content").removeClass("before-log-in");
+            $(".icon-user-outline").removeClass("icon-user-outline");
+            $(".log-out").text("Log Out");
+            $(".log-in-modal").removeClass("show-modal");
+        } else {
+            TweenMax.to('.log-in-window', 0.2, {
+                x: -220,
+                y: 0,
+                yoyo: true,
+                repeat:3,
+                ease: Elastic.easeOut
+            });
+            if($(window).width() <= 930){
+                TweenMax.to('.log-in-window', 0.2, {
+                    x: 10,
+                    y: -150,
+                    yoyo: true,
+                    repeat:3,
+                    ease: Elastic.easeOut
+                });
+            }
+        }
+        if(status == 'LOGGED IN'){
+            $(".login").click(function(e){
+            console.log('LOGGED OUT');
+            status = 'LOGGED OUT';
+            $(".log-in-modal").removeClass("show-modal");
+            $(".please-log-in").removeClass("before-log-in");
+            $(".mine-content").addClass("before-log-in");
+            $(".log-out").addClass("icon-user-outline");
+            $(".log-out").text("");
+            });
+        }
+    });
+
+    //owner
+    $(".log-in-window span.owner-submit").click(function(e){
+        e.preventDefault();
+        var ownerAccount = $(".account-owner").val();
+        var ownerPassword = $(".password-owner").val();
+        if(status == 'LOGGED OUT' && ownerAccount == 'me' && ownerPassword == 'me'){
+            console.log('LOGGED IN');
+            status = 'LOGGED IN';
+            $(".mine").removeClass("mine");
+            $(".mine").addClass("dashboard");
+            $(".mine").attr("href", "./dashboard.html");
+            $(".mine").text("dashboard");
+            $(".icon-user-outline").removeClass("icon-user-outline");
+            $(".log-out").text("Log Out");
+            $(".log-in-modal").removeClass("show-modal");
+        } else {
+            TweenMax.to('.log-in-window', 0.2, {
+                x: 220,
+                y: 0,
+                yoyo: true,
+                repeat:3,
+                ease: Elastic.easeOut
+            });
+            if($(window).width() <= 930){
+                TweenMax.to('.log-in-window', 0.2, {
+                    x: 10,
+                    y: 150,
+                    yoyo: true,
+                    repeat:3,
+                    ease: Elastic.easeOut
+                });
+            }
+        }
+        if(status == 'LOGGED IN'){
+            $(".login").click(function(e){
+            console.log('LOGGED OUT');
+            status = 'LOGGED OUT';
+            $(".log-in-modal").removeClass("show-modal");
+            
+            $(".log-out").addClass("icon-user-outline");
+            $(".log-out").text("");
+            });
+        }
     });
 
     //close modal
@@ -57,6 +172,7 @@ $(document).ready(function(e){
         $("body").removeClass("scroll-lock");
         $(".social-media").removeClass("hide-social-media");
         $(".log-in-modal a").hide();
+        $("input").val("");
         TweenMax.to('.log-in-window', 2, {
             x: -200,
             ease: Elastic.easeOut

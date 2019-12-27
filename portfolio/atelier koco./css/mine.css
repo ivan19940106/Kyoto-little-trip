@@ -1,0 +1,17 @@
+.nav a.mine {
+    color: #a35638;
+    font-weight: 600;
+}
+
+h3.subtitle {
+    text-align: center;
+    margin: 100px 0;
+}
+
+.before-log-in {
+    display: none;
+}
+
+.mine-content img {
+    margin: 10px auto;
+}

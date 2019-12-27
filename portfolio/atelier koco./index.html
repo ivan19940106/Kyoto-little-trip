@@ -22,7 +22,7 @@
         <div class="header-wrapper clearfix">
             <div class="logo"><a href="./index.html" class="home"><img src="./images/logo.png" alt="logo" id="logo"></a></div>
             <h1 class="koco"><a href="./index.html" class="title">atelier koco.</a></h1>
-            <div id="lan"><a href="#" class="login"><i class="icon-user-outline"></i></a> | <span class="lan-option"><a href="#" class="en">english</a>/<a href="#" class="mandarin">正體中文</a>/<a href="#" class="nihongo">日本語</a></span>
+            <div id="lan"><a href="#" class="login"><i class="icon-user-outline log-out"></i></a> | <span class="lan-option"><a href="#" class="en">english</a>/<a href="#" class="mandarin">正體中文</a>/<a href="#" class="nihongo">日本語</a></span>
                 <select name="lan-selection" id="" class="lan-selection">
                     <option value="english">english</option>
                     <option value="mandarin" selected>正體中文</option>
@@ -40,7 +40,7 @@
                 <li><a href="./gallery.html" class="gallery">gallery</a></li>
                 <li><a href="./ordering.html" class="ordering">ordering</a></li>
                 <li><a href="./sound tunnel.html" class="sound-tunnel">sound tunnel</a></li>
-                <li><a href="./dashboard.html" class="dashboard">dashboard</a></li>
+                <li><a href="./mine.html" class="mine">mine</a></li>
             </ul>
         </nav>
     </header>
@@ -202,28 +202,28 @@
                     <form action="" name="login">
                         <h2>個人</h2>
                         <label for="account">帳號：
-                            <input type="text" placeholder="Account">
+                            <input type="text" class="account-customer" placeholder="Account">
                         </label>
                         <br>
                         <label for="password">密碼：
-                            <input type="password" placeholder="password">
+                            <input type="password" class="password-customer" placeholder="password">
                         </label>
                         <br>
-                        <button type="submit">送出</button>
+                        <span class="customer-submit">送出</span>
                     </form>
                 </div>
                 <div class="log-in-window-owner hide-log-in-window">
                     <form action="" name="login">
                         <h2>經銷商</h2>
                         <label for="account">帳號：
-                            <input type="text" placeholder="Account">
+                            <input type="text" class="account-owner" placeholder="Account">
                         </label>
                         <br>
                         <label for="password">密碼：
-                            <input type="password" placeholder="password">
+                            <input type="password" class="password-owner" placeholder="password">
                         </label>
                         <br>
-                        <button type="submit">送出</button>
+                        <span class="owner-submit">送出</span>
                     </form>
                 </div>
                 <br>

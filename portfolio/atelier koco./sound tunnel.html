@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="./css/fontello.css">
     <link rel="stylesheet" href="./css/sound tunnel.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.4.84/Tone.js"></script>
     <script type="text/javascript" src="./js/jquery.js"></script>
+    <script src="./js/myTone.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <title>Atelier Koco. Ordering</title>
 </head>
@@ -59,11 +61,24 @@
         <h3 class="subtitle">pick up some notes!</h3>
         <div class="canvas">
             <div class="instruction">
-                <ul class="info">
+                <!-- <ul class="info">
                     <li>請選擇想試聽的搭配</li>
                     <li>或是直接選擇型號</li>
-                </ul>
+                </ul> -->
                 <img src="./images/pick.jpg" alt="pick" class="pick">
+                <!-- <div class="guitar-sim">
+                    <div class="headstock"></div>
+                    <div class="fingerboard"></div>
+                    <div class="shape">
+                        <div class="rosette">
+                            <div class="sound-hole"></div>
+                        </div>
+                    </div>
+                    <div class="bottom"></div>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div> -->
+                <!-- <canvas id="guitar-sim"></canvas> -->
             </div>
             <div class="panel">
                 <form action="#" method="POST" id="require" enctype="multipart/form-data">
@@ -78,6 +93,8 @@
                                 <option value="small-jumbo">small jumbo</option>
                                 <option value="parlor">parlor</option>
                             </select>
+                            <br>
+                            <input type="range" class="body-control">
                         </p>
                     </div>
                     <div class="neck"><img src="./images/square/neck.jpeg" alt="neck" class="neck">
@@ -146,7 +163,48 @@
             </div>
         </div>
 
-        <div id="pad">
+        <div class="piano">
+            <div class="white-keys">
+                <div class="white-key c3"><div class="black-key c3-sharp"></div><span>A</span></div>
+                
+                <div class="white-key d3"><div class="black-key d3-sharp"></div><span>S</span></div>
+                
+                <div class="white-key e3"><span>D</span></div>
+                <div class="white-key f3"><div class="black-key f3-sharp"></div><span>F</span></div>
+                
+                <div class="white-key g3"><div class="black-key g3-sharp"></div><span>G</span></div>
+                
+                <div class="white-key a3"><div class="black-key a3-sharp"></div><span>H</span></div>
+                
+                <div class="white-key b3"><span>J</span></div>
+                <div class="white-key c4"><div class="black-key c4-sharp"></div><span>K</span></div>
+                
+                <div class="white-key d4"><div class="black-key d4-sharp"></div><span>L</span></div>
+                
+                <div class="white-key e4"><span>Q</span></div>
+                <div class="white-key f4"><div class="black-key f4-sharp"></div><span>W</span></div>
+                
+                <div class="white-key g4"><div class="black-key g4-sharp"></div><span>E</span></div>
+                
+                <div class="white-key a4"><div class="black-key a4-sharp"></div><span>R</span></div>
+                
+                <div class="white-key b4"><span>T</span></div>
+                <div class="white-key c5"><div class="black-key c5-sharp"></div><span>Y</span></div>
+                
+                <div class="white-key d5"><div class="black-key d5-sharp"></div><span>U</span></div>
+                
+                <div class="white-key e5"><span>I</span></div>
+                <div class="white-key f5"><div class="black-key f5-sharp"></div><span>O</span></div>
+                
+                <div class="white-key g5"><div class="black-key g5-sharp"></div><span>P</span></div>
+                
+                <div class="white-key a5"><div class="black-key a5-sharp"></div><span>{</span></div>
+                
+                <div class="white-key b5"><span>}</span></div>
+            </div>
+        </div>
+
+        <!-- <div id="pad">
             <div class="info">
                 <h3 class="subtitle">遠端彈奏我們的吉他吧！</h3><br>
                 <ul class="info">
@@ -212,9 +270,8 @@
                 <li class="right-shift lastitem">shift</li>
                 <li class="space lastitem">&nbsp;</li>
             </ul>
-        </div>
-
-        <div class="player">
+        </div> -->
+        <!-- <div class="player">
             <h3 class="subtitle">輸入簡譜，由我們來彈奏</h3>
             <br>
             <ul class="info">
@@ -232,10 +289,9 @@
                 <br><br>
                 <a href="#" class="play">
                     <i class="icon-play-outline"></i>
-                    <!-- <p>&#8227;</p> -->
                 </a>
             </div>
-        </div>
+        </div> -->
         
     </div>
 

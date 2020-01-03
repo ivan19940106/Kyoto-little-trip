@@ -9,9 +9,21 @@ h3.subtitle {
 }
 
 .before-log-in {
-    display: none;
+    /* display: none; */
 }
 
-.mine-content img {
-    margin: 10px auto;
+.mine-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-chart {
+    width: 70%;
+}
+
+@media(max-width: 1024px){
+    .progress-chart {
+        width: 100%;
+    }
 }

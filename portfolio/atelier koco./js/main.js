@@ -25,7 +25,7 @@ $(document).ready(function(e){
     $(".login").click(function(e){
         event.preventDefault();
         window.scrollTo(0,0);
-        $(".log-in-modal").addClass("show-modal");
+        $(".log-in-modal").addClass("show-log-in-modal");
         $("body").addClass("scroll-lock");
         $(".social-media").addClass("hide-social-media");
         //show buttons
@@ -88,7 +88,7 @@ $(document).ready(function(e){
             $(".mine-content").removeClass("before-log-in");
             $(".icon-user-outline").removeClass("icon-user-outline");
             $(".log-out").text("Log Out");
-            $(".log-in-modal").removeClass("show-modal");
+            $(".log-in-modal").removeClass("show-log-in-modal");
         } else {
             TweenMax.to('.log-in-window', 0.2, {
                 x: -220,
@@ -111,7 +111,7 @@ $(document).ready(function(e){
             $(".login").click(function(e){
             console.log('LOGGED OUT');
             status = 'LOGGED OUT';
-            $(".log-in-modal").removeClass("show-modal");
+            $(".log-in-modal").removeClass("show-log-in-modal");
             $(".please-log-in").removeClass("before-log-in");
             $(".mine-content").addClass("before-log-in");
             $(".log-out").addClass("icon-user-outline");
@@ -134,7 +134,7 @@ $(document).ready(function(e){
             $(".mine").text("dashboard");
             $(".icon-user-outline").removeClass("icon-user-outline");
             $(".log-out").text("Log Out");
-            $(".log-in-modal").removeClass("show-modal");
+            $(".log-in-modal").removeClass("show-log-in-modal");
         } else {
             TweenMax.to('.log-in-window', 0.2, {
                 x: 220,
@@ -157,7 +157,7 @@ $(document).ready(function(e){
             $(".login").click(function(e){
             console.log('LOGGED OUT');
             status = 'LOGGED OUT';
-            $(".log-in-modal").removeClass("show-modal");
+            $(".log-in-modal").removeClass("show-log-in-modal");
             
             $(".log-out").addClass("icon-user-outline");
             $(".log-out").text("");
@@ -168,7 +168,7 @@ $(document).ready(function(e){
     //close modal
     $("a.log-in-close").click(function(e){
         event.preventDefault();
-        $(".log-in-modal").removeClass("show-modal");
+        $(".log-in-modal").removeClass("show-log-in-modal");
         $("body").removeClass("scroll-lock");
         $(".social-media").removeClass("hide-social-media");
         $(".log-in-modal a").hide();
@@ -412,4 +412,25 @@ $(document).ready(function(e){
             }
         });
     }
+
+    // //guitar simulation
+    // var canvas = document.getElementById("guitar-sim");
+    // var ctx = canvas.getContext('2d');
+
+    // canvas.width = 400;
+    // canvas.height = 400;
+    // canvas.stroke = 1;
+
+    // function draw(){
+    //     var freq = Math.PI/200;
+    //     ctx.beginPath();
+    //     ctx.moveTo(100,100);
+    //     ctx.strokeStyle = '#000';
+    //     for(var i=0;i<=200;i++){
+    //         ctx.lineTo(100+i,100+50*Math.sin(freq*i)+50*Math.sin(2*freq*i));
+    //     }
+    //     ctx.stroke();
+    // }
+    // draw();
+
 });

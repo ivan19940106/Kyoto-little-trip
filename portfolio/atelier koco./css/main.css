@@ -104,6 +104,10 @@ a.home {
     font-size: 16px;
 }
 
+.nav li a:hover {
+    border-bottom: 1px solid #5d5b6a;
+}
+
 .hamburger, .cross {
     display: none;
 }
@@ -579,6 +583,7 @@ h3.chang-ko {
 
 .customer, .owner {
     margin: 140px;
+    cursor: pointer;
 }
 
 .log-in-modal input {
@@ -617,8 +622,8 @@ a.log-in-close {
     font-size: 15px;
 }
 
-/* show modal */
-.show-modal {
+/* show log in modal */
+.show-log-in-modal {
     display: flex;
 }
 

@@ -35,6 +35,96 @@ img.pick {
     border-radius: 10px;
 }
 
+/* .guitar-sim {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: #eee;
+}
+
+.headstock {
+    width: 30px;
+    height: 50px;
+    border: 1px solid #000;
+    background-color: #c19a6b;
+}
+
+.fingerboard {
+    width: 20px;
+    height: 140px;
+    border: 1px solid #000;
+    background-color: #c19a6b;
+}
+
+.shape {
+    width: 170px;
+    height: 100px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c19a6b;
+    border-radius: 40% 40% 0 0;
+    border-bottom: none;
+}
+
+.bottom {
+    width: 200px;
+    height: 120px;
+    border: 1px solid #000;
+    background-color: #c19a6b;
+    border-radius: 0 0 40% 40%;
+    border-top: none;
+}
+
+.rosette {
+    width: 60px;
+    height: 60px;
+    background-color: #f5cdaa;
+    border: 1px solid #000;
+    border-radius: 50%;
+    transform: translate(0,40%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sound-hole {
+    width: 45px;
+    height: 45px;
+    background-color: #000;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+.left {
+    width: 100px;
+    height: 170px;
+    background-color: #eee;
+    border-radius: 45%;
+    position: absolute;
+    left: 0;
+    transform: translate(15%,57%) rotate(15deg);
+}
+
+.right {
+    width: 100px;
+    height: 170px;
+    background-color: #eee;
+    border-radius: 45%;
+    position: absolute;
+    right: 0;
+    transform: translate(-15%,57%) rotate(-15deg);
+} */
+
+/* canvas {
+    border: 1px solid #000;
+} */
+
 .instruction .info {
     margin-left: 60px;
 }
@@ -81,6 +171,57 @@ img.pick {
 .info li {
     margin: 10px 0;
     list-style-type: circle;
+}
+
+.body-control {
+    margin-top: 20px;
+    width: 120px;
+}
+
+
+/* piano */
+.piano {
+    margin: 100px 0;
+}
+
+.white-keys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-key {
+    position: relative;
+    width: 70px;
+    height: 170px;
+    background-color: #fff;
+    border: 1px solid #bbb;
+    display: flex;
+    justify-content: center;
+}
+
+.white-key span {
+    align-self: flex-end;
+    margin-bottom: 10px;
+    pointer-events: none; 
+}
+
+.black-key {
+    position: absolute;
+    left: 32px;
+    width: 40px;
+    height: 100px;
+    background-color: #000;
+    border: 1px solid #eee;
+    z-index: 1;
+}
+
+.white-key:hover {
+    background-color: rgba(99, 99, 99, 0.5);
+} 
+
+.black-key:hover {
+    /* background-color: rgba(78, 78, 78, 0.5); */
 }
 
 /*keyboard*/
@@ -243,6 +384,10 @@ img.pick {
     .panel p {
         text-align: center;
     }
+    .black-key {
+        width: 20px;
+        left: 22px;
+    }
     #pad {
         margin: 0;
         width: 90vw;
@@ -267,5 +412,18 @@ img.pick {
     }
     .control-bar textarea {
         width: 100%;
+    }
+}
+@media(max-width: 400px){
+    .piano {
+        margin: 30px 0;
+    }
+    .white-key {
+        height: 90px;
+    }
+    .black-key {
+        width: 11px;
+        height: 50px;
+        left: 10px;
     }
 }

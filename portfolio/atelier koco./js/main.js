@@ -128,10 +128,10 @@ $(document).ready(function(e){
         if(status == 'LOGGED OUT' && ownerAccount == 'me' && ownerPassword == 'me'){
             console.log('LOGGED IN');
             status = 'LOGGED IN';
-            $(".mine").removeClass("mine");
             $(".mine").addClass("dashboard");
-            $(".mine").attr("href", "./dashboard.html");
-            $(".mine").text("dashboard");
+            $(".mine").removeClass("mine");
+            $(".dashboard").attr("href", "./dashboard.html");
+            $(".dashboard").text("dashboard");
             $(".icon-user-outline").removeClass("icon-user-outline");
             $(".log-out").text("Log Out");
             $(".log-in-modal").removeClass("show-log-in-modal");

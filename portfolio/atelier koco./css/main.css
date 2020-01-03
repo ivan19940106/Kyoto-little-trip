@@ -595,6 +595,7 @@ h3.chang-ko {
     background-color: #eee;
     border: none;
     border-bottom: 1px solid #393e46;
+    border-radius: 0;
     margin-bottom: 10px;
 }
 

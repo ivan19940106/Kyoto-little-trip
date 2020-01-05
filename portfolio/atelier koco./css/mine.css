@@ -20,10 +20,12 @@ h3.subtitle {
 
 .progress-chart {
     width: 70%;
+    margin-top: 40px;
 }
 
 @media(max-width: 1024px){
     .progress-chart {
         width: 100%;
+        margin-top: 70px;
     }
 }

@@ -21,6 +21,17 @@ $(document).ready(function(e){
     // slider();
 
     //log in modal
+    //mine please-log-in
+    $(".please-log-in a").click(function(e){
+        event.preventDefault();
+        window.scrollTo(0,0);
+        $(".log-in-modal").addClass("show-log-in-modal");
+        $("body").addClass("scroll-lock");
+        $(".social-media").addClass("hide-social-media");
+        //show buttons
+        $(".log-in-modal a.log-in-close").show();
+    });
+
     //show modal
     $(".login").click(function(e){
         event.preventDefault();
@@ -85,10 +96,12 @@ $(document).ready(function(e){
             console.log('LOGGED IN');
             status = 'LOGGED IN';
             $(".please-log-in").addClass("before-log-in");
-            $(".mine-content").removeClass("before-log-in");
+            $(".mine-content, .progress-chart").removeClass("before-log-in");
             $(".icon-user-outline").removeClass("icon-user-outline");
             $(".log-out").text("Log Out");
             $(".log-in-modal").removeClass("show-log-in-modal");
+            $("body").removeClass("scroll-lock");
+            $(".social-media").css('z-index', 2);
         } else {
             TweenMax.to('.log-in-window', 0.2, {
                 x: -220,
@@ -113,9 +126,11 @@ $(document).ready(function(e){
             status = 'LOGGED OUT';
             $(".log-in-modal").removeClass("show-log-in-modal");
             $(".please-log-in").removeClass("before-log-in");
-            $(".mine-content").addClass("before-log-in");
+            $(".mine-content, .progress-chart").addClass("before-log-in");
             $(".log-out").addClass("icon-user-outline");
             $(".log-out").text("");
+            $("body").removeClass("scroll-lock");
+            $(".social-media").css('z-index', 2);
             });
         }
     });
@@ -135,6 +150,8 @@ $(document).ready(function(e){
             $(".icon-user-outline").removeClass("icon-user-outline");
             $(".log-out").text("Log Out");
             $(".log-in-modal").removeClass("show-log-in-modal");
+            $("body").removeClass("scroll-lock");
+            $(".social-media").css('z-index', 2);
         } else {
             TweenMax.to('.log-in-window', 0.2, {
                 x: 220,
@@ -161,6 +178,8 @@ $(document).ready(function(e){
             
             $(".log-out").addClass("icon-user-outline");
             $(".log-out").text("");
+            $("body").removeClass("scroll-lock");
+            $(".social-media").css('z-index', 2);
             });
         }
     });

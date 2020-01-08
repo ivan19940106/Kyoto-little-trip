@@ -38,6 +38,51 @@ $(document).ready(function(e){
     });
     window.vm = vm;
 
+    // //do the ingradients adaption once again when a change is detected (with javascript)
+    // document.getElementsByTagName('input').addEventListener('change',function(e){
+    //     console.log('you just adjust the ingradients!');
+    //     for(var i=0;i<=vm.milkTeas.length;i++){
+    //         var blackTeaHeight = Number(($(".ingradients").eq(i).find(".black-tea").css("height")).replace('px',''));
+    //         var greenTeaHeight = Number(($(".ingradients").eq(i).find(".green-tea").css("height")).replace('px',''));
+    //         var milkHeight = Number(($(".ingradients").eq(i).find(".milk").css("height")).replace('px',''));
+    //         var foamHeight = Number(($(".ingradients").eq(i).find(".foam").css("height")).replace('px',''));
+    //         if(blackTeaHeight != 0){
+    //             ingradientColor = '#801a08';
+    //         } else if(greenTeaHeight != 0){
+    //             ingradientColor = '#9dab86';
+    //         } else if(milkHeight != 0){
+    //             ingradientColor = '#f7d8bb';
+    //         } else if(foamHeight != 0){
+    //             ingradientColor = '#eee';
+    //         }
+    //         $(".ingradients").eq(i).css('background-color', ingradientColor);
+    //     }
+    // });
+    $(document).on('input', 'input', function(){
+        console.log('you just adjust the ingradients!');
+        for(var i=0;i<=vm.milkTeas.length;i++){
+            var blackTeaHeight = Number(($(".ingradients").eq(i).find(".black-tea").css("height")).replace('px',''));
+            var greenTeaHeight = Number(($(".ingradients").eq(i).find(".green-tea").css("height")).replace('px',''));
+            var milkHeight = Number(($(".ingradients").eq(i).find(".milk").css("height")).replace('px',''));
+            var foamHeight = Number(($(".ingradients").eq(i).find(".foam").css("height")).replace('px',''));
+            if(blackTeaHeight != 0){
+                ingradientColor = '#801a08';
+            } else if(greenTeaHeight != 0){
+                ingradientColor = '#9dab86';
+            } else if(milkHeight != 0){
+                ingradientColor = '#f7d8bb';
+            } else if(foamHeight != 0){
+                ingradientColor = '#eee';
+            }
+            $(".ingradients").eq(i).css('background-color', ingradientColor);
+            //prevent beverages overflow out of the cup
+            if(blackTeaHeight+greenTeaHeight+milkHeight+foamHeight >= 70){
+                console.log(blackTeaHeight+greenTeaHeight+milkHeight+foamHeight);
+                $(".ingradients").eq(i).find(".milk").css("height") = milkHeight+'px';
+            }
+        }
+    });
+
     //adapt ingradients background color to milkTeas (with jQuery)
     console.log(vm.milkTeas.length);
     var ingradientColor = "";
@@ -57,43 +102,4 @@ $(document).ready(function(e){
         }
         $(".ingradients").eq(i).css('background-color', ingradientColor);
     }
-    //do the ingradients adaption once again when a change is detected (with javascript)
-    document.getElementsByTagName('input').addEventListener('change',function(e){
-        console.log('you just adjust the ingradients!');
-        for(var i=0;i<=vm.milkTeas.length;i++){
-            var blackTeaHeight = Number(($(".ingradients").eq(i).find(".black-tea").css("height")).replace('px',''));
-            var greenTeaHeight = Number(($(".ingradients").eq(i).find(".green-tea").css("height")).replace('px',''));
-            var milkHeight = Number(($(".ingradients").eq(i).find(".milk").css("height")).replace('px',''));
-            var foamHeight = Number(($(".ingradients").eq(i).find(".foam").css("height")).replace('px',''));
-            if(blackTeaHeight != 0){
-                ingradientColor = '#801a08';
-            } else if(greenTeaHeight != 0){
-                ingradientColor = '#9dab86';
-            } else if(milkHeight != 0){
-                ingradientColor = '#f7d8bb';
-            } else if(foamHeight != 0){
-                ingradientColor = '#eee';
-            }
-            $(".ingradients").eq(i).css('background-color', ingradientColor);
-        }
-    });
-    $(document).on('change', 'input', function(){
-        console.log('you just adjust the ingradients!');
-        for(var i=0;i<=vm.milkTeas.length;i++){
-            var blackTeaHeight = Number(($(".ingradients").eq(i).find(".black-tea").css("height")).replace('px',''));
-            var greenTeaHeight = Number(($(".ingradients").eq(i).find(".green-tea").css("height")).replace('px',''));
-            var milkHeight = Number(($(".ingradients").eq(i).find(".milk").css("height")).replace('px',''));
-            var foamHeight = Number(($(".ingradients").eq(i).find(".foam").css("height")).replace('px',''));
-            if(blackTeaHeight != 0){
-                ingradientColor = '#801a08';
-            } else if(greenTeaHeight != 0){
-                ingradientColor = '#9dab86';
-            } else if(milkHeight != 0){
-                ingradientColor = '#f7d8bb';
-            } else if(foamHeight != 0){
-                ingradientColor = '#eee';
-            }
-            $(".ingradients").eq(i).css('background-color', ingradientColor);
-        }
-    });
 });

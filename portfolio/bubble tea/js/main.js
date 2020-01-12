@@ -18,10 +18,10 @@ $(document).ready(function(e){
                 // for html .ingradients: :style="{'backgroundColor': getIngradientColor}"
                 getIngradientColor: function(){
                     var ingradientColor = "";
-                    var blackTeaHeight = Number(milkTea['black-tea'].replace('px',''));
-                    var greenTeaHeight = Number(milkTea['green-tea'].replace('px',''));
-                    var milkHeight = Number(milkTea.milk.replace('px',''));
-                    var foamHeight = Number(milkTea.foam.replace('px',''));
+                    var blackTeaHeight = Number(milkTea['black-tea']);
+                    var greenTeaHeight = Number(milkTea['green-tea']);
+                    var milkHeight = Number(milkTea.milk);
+                    var foamHeight = Number(milkTea.foam);
                     if(blackTeaHeight != 0){
                         ingradientColor = '#801a08';
                     } else if(greenTeaHeight != 0){
@@ -38,26 +38,6 @@ $(document).ready(function(e){
     });
     window.vm = vm;
 
-    // //do the ingradients adaption once again when a change is detected (with javascript)
-    // document.getElementsByTagName('input').addEventListener('change',function(e){
-    //     console.log('you just adjust the ingradients!');
-    //     for(var i=0;i<=vm.milkTeas.length;i++){
-    //         var blackTeaHeight = Number(($(".ingradients").eq(i).find(".black-tea").css("height")).replace('px',''));
-    //         var greenTeaHeight = Number(($(".ingradients").eq(i).find(".green-tea").css("height")).replace('px',''));
-    //         var milkHeight = Number(($(".ingradients").eq(i).find(".milk").css("height")).replace('px',''));
-    //         var foamHeight = Number(($(".ingradients").eq(i).find(".foam").css("height")).replace('px',''));
-    //         if(blackTeaHeight != 0){
-    //             ingradientColor = '#801a08';
-    //         } else if(greenTeaHeight != 0){
-    //             ingradientColor = '#9dab86';
-    //         } else if(milkHeight != 0){
-    //             ingradientColor = '#f7d8bb';
-    //         } else if(foamHeight != 0){
-    //             ingradientColor = '#eee';
-    //         }
-    //         $(".ingradients").eq(i).css('background-color', ingradientColor);
-    //     }
-    // });
     $(document).on('input', 'input', function(){
         console.log('you just adjust the ingradients!');
         for(var i=0;i<=vm.milkTeas.length;i++){

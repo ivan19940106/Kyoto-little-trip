@@ -225,6 +225,7 @@ label {
 @media(max-width: 768px){
     .product-container {
         flex-direction: column;
+        pointer-events: none;
     }
     h1 {
         font-size: 24px;

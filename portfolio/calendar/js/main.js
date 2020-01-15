@@ -21,25 +21,35 @@ $(document).ready(function(){
     });
     window.vm = vm;
 
-    //arrange calendar pages
+    $(window).resize(function(){
+        adaptPages();
+    });
+
     var pages = vm.pages;
-    var windowHeight = window.innerHeight;
-    for(var i=0;i<pages;i++){
-        var top = windowHeight/2-i*2;
-        var width = 300-i*2;
-        var z = -1*i;
-        $('.calendar').eq(i).css({
-            top: top+'px',
-            width: width+'px',
-            'z-index': pages+z
-        });
-        //banner
-        $('.banner').css({
-            top: windowHeight/2-450/2-pages*2+'px',
-            transform: 'translate(-50%,-102%)',
-            width: width+'px'
-        });
+    function adaptPages(){
+        //arrange calendar pages
+        var windowHeight = window.innerHeight;
+        var pageWidth = parseInt($('.calendar').eq(0).css('width'));
+        var pageHeight = parseInt($('.calendar').eq(0).css('height'));
+        for(var i=0;i<pages;i++){
+            var top = windowHeight/2-i*2;
+            var width = pageWidth-i*2;
+            var z = -1*i;
+            $('.calendar').eq(i).css({
+                top: top+'px',
+                width: width+'px',
+                'z-index': pages+z
+            });
+            //banner
+            $('.banner').css({
+                top: windowHeight/2-pageHeight/2-pages*2+'px',
+                transform: 'translate(-50%,-102%)',
+                width: width+'px'
+            });
+        }
     }
+
+    adaptPages();
 
     var clicks = 0;
     //next page

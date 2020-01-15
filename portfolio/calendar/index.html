@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./js/main.js"></script>
+    <title>Vue.js 傳統日曆</title>
+</head>
+<body>
+    <div id="app">
+        <div class="banner">財源廣進</div>
+        <div class="calendar" v-for="page in pages">
+            <div class="up">
+                <div class="left">
+                    <div class="year">109年
+                        <small>歲次
+                            <br>
+                        </small>
+                        <span class="year-index">庚子</span>
+                    </div>
+                    <div class="solar-terms">立春</div>
+                    <div class="weather">
+                        <span>雲</span>
+                        <img src="./images/cloud.png" alt="weather-image" width="50">
+                    </div>
+                </div>
+                <div class="date">04</div>
+                <div class="right">
+                    <div class="month">2月<br><span class="eng">feb</span></div>
+                    <div class="luck">
+                        <div class="good"><span>宜</span>&nbsp;寫扣</div>
+                        <div class="bad"><span>忌</span>&nbsp;喬遷</div>
+                    </div>
+                </div>
+            </div>
+            <div class="weekday">星期二</div>
+            <div class="down">
+                <div class="memo">備忘錄：</div>
+                <div class="quote">以銅為鏡，可以正衣冠。以古為鏡，可以知興替。以人為鏡，可以明得失。</div>
+            </div>
+        </div>
+        <div class="controls">
+            <a href="#" class="prev"><i class="icon-left"></i></a>
+            <a href="#" class="next"><i class="icon-right"></i></a>
+        </div>
+    </div>
+</body>
+</html>

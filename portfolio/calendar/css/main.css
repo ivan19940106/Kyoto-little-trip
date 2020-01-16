@@ -176,12 +176,13 @@ html, body {
         font-size: 12px;
     }
     .quote {
+        margin-right: 6px;
         padding: 4px;
         font-size: 12px;
         line-height: 1.4;
     }
     .controls {
-        top: 500px;
+        top: 600px;
     }
     .controls a {
         margin: 5px;

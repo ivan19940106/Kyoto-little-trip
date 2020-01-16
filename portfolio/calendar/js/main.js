@@ -55,6 +55,10 @@ $(document).ready(function(){
                 width: width+'px'
             });
         }
+        //controls
+        $('.controls').css({
+            top: windowHeight/2+pageHeight/2+50+'px'
+        });
     }
 
     adaptPages();

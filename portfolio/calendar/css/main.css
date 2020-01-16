@@ -136,8 +136,8 @@ html, body {
 }
 @media(max-width: 768px){
     .calendar{
-        width: 240px;
-        height: 360px;
+        width: 200px;
+        height: 300px;
     }
     .banner {
         font-size: 30px;
@@ -169,6 +169,7 @@ html, body {
     }
     .down {
         margin: 10px 0 5px 0;
+        height: 120px;
     }
     .memo {
         padding: 4px;
@@ -179,7 +180,7 @@ html, body {
         font-size: 10px;
     }
     .controls {
-        top: 550px;
+        top: 500px;
     }
     .controls a {
         margin: 5px;

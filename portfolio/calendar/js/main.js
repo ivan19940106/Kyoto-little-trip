@@ -20,11 +20,20 @@ $(document).ready(function(){
         },
         methods: {
             randomWeatherText: function(){
-                return weatherText[Math.floor(Math.random()*2)];
+                return vm.weatherText[Math.floor(Math.random()*3)];
+            },
+            randomWeatherImagePath: function(){
+                var path = "";
+                var text = $('.weather span').text();
+                if(text.includes('晴')){
+                    path = vm.weatherImagePath[0];
+                } else if(text.includes('雨')) {
+                    path = vm.weatherImagePath[1];
+                } else if(text.includes('雲')){
+                    path = vm.weatherImagePath[2];
+                }
+                return path;
             }
-            // randomWeatherImagePath: function(){
-                
-            // }
         }
     });
     window.vm = vm;

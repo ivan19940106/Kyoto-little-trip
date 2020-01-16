@@ -17,6 +17,14 @@ $(document).ready(function(){
             badLuck: ['諸事不宜'],
             weekday: ['一','二','三','四','五','六','日'],
             quote: ["以銅為鏡，可以正衣冠。以古為鏡，可以知興替。以人為鏡，可以明得失。"]
+        },
+        methods: {
+            randomWeatherText: function(){
+                return weatherText[Math.floor(Math.random()*2)];
+            }
+            // randomWeatherImagePath: function(){
+                
+            // }
         }
     });
     window.vm = vm;

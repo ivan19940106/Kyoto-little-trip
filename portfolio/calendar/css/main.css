@@ -169,15 +169,16 @@ html, body {
     }
     .down {
         margin: 10px 0 5px 0;
-        height: 120px;
+        height: 100px;
     }
     .memo {
         padding: 4px;
-        font-size: 14px;
+        font-size: 12px;
     }
     .quote {
         padding: 4px;
-        font-size: 10px;
+        font-size: 12px;
+        line-height: 1.4;
     }
     .controls {
         top: 500px;

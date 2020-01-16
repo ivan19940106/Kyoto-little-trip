@@ -19,21 +19,21 @@ $(document).ready(function(){
             quote: ["以銅為鏡，可以正衣冠。以古為鏡，可以知興替。以人為鏡，可以明得失。"]
         },
         methods: {
-            randomWeatherText: function(){
-                return vm.weatherText[Math.floor(Math.random()*3)];
-            },
-            randomWeatherImagePath: function(){
-                var path = "";
-                var text = $('.weather span').text();
-                if(text.includes('晴')){
-                    path = vm.weatherImagePath[0];
-                } else if(text.includes('雨')) {
-                    path = vm.weatherImagePath[1];
-                } else if(text.includes('雲')){
-                    path = vm.weatherImagePath[2];
-                }
-                return path;
-            }
+            // randomWeatherText: function(){
+            //     return vm.weatherText[Math.floor(Math.random()*3)];
+            // },
+            // randomWeatherImagePath: function(){
+            //     var path = "";
+            //     var text = $('.weather span').text();
+            //     if(text.includes('晴')){
+            //         path = vm.weatherImagePath[0];
+            //     } else if(text.includes('雨')) {
+            //         path = vm.weatherImagePath[1];
+            //     } else if(text.includes('雲')){
+            //         path = vm.weatherImagePath[2];
+            //     }
+            //     return path;
+            // }
         }
     });
     window.vm = vm;
@@ -42,6 +42,7 @@ $(document).ready(function(){
         adaptPages();
     });
 
+    //calendar RWD
     var pages = vm.pages;
     function adaptPages(){
         //arrange calendar pages
@@ -55,7 +56,8 @@ $(document).ready(function(){
             $('.calendar').eq(i).css({
                 top: top+'px',
                 width: width+'px',
-                'z-index': pages+z
+                'z-index': pages+z,
+                transition: 'all 1s'
             });
             //banner
             $('.banner').css({
@@ -72,6 +74,7 @@ $(document).ready(function(){
 
     adaptPages();
 
+    //arrows
     var clicks = 0;
     //next page
     $('.next').click(function(event){
@@ -80,7 +83,20 @@ $(document).ready(function(){
             clicks = pages-1
         } else {
             $('.calendar').eq(clicks).slideUp();
+            //change the weather
+            randomWeatherText();
+            randomWeatherImagePath();
             clicks ++;
+            //move forward
+            // for(var i=clicks;i<=pages-clicks;i++){
+            //     var currentTop = $('.calendar').eq(clicks).css('top');
+            //     var currentWidth = $('.calendar').eq(clicks).css('width');
+            //     $('.calendar').eq(clicks).css({
+            //         top: currentTop+i*2,
+            //         width: currentWidth+i*2,
+            //         transition: 'all 1s'
+            //     });
+            // }
         }
     });
     //previous page
@@ -90,7 +106,29 @@ $(document).ready(function(){
             clicks = 0;
         } else {
             $('.calendar').eq(clicks).slideDown();
+            //change the weather
+            randomWeatherText();
+            randomWeatherImagePath();
             clicks --;
+            //move backward
         }
     });
+
+    //random weather with jQuery
+    function randomWeatherText(){
+        var newWeatherText = vm.weatherText[Math.floor(Math.random()*3)];
+        $('.weather span').text(newWeatherText);
+    }
+    function randomWeatherImagePath(){
+        var path = "";
+        var text = $('.weather span').text();
+        if(text.includes('晴')){
+            path = vm.weatherImagePath[0];
+        } else if(text.includes('雨')) {
+            path = vm.weatherImagePath[1];
+        } else if(text.includes('雲')){
+            path = vm.weatherImagePath[2];
+        }
+        $('.weather img').attr('src', path);
+    }
 });

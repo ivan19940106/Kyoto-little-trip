@@ -56,8 +56,7 @@ $(document).ready(function(){
             $('.calendar').eq(i).css({
                 top: top+'px',
                 width: width+'px',
-                'z-index': pages+z,
-                transition: 'all 1s'
+                'z-index': pages+z
             });
             //banner
             $('.banner').css({

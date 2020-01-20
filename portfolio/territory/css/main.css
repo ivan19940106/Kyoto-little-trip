@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+html, body {
+    background-color: #ADB993;
+    width: 100%;
+    height: 100%;
+    font-family: serif;
+}
+.territory {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    margin: 0 auto;
+}
+path {
+    stroke: #5A716A;
+    fill: transparent;
+    transition: all 0.5s;
+}
+path:hover {
+    fill: #eee;
+    transform: translate(-2px,-2px);
+}
+@media(max-width: 768px){
+    .territory {
+        width: 90%;
+    }
+}

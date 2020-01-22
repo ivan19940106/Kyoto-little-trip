@@ -5,7 +5,7 @@ $(document).ready(function(e){
             editing: true,
             features: ['店長推薦', '國外進口', '國產好茶', '冬季限定'],
             milkTeas: [
-                {name: "四季奶青加珍珠", foam: 10, milk: 30, 'green-tea': 30, 'black-tea': 0, bubbles: 5, type: 'thermos', accType: 'top'},
+                {name: "四季奶青加珍珠", foam: 10, milk: 25, 'green-tea': 25, 'black-tea': 0, bubbles: 5, type: 'thermos', accType: 'top'},
                 {name: "京都風雲珍珠奶綠", foam: 5, milk: 20, 'green-tea': 30, 'black-tea': 0, bubbles: 10, type: 'paper-cup', accType: 'straw'},
                 {name: "日月潭奶蓋紅茶", foam: 10, milk: 15, 'green-tea': 0, 'black-tea': 10, bubbles: 1, type: 'coffee-cup'},
                 {name: "暖心紅茶拿鐵", foam: 5, milk: 25, 'green-tea': 0, 'black-tea': 20, bubbles: 5, type: 'mug'}

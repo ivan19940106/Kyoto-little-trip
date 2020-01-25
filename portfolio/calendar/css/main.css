@@ -127,6 +127,7 @@ html, body {
     left: 50%;
     top: 87%;
     transform: translate(-50%,-50%);
+    text-align: center;
 }
 .controls a {
     margin: 10px;

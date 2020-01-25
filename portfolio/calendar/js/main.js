@@ -19,21 +19,21 @@ $(document).ready(function(){
             quote: ["以銅為鏡，可以正衣冠。以古為鏡，可以知興替。以人為鏡，可以明得失。"]
         },
         methods: {
-            // randomWeatherText: function(){
-            //     return vm.weatherText[Math.floor(Math.random()*3)];
-            // },
-            // randomWeatherImagePath: function(){
-            //     var path = "";
-            //     var text = $('.weather span').text();
-            //     if(text.includes('晴')){
-            //         path = vm.weatherImagePath[0];
-            //     } else if(text.includes('雨')) {
-            //         path = vm.weatherImagePath[1];
-            //     } else if(text.includes('雲')){
-            //         path = vm.weatherImagePath[2];
-            //     }
-            //     return path;
-            // }
+            randomWeatherText: function(){
+                return vm.weatherText[Math.floor(Math.random()*3)];
+            },
+            randomWeatherImagePath: function(){
+                var path = "";
+                var text = $('.weather span').text();
+                if(text.includes('晴')){
+                    path = vm.weatherImagePath[0];
+                } else if(text.includes('雨')) {
+                    path = vm.weatherImagePath[1];
+                } else if(text.includes('雲')){
+                    path = vm.weatherImagePath[2];
+                }
+                return path;
+            }
         }
     });
     window.vm = vm;

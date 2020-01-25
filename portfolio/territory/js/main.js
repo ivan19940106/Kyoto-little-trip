@@ -181,10 +181,20 @@ $(document).ready(function(){
         el: '#app',
         data: {
             placeData: placeData,
+            idResult: '',
             filterResult: ''
         },
         computed: {
-
+            getPlaceName: function(){
+                var vobj = this;
+                var placeName = '';
+                for(var i=0;i<vobj.placeData.length;i++){
+                    if(vobj.placeData[i].tag == vm.idResult.replace(' ','-')){
+                        placeName = vobj.placeData[i].place;
+                    }
+                }
+                return placeName;
+            }
         }
     });
 
@@ -192,6 +202,14 @@ $(document).ready(function(){
 
     $('path').mouseenter(function(e){
         var idName = $(this).attr('id').replace('-',' ');
-        vm.filterResult = idName;
+        vm.idResult = idName;
+        //placeName
+        // var placeName = '';
+        // for(var i=0;i<vm.placeData.length;i++){
+        //     if(vm.placeData[i].tag == vm.idResult.replace(' ','-')){
+        //         placeName = vm.placeData[i].place;
+        //         vm.filterResult = placeName;
+        //     }
+        // }
     });
 });

@@ -177,11 +177,21 @@ $(document).ready(function(){
         },
     ];
 
-    
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            placeData: placeData,
+            filterResult: ''
+        },
+        computed: {
 
-    $('#io').click(function(){
-        $('#io').css({
-            fill: 'black'
-        });
+        }
+    });
+
+    window.vm = vm;
+
+    $('path').mouseenter(function(e){
+        var idName = $(this).attr('id').replace('-',' ');
+        vm.filterResult = idName;
     });
 });

@@ -42,11 +42,21 @@ hr {
     border: none;
     border-bottom: solid 2px #5A716A;
 }
-h2 {
-    
+h2 span {
+    text-transform: capitalize;
+    color: #eee;
 }
 @media(max-width: 768px){
+    html, body {
+        flex-direction: column;
+    }
     .territory {
         width: 90%;
+        order: 1;
+    }
+    .info {
+        margin-bottom: 30px;
+        width: 70%;
+        font-size: 15px;
     }
 }

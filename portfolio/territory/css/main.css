@@ -55,6 +55,7 @@ h2 span {
         order: 1;
     }
     .info {
+        margin-top: 30px;
         margin-bottom: 30px;
         width: 70%;
         font-size: 15px;

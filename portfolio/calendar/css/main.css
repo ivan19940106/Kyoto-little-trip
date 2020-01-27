@@ -130,6 +130,7 @@ html, body {
     top: 87%;
     transform: translate(-50%,-50%);
     text-align: center;
+    color: #60463B;
 }
 .controls a {
     margin: 10px;
@@ -137,6 +138,7 @@ html, body {
     text-decoration: none;
     color: initial;
     line-height: 1;
+    color: #60463B;
 }
 .someday {
     margin-top: 20px;

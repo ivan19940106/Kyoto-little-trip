@@ -29,6 +29,7 @@ path {
 path:hover {
     fill: #eee;
     transform: translate(-2px,-2px);
+    z-index: 1;
 }
 .info {
     font-family: 'Montserrat', sans-serif;

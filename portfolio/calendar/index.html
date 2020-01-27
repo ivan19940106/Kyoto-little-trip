@@ -17,37 +17,40 @@
         <div class="calendar" v-for="page in pages">
             <div class="up">
                 <div class="left">
-                    <div class="year">109年
+                    <div class="year">{{yearToday}}年<br>
                         <small>歲次
                             <br>
                         </small>
-                        <span class="year-index">庚子</span>
+                        <span class="year-index">{{yearIndexToday}}</span>
                     </div>
-                    <div class="solar-terms">立春</div>
+                    <div v-if="dateTraditionalToday=='初一'||dateTraditionalToday=='十五'" class="solar-terms">{{solarTermsToday}}</div>
+                    <div v-else="dateTraditionalToday!='初一'||dateTraditionalToday!='十五'" class="date-traditional">{{dateTraditionalToday}}</div>
                     <div class="weather">
                         <span>雲{{this.randomWeatherText}}</span>
                         <img src="./images/cloud.png" alt="weather-image">
                     </div>
                 </div>
-                <div class="date">04</div>
+                <div class="date">{{dateOnToday}}</div>
                 <div class="right">
-                    <div class="month">2月<br><span class="eng">feb</span></div>
+                    <div class="month">{{monthToday}}月<br><span class="eng">{{monthEnglishToday}}</span></div>
                     <div class="luck">
                         <div class="good"><span>宜</span>&nbsp;寫扣</div>
                         <div class="bad"><span>忌</span>&nbsp;喬遷</div>
                     </div>
                 </div>
             </div>
-            <div class="weekday">星期二</div>
+            <div class="weekday">星期{{weekdayToday}}</div>
             <div class="down">
                 <div class="memo">備忘錄：</div>
                 <div class="quote">以銅為鏡，可以正衣冠。以古為鏡，可以知興替。以人為鏡，可以明得失。</div>
             </div>
         </div>
         <div class="controls">
-            <a href="#" class="prev"><i class="icon-left"></i></a>
-            <a href="#" class="next"><i class="icon-right"></i></a>
+            <a href="#" v-on:click="prev" class="prev"><i class="icon-left"></i></a>
+            <a href="#" v-on:click="next" class="next"><i class="icon-right"></i></a>
             <!-- <br><input type="range" min="1" max="100" v-model.number="pages"> -->
+            <br>
+            <div class="someday">會不會有一天，時間真的能倒退，退回你的我的回不去的悠悠的 <input type="text" class="backTime" placeholder="例：2012-06-01"><a href="#" class="go"><i class="icon-calendar"></i></a></div>
         </div>
     </div>
 </body>

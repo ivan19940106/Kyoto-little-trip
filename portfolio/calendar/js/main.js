@@ -124,7 +124,7 @@ $(document).ready(function(){
         var pageWidth = parseInt($('.calendar').eq(0).css('width'));
         var pageHeight = parseInt($('.calendar').eq(0).css('height'));
         for(var i=0;i<pages;i++){
-            var top = windowHeight/2-i*2;
+            var top = windowHeight/2.3-i*2;
             var width = pageWidth-i*2;
             var z = -1*i;
             $('.calendar').eq(i).css({
@@ -134,14 +134,14 @@ $(document).ready(function(){
             });
             //banner
             $('.banner').css({
-                top: windowHeight/2-pageHeight/2-pages*2+'px',
+                top: windowHeight/2.3-pageHeight/2-pages*2+'px',
                 transform: 'translate(-50%,-102%)',
                 width: width+'px'
             });
         }
         //controls
         $('.controls').css({
-            top: windowHeight/2+pageHeight/2+150+'px'
+            top: windowHeight/2+pageHeight/2+110+'px'
         });
     }
 

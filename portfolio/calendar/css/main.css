@@ -79,7 +79,7 @@ html, body {
 }
 .date {
     width: 60%;
-    font-size: 160px;
+    font-size: 165px;
     font-weight: 600;
     line-height: 1.6;
     color: #004098;
@@ -172,7 +172,7 @@ html, body {
         writing-mode: vertical-rl;
     }
     .date {
-        font-size: 112px;
+        font-size: 108px;
         line-height: 1.5;
     }
     .weekday {

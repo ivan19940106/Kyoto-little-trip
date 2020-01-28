@@ -26,8 +26,8 @@ $(document).ready(function(){
                 if(this.dateToday.getDate()>nowDateIndex){
                     this.dateToday.getDate()=nowDateIndex;
                 } else {
-                    this.dateToday.setDate(this.dateToday.getDate()+1);
-                    console.log(this.dateToday);
+                    var update = this.dateToday.setDate(this.dateToday.getDate()+1);
+                    this.dateToday = new Date(update);
                 }
             },
             prev: function(){
@@ -35,8 +35,8 @@ $(document).ready(function(){
                 if(this.dateToday.getDate()<nowDateIndex){
                     this.dateToday.getDate()=nowDateIndex;
                 } else {
-                    this.dateToday.setDate(this.dateToday.getDate()-1);
-                    console.log(this.dateToday);
+                    var update = this.dateToday.setDate(this.dateToday.getDate()-1);
+                    this.dateToday = new Date(update);
                 }
             }
         },

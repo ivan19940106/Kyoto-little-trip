@@ -146,6 +146,9 @@ html, body {
 .icon-calendar {
     font-size: 18px;
 }
+.icon-evernote {
+    font-size: 18px;
+}
 @media(max-width: 768px){
     .calendar{
         width: 200px;

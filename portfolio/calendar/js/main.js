@@ -3,7 +3,7 @@ $(document).ready(function(){
         el: '#app',
         data: {
             dateToday: new Date(),
-            banner: ['財源廣進'],
+            banner: '財源廣進',
             pages: 10,
             year: [2019,2020],
             yearIndexX: ['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'],
@@ -137,7 +137,7 @@ $(document).ready(function(){
         }
         //controls
         $('.controls').css({
-            top: windowHeight/2+pageHeight/2+90+'px'
+            top: windowHeight/2+pageHeight/2+150+'px'
         });
     }
 
@@ -178,6 +178,13 @@ $(document).ready(function(){
         e.preventDefault();
         var val = $('.backTime').val();
         vm.dateToday = new Date(val);
+    });
+
+    //new year wishes
+    $('.controls a.confirm').click(function(e){
+        e.preventDefault();
+        var val = $('.wishInput').val();
+        vm.banner = val;
     });
 
     //random weather with jQuery

@@ -101,8 +101,12 @@ $(document).ready(function(){
                 return monthEnglish;
             },
             weekdayToday: function(){
-                var weekday = this.dateToday.getDay();
-                return this.weekday[weekday-1];
+                if(this.dateToday.getDay()==0){
+                    return this.weekday[6];
+                } else {
+                    var weekday = this.dateToday.getDay();
+                    return this.weekday[weekday-1];
+                }
             }
         }
     });

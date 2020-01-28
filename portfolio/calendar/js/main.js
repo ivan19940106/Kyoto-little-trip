@@ -22,10 +22,22 @@ $(document).ready(function(){
         },
         methods: {
             next: function(){
-                
+                var nowDateIndex = this.dateToday.getDate();
+                if(this.dateToday.getDate()>nowDateIndex){
+                    this.dateToday.getDate()=nowDateIndex;
+                } else {
+                    this.dateToday.setDate(this.dateToday.getDate()+1);
+                    console.log(this.dateToday);
+                }
             },
             prev: function(){
-
+                var nowDateIndex = this.dateToday.getDate();
+                if(this.dateToday.getDate()<nowDateIndex){
+                    this.dateToday.getDate()=nowDateIndex;
+                } else {
+                    this.dateToday.setDate(this.dateToday.getDate()-1);
+                    console.log(this.dateToday);
+                }
             }
         },
         computed: {
@@ -144,16 +156,6 @@ $(document).ready(function(){
             randomWeatherText();
             randomWeatherImagePath();
             clicks ++;
-            //move forward
-            // for(var i=clicks;i<=pages-clicks;i++){
-            //     var currentTop = $('.calendar').eq(clicks).css('top');
-            //     var currentWidth = $('.calendar').eq(clicks).css('width');
-            //     $('.calendar').eq(clicks).css({
-            //         top: currentTop+i*2,
-            //         width: currentWidth+i*2,
-            //         transition: 'all 1s'
-            //     });
-            // }
         }
     });
     //previous page

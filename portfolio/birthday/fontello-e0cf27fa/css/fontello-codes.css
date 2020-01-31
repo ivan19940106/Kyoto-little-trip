@@ -1,0 +1,7 @@
+
+.icon-heart:before { content: '\e800'; } /* '' */
+.icon-heart-outline:before { content: '\e801'; } /* '' */
+.icon-cancel:before { content: '\e802'; } /* '' */
+.icon-right:before { content: '\e806'; } /* '' */
+.icon-left:before { content: '\e807'; } /* '' */
+.icon-cancel-outline:before { content: '\e80f'; } /* '' */

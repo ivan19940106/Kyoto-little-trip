@@ -1,0 +1,392 @@
+html, body {
+    background-color: #fff1e9;
+}
+* {
+    box-sizing: border-box;
+    font-family: serif;
+}
+.cover {
+    width: 100%;
+}
+.container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    /* border: 1px solid #000; */
+}
+/* calendar */
+.calendar-wrapper {
+    position: relative;
+    margin: 0 auto;
+    height: 770px;
+    /* border: 1px solid #000; */
+}
+.banner {
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%,0);
+    width: 270px;
+    background-color: #D61517;
+    text-align: center;
+    font-size: 48px;
+    line-height: 1.6;
+    color: #F7E430;
+    border-radius: 2px;
+}
+.calendar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 450px;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    /* border: 1px solid rgba(80,80,80, 0.1); */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.up {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left {
+    width: 20%;
+    line-height: 1.4;
+    color: #004098;
+}
+.right {
+    width: 20%;
+    color: #004098;
+}
+.solar-terms, .date-traditional {
+    line-height: 4;
+}
+.weather img {
+    width: 60px;
+}
+.month {
+    font-size: 28px;
+    text-transform: capitalize;
+}
+.luck {
+    line-height: 4;
+}
+.date {
+    width: 60%;
+    font-size: 165px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #004098;
+    transform: scaleY(2);
+}
+.bad span {
+    color: #D4281E;
+}
+.weekday {
+    width: 200px;
+    padding: 2px;
+    text-align: center;
+    background-color: #004098;
+    color: #fff;
+}
+.down {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 20px 0 10px;
+    height: 150px;
+    border: 1px solid #D4281E;
+}
+.memo {
+    padding: 5px;
+    position: absolute;
+    left: 0;
+    text-align: left;
+    color: #D4281E;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+.quote {
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    color: #D4281E;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    word-break: break-all;
+    text-decoration: underline;
+}
+.controls {
+    width: 280px;
+    position: absolute;
+    left: 50%;
+    top: 87%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #60463B;
+}
+.controls a {
+    margin: 10px;
+    font-size: 48px;
+    text-decoration: none;
+    color: initial;
+    line-height: 1;
+    color: #60463B;
+}
+.wishes {
+    margin-top: 20px;
+}
+.wishInput {
+    margin-top: 20px;
+}
+.icon-heart {
+    font-size: 18px;
+}
+
+@media(max-width: 768px){
+    .calendar-wrapper {
+        height: 570px;
+    }
+    .calendar{
+        width: 200px;
+        height: 300px;
+    }
+    .banner {
+        font-size: 30px;
+    }
+    .up {
+        font-size: 14px;
+    }
+    .solar-terms, .date-traditional {
+        line-height: 2;
+    }
+    .weather img {
+        width: 35px;
+    }
+    .month {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    .luck {
+        line-height: 1.4;
+        writing-mode: vertical-rl;
+    }
+    .date {
+        font-size: 108px;
+        line-height: 1.5;
+    }
+    .weekday {
+        width: 120px;
+        padding: 0;
+    }
+    .down {
+        margin: 10px 0 5px 0;
+        height: 100px;
+    }
+    .memo {
+        padding: 2px;
+        font-size: 12px;
+    }
+    .quote {
+        margin-right: 6px;
+        padding: 4px;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    .controls {
+        top: 600px;
+    }
+    .controls a {
+        margin: 5px;
+        font-size: 30px;
+    }
+}
+
+/* ticket */
+.ticket-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #000; */
+}
+.ticket {
+    width: 120px;
+    height: 268px;
+    flex: 0 0 auto;
+    background-color: #FCF9EB;
+    padding: 20px 10px;
+    margin: 10px;
+    text-align: center;
+    background-image: radial-gradient(#d1e8c9 0%, #d1e8c9 20%, transparent 20%, transparent 40%, #d1e8c9 40%, #d1e8c9 55%, transparent 55%, transparent 100%);
+    background-size: 10px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+.ticket-date {
+    font-size: 10px;
+}
+.arrow {
+    font-size: 28px;
+}
+.station {
+    font-size: 20px;
+    margin: 5px 5px;
+    font-weight: bold;
+}
+.info {
+    font-size: 10px;
+    margin-top: 8px;
+}
+a {
+    text-decoration: none;
+    color: #222831;
+}
+.ticket:hover {
+    transform: translate(0,-10px);
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* taiwan */
+.taiwan-wrapper {
+    position: relative;
+    width: 350px;
+    margin: 0 auto;
+    text-align: left;
+    /* border: 1px solid #000; */
+}
+path {
+    stroke: #5A716A;
+    fill: transparent;
+    transition: all 0.5s;
+}
+path:hover {
+    fill: #eee;
+    transform: translate(-2px,-2px);
+    z-index: 1;
+}
+.info-taiwan {
+    font-family: 'Montserrat', sans-serif;
+    color: #5A716A;
+}
+.title {
+    text-transform: capitalize;
+}
+hr {
+    margin: 20px;
+    border: none;
+    border-bottom: solid 2px #5A716A;
+}
+h2 span {
+    text-transform: capitalize;
+    color: #5A716A;
+}
+
+/* thumbnails */
+.tainan {
+    position: absolute;
+    top: 260px;
+    left: 100px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/IMG_4621.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.tainan:hover {
+    transform: rotate(15deg);
+}
+
+/* modal */
+.modal {
+    /* block the modal out */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(238,238,238, 0.9);
+    z-index: 10;
+    overflow: scroll;
+    /* hide scroll bar */
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+}
+.modal div:first-of-type {
+    margin-top: 90px;
+}
+.card {
+    flex-shrink: 0;
+    margin: 20px auto;
+    width: 400px;
+    height: 600px;
+    background-color: #F4CBC6;
+    border: 1px solid #F4AFAB;
+}
+.slider {
+    margin: 20px auto;
+    width: 90%;
+    height: 150px;
+    border: 1px solid #eee;
+}
+.slider img {
+    width: 100%;
+}
+.text {
+    margin: 20px auto;
+    width: 90%;
+}
+.content {
+    margin-top: 10px;
+    overflow: scroll;
+    /* hide scroll bar */
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+/* show modal */
+.show-modal {
+    display: block;
+}
+/* scroll lock */
+.scroll-lock {
+    overflow: hidden;
+}
+
+@media(max-width: 768px){
+    .container {
+        width: 90%;
+    }
+    .taiwan-wrapper {
+        width: 100%;
+    }
+    .info-taiwan {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 70%;
+        font-size: 15px;
+    }
+    .close {
+        right: 20px;
+    }
+    .card {
+        width: 90%;
+        height: 600px;
+    }
+}

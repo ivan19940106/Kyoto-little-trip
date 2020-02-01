@@ -347,7 +347,7 @@ $(document).ready(function(){
         var pageHeight = parseInt($('.calendar').eq(0).css('height'));
         if(windowWidth<=768){
             for(var i=0;i<pages;i++){
-                var top = windowHeight/3.5-i*2;
+                var top = windowHeight/3.2-i*2;
                 var width = pageWidth-i*2;
                 var z = -1*i;
                 $('.calendar').eq(i).css({
@@ -357,14 +357,14 @@ $(document).ready(function(){
                 });
                 //banner
                 $('.banner').css({
-                    top: windowHeight/3.5-pageHeight/2-pages*2+'px',
+                    top: windowHeight/3.2-pageHeight/2-pages*2+'px',
                     transform: 'translate(-50%,-98%)',
                     width: width+'px'
                 });
             }
             //controls
             $('.controls').css({
-                top: windowHeight/4+pageHeight/2+110+'px'
+                top: windowHeight/3.6+pageHeight/2+110+'px'
             });
         } else {
             for(var i=0;i<pages;i++){
@@ -455,12 +455,16 @@ $(document).ready(function(){
 
     //modal
     $('.tainan').click(function(){
-        window.scrollTo(0,0);
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
         $('.modal').addClass('show-modal');
         $('body').addClass('scroll-lock');
     });
 
-    $('.close').click(function(){
+    $('.close').click(function(e){
+        e.preventDefault();
         $('.modal').removeClass('show-modal');
         $('body').removeClass('scroll-lock');
     });

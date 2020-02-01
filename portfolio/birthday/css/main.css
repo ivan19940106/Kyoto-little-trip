@@ -1,4 +1,5 @@
 html, body {
+    margin: 0;
     background-color: #fff1e9;
 }
 * {
@@ -219,7 +220,7 @@ html, body {
 }
 .ticket {
     width: 120px;
-    height: 268px;
+    height: 262px;
     flex: 0 0 auto;
     background-color: #FCF9EB;
     padding: 20px 10px;
@@ -257,7 +258,7 @@ a {
 /* taiwan */
 .taiwan-wrapper {
     position: relative;
-    width: 350px;
+    width: 337.5px;
     margin: 0 auto;
     text-align: left;
     /* border: 1px solid #000; */
@@ -292,11 +293,11 @@ h2 span {
 /* thumbnails */
 .tainan {
     position: absolute;
-    top: 260px;
-    left: 100px;
-    width: 40px;
-    height: 40px;
-    background-image: url(../images/IMG_4621.JPG);
+    top: 265px;
+    left: 107px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_4582.JPG);
     background-size: cover;
     border: 1px solid #fff;
     transition: all 1s;
@@ -310,10 +311,8 @@ h2 span {
     /* block the modal out */
     display: none;
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
     width: 100%;
+    height: 100%;
     background-color: rgba(238,238,238, 0.9);
     z-index: 10;
     overflow: scroll;
@@ -328,7 +327,7 @@ h2 span {
     right: 30px;
     font-size: 30px;
 }
-.modal div:first-of-type {
+.modal > div:first-of-type {
     margin-top: 90px;
 }
 .card {
@@ -342,8 +341,7 @@ h2 span {
 .slider {
     margin: 20px auto;
     width: 90%;
-    height: 150px;
-    border: 1px solid #eee;
+    height: auto;
 }
 .slider img {
     width: 100%;
@@ -372,9 +370,6 @@ h2 span {
 @media(max-width: 768px){
     .container {
         width: 90%;
-    }
-    .taiwan-wrapper {
-        width: 100%;
     }
     .info-taiwan {
         margin-top: 30px;

@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="app" class="container">
-        <h1 class="title">24歲生日快樂！</h1>
+        <h1 class="title">寶貝，24歲生日快樂！</h1>
         <img src="./images/IMG_8701.JPG" alt="cover photo" class="cover">
         <div class="calendar-wrapper">
             <div class="banner">{{banner}}</div>
@@ -62,13 +62,14 @@
             </div>
         </div>
         <div class="ticket-wrapper">
+          <h1 class="subtitle">半年多來我們一起去了好多地方！</h1>
             <div class="ticket">
                 <div class="ticket-date">{{ticket.date}}</div>
                 <a v-bind:href="ticket.link" target="_blank" class="info">{{company}}</a>
-                <div class="info">{{ticket.direction == "south" ? "南下" : "北上"}}</div>
+                <div class="info">{{filterResult == "基隆" ? '北上' : '南下'}}</div>
                 <div class="station">{{ticket.from}}站</div>
                 <div class="arrow">↓</div>
-                <div class="station">{{ticket.to}}站</div>
+                <div class="station">{{filterResult}}<span class="station" v-if="filterResult==''">高雄</span>站</div>
                 <div class="info" v-html="ticket.other"></div>
                 <div class="info">售價 {{ticket.price*ticket.discount}} 元</div>
             </div>

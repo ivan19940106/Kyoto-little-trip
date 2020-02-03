@@ -327,6 +327,7 @@ $(document).ready(function(){
                         placeName = vobj.placeData[i].place;
                     }
                 }
+                this.filterResult = placeName.replace('市','').replace('縣','');
                 return placeName;
             }
         }

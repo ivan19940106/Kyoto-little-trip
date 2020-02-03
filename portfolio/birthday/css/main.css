@@ -5,9 +5,11 @@ html, body {
 * {
     box-sizing: border-box;
     font-family: serif;
+    /* border: 1px solid #000; */
 }
 .cover {
-    width: 100%;
+    margin: 0 auto;
+    width: 500px;
 }
 .container {
     width: 70%;
@@ -18,7 +20,7 @@ html, body {
 /* calendar */
 .calendar-wrapper {
     position: relative;
-    margin: 0 auto;
+    margin: 50px auto 0;
     height: 770px;
     /* border: 1px solid #000; */
 }
@@ -213,10 +215,15 @@ html, body {
 
 /* ticket */
 .ticket-wrapper {
+    margin-top: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* border: 1px solid #000; */
+}
+.subtitle {
+    font-size: 20px;
 }
 .ticket {
     width: 120px;
@@ -241,6 +248,9 @@ html, body {
     font-size: 20px;
     margin: 5px 5px;
     font-weight: bold;
+}
+span.station {
+    margin: 0;
 }
 .info {
     font-size: 10px;
@@ -274,6 +284,7 @@ path:hover {
     z-index: 1;
 }
 .info-taiwan {
+    display: none;
     font-family: 'Montserrat', sans-serif;
     color: #5A716A;
 }
@@ -370,6 +381,9 @@ h2 span {
 @media(max-width: 768px){
     .container {
         width: 90%;
+    }
+    .cover {
+        width: 100%;
     }
     .info-taiwan {
         margin-top: 30px;

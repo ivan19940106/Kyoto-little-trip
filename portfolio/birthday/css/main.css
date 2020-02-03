@@ -302,6 +302,107 @@ h2 span {
 }
 
 /* thumbnails */
+.keelung {
+    position: absolute;
+    top: 15px;
+    left: 270px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_7179.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.keelung:hover {
+    transform: rotate(15deg);
+}
+.beitou {
+    position: absolute;
+    top: 30px;
+    left: 207px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_9226.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.beitou:hover {
+    transform: rotate(15deg);
+}
+.yangming {
+    position: absolute;
+    top: 20px;
+    left: 230px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_5170.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.yangming:hover {
+    transform: rotate(15deg);
+    z-index: 1;
+}
+.taipei {
+    position: absolute;
+    top: 60px;
+    left: 232px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_7674.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+    z-index: 1;
+}
+.taipei:hover {
+    transform: rotate(15deg);
+}
+.zoo {
+    position: absolute;
+    top: 70px;
+    left: 250px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_8952.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.zoo:hover {
+    transform: rotate(15deg);
+    z-index: 1;
+}
+.taichung {
+    position: absolute;
+    top: 155px;
+    left: 140px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_7739.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.taichung:hover {
+    transform: rotate(15deg);
+}
+.yilan {
+    position: absolute;
+    top: 100px;
+    left: 240px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_4911.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.yilan:hover {
+    transform: rotate(15deg);
+}
 .tainan {
     position: absolute;
     top: 265px;

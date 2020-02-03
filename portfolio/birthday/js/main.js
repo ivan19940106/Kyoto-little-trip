@@ -43,6 +43,7 @@ $(document).ready(function(){
         {
          tag: "keelung-city",
          place: "基隆市",
+         date: new Date('2019-10-14').toISOString().replace('T00:00:00.000Z',''),
          low: 15,
          high: 24,
          weather: "Rainy"
@@ -215,7 +216,8 @@ $(document).ready(function(){
             //taiwan data
             placeData: placeData,
             idResult: '',
-            filterResult: ''
+            filterResult: '',
+            datePlace: ''
         },
         methods: {
             next: function(){
@@ -322,12 +324,15 @@ $(document).ready(function(){
             getPlaceName: function(){
                 var vobj = this;
                 var placeName = '';
+                var date = '';
                 for(var i=0;i<vobj.placeData.length;i++){
                     if(vobj.placeData[i].tag == vm.idResult.replace(' ','-')){
                         placeName = vobj.placeData[i].place;
+                        date = vobj.placeData[i].date;
                     }
                 }
                 this.filterResult = placeName.replace('市','').replace('縣','');
+                this.datePlace = date;
                 return placeName;
             }
         }

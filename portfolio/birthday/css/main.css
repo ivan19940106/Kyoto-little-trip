@@ -10,6 +10,8 @@ html, body {
 .cover {
     margin: 0 auto;
     width: 500px;
+    border: 2px solid #FFFFFB;
+    border-radius: 10px;
 }
 .container {
     width: 70%;
@@ -241,6 +243,10 @@ html, body {
 .ticket-date {
     font-size: 10px;
 }
+.ticket-date span.defaultDate {
+    margin: 0;
+    font-size: 10px;
+}
 .arrow {
     font-size: 28px;
 }
@@ -308,7 +314,7 @@ h2 span {
     left: 270px;
     width: 35px;
     height: 35px;
-    background-image: url(../images/IMG_7179.JPG);
+    background-image: url(../images/IMG_7283.JPG);
     background-size: cover;
     border: 1px solid #fff;
     transition: all 1s;
@@ -375,20 +381,6 @@ h2 span {
     transform: rotate(15deg);
     z-index: 1;
 }
-.taichung {
-    position: absolute;
-    top: 155px;
-    left: 140px;
-    width: 35px;
-    height: 35px;
-    background-image: url(../images/IMG_7739.JPG);
-    background-size: cover;
-    border: 1px solid #fff;
-    transition: all 1s;
-}
-.taichung:hover {
-    transform: rotate(15deg);
-}
 .yilan {
     position: absolute;
     top: 100px;
@@ -401,6 +393,34 @@ h2 span {
     transition: all 1s;
 }
 .yilan:hover {
+    transform: rotate(15deg);
+}
+.zhongli {
+    position: absolute;
+    top: 60px;
+    left: 190px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_7591.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.zhongli:hover {
+    transform: rotate(15deg);
+}
+.taichung {
+    position: absolute;
+    top: 155px;
+    left: 140px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/IMG_7739.JPG);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.taichung:hover {
     transform: rotate(15deg);
 }
 .tainan {
@@ -434,15 +454,16 @@ h2 span {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 .close {
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
     font-size: 30px;
 }
-.modal > div:first-of-type {
+/* .modal > div:first-of-type {
     margin-top: 90px;
-}
+} */
 .card {
+    display: none;
     flex-shrink: 0;
     margin: 20px auto;
     width: 400px;
@@ -473,6 +494,9 @@ h2 span {
 /* show modal */
 .show-modal {
     display: block;
+}
+.show-card {
+    display: block; 
 }
 /* scroll lock */
 .scroll-lock {

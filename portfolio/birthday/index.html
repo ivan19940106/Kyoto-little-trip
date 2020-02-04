@@ -64,7 +64,7 @@
         <div class="ticket-wrapper">
           <h1 class="subtitle">半年多來我們一起去了好多地方！</h1>
             <div class="ticket">
-                <div class="ticket-date">{{ticket.date}}</div>
+                <div class="ticket-date">{{datePlace}}<span class="defaultDate" v-if="datePlace==undefined||datePlace==''">2020.01.10-01.11</span></div>
                 <a v-bind:href="ticket.link" target="_blank" class="info">{{company}}</a>
                 <div class="info">{{filterResult == "基隆" ? '北上' : '南下'}}</div>
                 <div class="station">{{ticket.from}}站</div>
@@ -378,6 +378,7 @@
                 <div class="taipei"></div>
                 <div class="zoo"></div>
                 <div class="yilan"></div>
+                <div class="zhongli"></div>
                 <div class="taichung"></div>
                 <div class="tainan"></div>
               </div>
@@ -392,7 +393,72 @@
     </div>
     <div class="modal">
       <a href="#" class="close"><i class="icon-cancel"></i></a>
-        <div class="card">
+      <div class="card keelung-card">
+          <div class="slider">
+              <div><img src="./images/IMG_7269.JPG" alt=""></div>
+              <div><img src="./images/IMG_7283.JPG" alt=""></div>
+              <div><img src="./images/IMG_7270.JPG" alt=""></div>
+              <div><img src="./images/IMG_7271.JPG" alt=""></div>
+              <div><img src="./images/IMG_7265.JPG" alt=""></div>
+              <div><img src="./images/IMG_7266.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">基隆</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
+      <div class="card yangming-card">
+          <div class="slider">
+              <div><img src="./images/IMG_5170.JPG" alt=""></div>
+              <div><img src="./images/IMG_0512.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">擎天崗</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
+      <div class="card beitou-card">
+          <div class="slider">
+              <div><img src="./images/IMG_8794.JPG" alt=""></div>
+              <div><img src="./images/IMG_9226.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">北投</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
+      <div class="card beitou-card">
+          <div class="slider">
+              <div><img src="./images/IMG_5118.JPG" alt=""></div>
+              <div><img src="./images/IMG_5111.jpg" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">淡水</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
+      <div class="card yilan-card">
+          <div class="slider">
+              <div><img src="./images/IMG_4888.JPG" alt=""></div>
+              <div><img src="./images/IMG_4902.JPG" alt=""></div>
+              <div><img src="./images/IMG_4911.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">宜蘭</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
+        <div class="card tainan-card">
             <div class="slider">
                 <div><img src="./images/IMG_4582.JPG" alt=""></div>
                 <div><img src="./images/IMG_4558.JPG" alt=""></div>

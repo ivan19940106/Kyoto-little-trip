@@ -11,6 +11,7 @@ $(document).ready(function(){
         {
          tag: "new-taipei-city",
          place: "新北市",
+         date: new Date('2019-08-26').toISOString().replace('T00:00:00.000Z',''),
          low: 15,
          high: 22,
          weather: "Rainy"
@@ -19,6 +20,7 @@ $(document).ready(function(){
         {
          tag: "taichung-city",
          place: "台中市",
+         date: new Date('2019-11-24').toISOString().replace('T00:00:00.000Z',''),
          low: 15,
          high: 22,
          weather: "Rainy"
@@ -27,6 +29,7 @@ $(document).ready(function(){
         {
          tag: "tainan-city",
          place: "臺南市",
+         date: new Date('2019-08-03').toISOString().replace('T00:00:00.000Z',''),
          low: 16,
          high: 24,
          weather: "Rainy"
@@ -52,6 +55,7 @@ $(document).ready(function(){
         {
          tag: "taoyuan-county",
          place: "桃園市",
+         date: new Date('2019-11-10').toISOString().replace('T00:00:00.000Z',''),
          low: 15,
          high: 24,
          weather: "Rainy"
@@ -132,6 +136,7 @@ $(document).ready(function(){
         {
          tag: "yilan-county",
          place: "宜蘭縣",
+         date: new Date('2019-08-14').toISOString().replace('T00:00:00.000Z',''),
          low: 20,
          high: 24,
          weather: "Cloudy"
@@ -460,17 +465,74 @@ $(document).ready(function(){
     });
 
     //modal
+    $('.keelung').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.keelung-card').addClass('show-card');
+        $('.keelung-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
+    $('.yangming').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.yangming-card').addClass('show-card');
+        $('.yangming-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
+    $('.beitou').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.beitou-card').addClass('show-card');
+        $('.beitou-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
+    $('.yilan').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.yilan-card').addClass('show-card');
+        $('.yilan-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
     $('.tainan').click(function(){
         var y = window.pageYOffset;
         $('.modal').css({
             top: y + 'px'
         });
         $('.modal').addClass('show-modal');
+        $('.tainan-card').addClass('show-card');
+        $('.tainan-card').eq(0).css({
+            marginTop: '90px'
+        });
         $('body').addClass('scroll-lock');
     });
 
     $('.close').click(function(e){
         e.preventDefault();
+        $('.card').removeClass('show-card');
         $('.modal').removeClass('show-modal');
         $('body').removeClass('scroll-lock');
     });

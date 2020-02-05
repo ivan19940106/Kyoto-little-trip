@@ -504,6 +504,32 @@ $(document).ready(function(){
         $('body').addClass('scroll-lock');
     });
 
+    $('.taipei').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.taipei-card').addClass('show-card');
+        $('.taipei-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
+    $('.zoo').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.zoo-card').addClass('show-card');
+        $('.zoo-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
     $('.yilan').click(function(){
         var y = window.pageYOffset;
         $('.modal').css({
@@ -512,6 +538,32 @@ $(document).ready(function(){
         $('.modal').addClass('show-modal');
         $('.yilan-card').addClass('show-card');
         $('.yilan-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
+    $('.zhongli').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.zhongli-card').addClass('show-card');
+        $('.zhongli-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
+    $('.taichung').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.taichung-card').addClass('show-card');
+        $('.taichung-card').eq(0).css({
             marginTop: '90px'
         });
         $('body').addClass('scroll-lock');

@@ -48,7 +48,7 @@
                 <div class="weekday">星期{{weekdayToday}}</div>
                 <div class="down">
                     <div class="memo">生活要事：</div>
-                    <div class="quote">從2019年7月26號，在寶藏巖牽起妳的手開始，我們在一起{{beenTogether}}天了！</div>
+                    <div class="quote">從2019年7月26號，在寶藏巖牽起妳的手開始，我們在一起{{beenTogether}}天了！未來也請多多指教唷！</div>
                 </div>
             </div>
             <div class="controls">
@@ -62,9 +62,9 @@
             </div>
         </div>
         <div class="ticket-wrapper">
-          <h1 class="subtitle">半年多來我們一起去了好多地方！</h1>
+          <h1 class="subtitle">我們的{{filterResult}}<span class="station" v-if="filterResult==''">台灣</span>之旅！</h1>
             <div class="ticket">
-                <div class="ticket-date">{{datePlace}}<span class="defaultDate" v-if="datePlace==undefined||datePlace==''">2020.01.10-01.11</span></div>
+                <div class="ticket-date">{{datePlace}}<span class="defaultDate" v-if="datePlace==undefined||datePlace==''">2020.01.01-12.31</span></div>
                 <a v-bind:href="ticket.link" target="_blank" class="info">{{company}}</a>
                 <div class="info">{{filterResult == "基隆" ? '北上' : '南下'}}</div>
                 <div class="station">{{ticket.from}}站</div>
@@ -445,6 +445,55 @@
               </div>
           </div>
       </div>
+      <div class="card taipei-card">
+          <div class="slider">
+              <div><img src="./images/IMG_7674.JPG" alt=""></div>
+              <div><img src="./images/IMG_8276.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">天文館</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
+      <div class="card taipei-card">
+          <div class="slider">
+              <div><img src="./images/IMG_8701.JPG" alt=""></div>
+              <div><img src="./images/IMG_8702.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">浮世繪展</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
+      <div class="card zoo-card">
+          <div class="slider">
+              <div><img src="./images/IMG_8940.JPG" alt=""></div>
+              <div><img src="./images/IMG_8952.JPG" alt=""></div>
+              <div><img src="./images/IMG_8955.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">動物園</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
+      <div class="card zhongli-card">
+          <div class="slider">
+              <div><img src="./images/IMG_7591.JPG" alt=""></div>
+              <div><img src="./images/IMG_7614.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">中壢</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
       <div class="card yilan-card">
           <div class="slider">
               <div><img src="./images/IMG_4888.JPG" alt=""></div>
@@ -458,21 +507,33 @@
               </div>
           </div>
       </div>
-        <div class="card tainan-card">
-            <div class="slider">
-                <div><img src="./images/IMG_4582.JPG" alt=""></div>
-                <div><img src="./images/IMG_4558.JPG" alt=""></div>
-                <div><img src="./images/IMG_4621.JPG" alt=""></div>
-            </div>
-            <div class="text">
-                <div class="card-title">台南</div>
-                <div class="content">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
-                </div>
-            </div>
-        </div>
-        <div class="card">to be continued...</div>
-        <div class="card">to be continued...</div>
+      <div class="card taichung-card">
+          <div class="slider">
+              <div><img src="./images/IMG_7739.JPG" alt=""></div>
+              <div><img src="./images/IMG_7733.JPG" alt=""></div>
+              <div><img src="./images/IMG_7732.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">台中</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
+      <div class="card tainan-card">
+          <div class="slider">
+              <div><img src="./images/IMG_4582.JPG" alt=""></div>
+              <div><img src="./images/IMG_4558.JPG" alt=""></div>
+              <div><img src="./images/IMG_4621.JPG" alt=""></div>
+              <div><img src="./images/IMG_4538.JPG" alt=""></div>
+          </div>
+          <div class="text">
+              <div class="card-title">台南</div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda, magni eveniet incidunt laudantium sed hic accusamus culpa quae a saepe consequatur, sint natus illum quidem! Omnis distinctio incidunt ad.
+              </div>
+          </div>
+      </div>
     </div>
     <div class="footer">
         <img src="" alt="" class="footer-cover">

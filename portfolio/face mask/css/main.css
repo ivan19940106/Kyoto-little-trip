@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: #546D64;
+    font-family: 'Source Sans Pro', sans-serif;
+    /* font-family: 'Slabo 27px', serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Shadows Into Light', cursive; */
+    letter-spacing: 4px;
+    font-size: 20px;
+    /* border: 1px solid #000; */
+}
+.container {
+    margin: 0 auto;
+    width: 700px;
+}
+h1.title {
+    text-align: center;
+    margin-top: 30px;
+}
+.info {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 70%;
+}
+.info li {
+    list-style-type: circle;
+    font-size: 14px;
+    line-height: 2;
+}
+.prod-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prod-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+    margin: 20px 30px;
+    width: 30%;
+}
+.mask-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+    margin: 20px 0;
+    width: 40%;
+}
+.desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0 20px 70px;
+    width: 30%;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* mask */
+.mask {
+    position: relative;
+    width: 200px;
+    height: 90px;
+    background-color: #87F0DF;
+    border: 3px dotted #eee;
+    border-top: 4px solid #eee;
+    border-radius: 2px;
+    transition: all 0.7s;
+}
+.mask:hover {
+    transform: translate(0,-5px);
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.4);
+}
+.mask .iron-line {
+    margin: 6px auto;
+    width: 190px;
+    border: 2px solid #eee;
+}
+.mask .line {
+    margin: 20px auto;
+    width: 190px;
+    border: 1px solid #eee;
+}
+.mask::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    border: 2px solid #eee;
+    border-right: 2px dotted #eee;
+    left: -50px;
+    border-radius: 40px 0px 0px 40px;
+}
+.mask::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    border: 2px solid #eee;
+    border-left: 2px dotted #eee;
+    top: 0;
+    right: -50px;
+    border-radius: 0px 40px 40px 0px;
+}
+
+/* carbon */
+.carbon-mask {
+    position: relative;
+    width: 200px;
+    height: 90px;
+    background-image: radial-gradient(#778683 70%, #AAB3B2 30%);
+    background-size: 2px 2px;
+    border: 3px dotted #ddd;
+    border-top: 4px solid #ddd;
+    border-radius: 2px;
+    transition: all 0.7s;
+}
+.carbon-mask:hover {
+    transform: translate(0,-5px);
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.4);
+}
+.carbon-mask .iron-line {
+    margin: 6px auto;
+    width: 190px;
+    border: 2px solid #ddd;
+}
+.carbon-mask .line {
+    margin: 20px auto;
+    width: 190px;
+    border: 1px solid #AAB3B2;
+}
+.carbon-mask::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    border: 2px solid #eee;
+    border-right: 2px dotted #eee;
+    left: -50px;
+    border-radius: 40px 0px 0px 40px;
+}
+.carbon-mask::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    border: 2px solid #eee;
+    border-left: 2px dotted #eee;
+    top: 0;
+    right: -50px;
+    border-radius: 0px 40px 40px 0px;
+}
+
+/* n95 */
+.n95-mask {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-image: radial-gradient(#eee, rgb(177, 177, 177));
+    background-size: cover;
+    border: 3px solid #ccc;
+    border-radius: 75px 40px 75px 75px;
+    transform: rotate(-45deg);
+    transition:  0.7s;
+}
+.n95-mask:hover {
+    transform: translate(0,-10px);
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.4);
+}
+.n95-mask .iron-line-left {
+    position: absolute;
+    top: 8%;
+    left: 22%;
+    margin: 6px auto;
+    width: 90px;
+    border: 2px solid #ddd;
+    transform: rotate(5deg);
+}
+.n95-mask .iron-line-right {
+    position: absolute;
+    top: 42%;
+    left: 54%;
+    margin: 6px auto;
+    width: 90px;
+    border: 2px solid #ddd;
+    transform: rotate(85deg);
+}
+.n95-mask .filter {
+    position: absolute;
+    top: 6px;
+    left: 16px;
+    margin: 20px auto;
+    width: 30px;
+    height: 30px;
+    background-image: radial-gradient(#ddd 60%, rgb(177, 177, 177) 40%);
+    background-size: contain;
+    border: 2px dotted #ddd;
+    border-radius: 50%;
+}
+.n95-mask .mark {
+    position: absolute;
+    top: 88px;
+    left: 2%;
+    width: 90px;
+    height: 20px;
+    background-color: #ddd;
+    border: 1px dotted #AAB3B2;
+    transform: rotate(45deg);
+    font-size: 10px;
+    color: #666;
+    letter-spacing: 0;
+    font-family: 'serif';
+    font-weight: 600;
+}
+.n95-mask::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    border: 2px solid #eee;
+    border-right: 2px dotted #eee;
+    top: -32px;
+    left: -16px;
+    border-radius: 40px 0px 0px 40px;
+    transform: rotate(45deg);
+}
+.n95-mask::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    border: 2px solid #eee;
+    border-left: 2px dotted #eee;
+    top: 87px;
+    right: -17px;
+    border-radius: 0px 40px 40px 0px;
+    transform: rotate(45deg);
+}
+
+/* no-mask */
+.no-mask {
+    position: relative;
+    width: 200px;
+    height: 90px;
+    background-color: transparent;
+    border: 1px dotted #eee;
+    border-radius: 2px;
+    transition: all 0.7s;
+}
+.no-mask:hover {
+    transform: translate(0,-5px);
+}
+.no-mask .line {
+    margin: 30px auto;
+    width: 190px;
+    color: #444;
+    text-decoration: line-through;
+}
+.no-mask::before {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    border: 1px dotted #eee;
+    border-right: 1px dotted #eee;
+    top: 2px;
+    left: -50px;
+    border-radius: 40px 0px 0px 40px;
+}
+.no-mask::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    border: 1px dotted #eee;
+    border-left: 1px dotted #eee;
+    top: 2px;
+    right: -50px;
+    border-radius: 0px 40px 40px 0px;
+}
+@media(max-width: 768px){
+    .container {
+        width: 90%;
+    }
+    .info {
+        width: 90%;
+    }
+    .info li {
+        margin: 10px auto;
+        line-height: 1.5;
+    }
+    .prod-wrapper {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .prod-name {
+        width: 100%;
+        margin: 20px auto;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .mask-wrapper {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0;
+    }
+    .desc {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}

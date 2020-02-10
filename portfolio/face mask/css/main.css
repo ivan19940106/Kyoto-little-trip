@@ -69,8 +69,10 @@ h1.title {
     text-align: left;
 }
 .source {
+    text-align: center;
     padding: 20px;
-    float: right;
+}
+.link {
     font-size: 10px;
 }
 

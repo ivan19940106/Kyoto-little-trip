@@ -148,6 +148,7 @@ html, body {
     border-radius: 0 0 50% 50%;
     border-top: none;
     overflow: hidden;
+    z-index: 3;
 }
 .handle {
     width: 30px;

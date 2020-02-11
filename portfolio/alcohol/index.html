@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./js/smoke.js"></script>
+    <script src="./js/main.js"></script>
+    <title>75% Alcohol Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">７５％消毒酒精計算機</h1>
+        <h2 class="subtitle">買不到消毒酒精嗎? 教你如何用95%酒精+水調成75%消毒酒精!</h2>
+        <div id="app">
+            <div class="liquid-wrapper">
+                <canvas id="canvas"></canvas>
+                <div class="alcohol-wrapper">
+                    <div class="top"></div>
+                    <div class="alcohol">
+                        <div class="tag">
+                            <div class="concentration">{{calcAlcCon}}％</div>
+                            <div class="hr"></div>
+                            <div class="label">
+                                <i class="icon-warning"></i>
+                                <i class="icon-fire"></i>
+                                <i class="icon-barcode"></i>
+                            </div>
+                        </div>
+                        <div class="alc-liquid" :style="{height: alcVol/2.3 + 'px'}">
+                            <div class='box'>
+                                <div class='wave-alc -one'></div>
+                                <div class='wave-alc -two'></div>
+                                <div class='wave-alc -three'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alc-panel">
+                        <input type="range" class="alc-vol" v-model.number="alcVol" min="0" max="500">
+                        <div class="scale">95%酒精體積：{{alcVol}} ml</div>
+                    </div>
+                </div>
+                <div class="water-wrapper">
+                    <div class="handle"></div>
+                    <div class="water">
+                        <div class="wat-liquid" :style="{height: watVol/2.4 + 'px'}">
+                            <div class='box'>
+                                <div class='wave-wat -one'></div>
+                                <div class='wave-wat -two'></div>
+                                <div class='wave-wat -three'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wat-panel">
+                        <input type="range" class="wat-vol" v-model.number="watVol" id="wat-vol" min="0" max="200">
+                        <div class="scale">純水體積：{{watVol}} ml</div>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                
+            </div>
+        </div>
+        <h3 class="info">貼心提醒：酒精濃度介於<span class="seventy">&nbsp;70%至78%之間&nbsp;</span>，都兼具凝固和穿透細菌、病毒表的蛋白質，達到殺菌效果。民眾可上<a href="https://www.cdc.gov.tw/" class="cdc" target="_blank">衛福部疾管署全球資訊網</a>「<a href="https://www.cdc.gov.tw/Disease/SubIndex/N6XvFa1YP9CXYdB0kNSA9A" class="2019-nCov" target="_blank">2019新型冠狀病毒</a>」專區查詢，也可加入疾管署的官方Line好友帳號「<a href="https://page.line.me/vqv2007o" class="cdc-line">疾管家</a>」，以獲取最新消息。然而，酒精具有一定程度的可燃性，因此民眾在防疫之餘，也要格外注意消防安全喔！</h3>
+        <h4 class="source"><a href="https://health.udn.com/health/story/120952/4314256" class="link" target="_blank">資料來源：聯合報 | 記者鄭維真 台南即時報導 2020-01-31</a></h4>
+    </div>
+</body>
+</html>

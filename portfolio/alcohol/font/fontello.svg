@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="fire" unicode="&#xe800;" d="M7 238q10 41 50 131t44 146q39-72 45-145 148 184 154 428 10-6 25-17t58-45 74-74 61-96 34-118q15 36 19 79t-9 80q15-12 41-39t56-75 56-99 31-118-9-127-72-127-152-120q64 129 25 278t-154 229q10-43-11-141t-65-150q7 63 4 102t-12 59l-10 17q-12-70-60-140-26-38-39-69t-9-80 30-105q-135 76-181 154t-24 182z" horiz-adv-x="748" />
+
+<glyph glyph-name="barcode" unicode="&#xe801;" d="M35-7h-35v786h35v-786z m35 0h-17v786h17v-786z m53 0h-17v786h17v-786z m87 0h-17v786h17v-786z m88 0h-35v786h35v-786z m70 0h-17v786h17v-786z m36 0h-18v786h18v-786z m35 0h-18v786h18v-786z m87 0h-35v786h35v-786z m88 0h-35v786h35v-786z m70 0h-35v786h35v-786z m71 0h-36v786h36v-786z m52 0h-35v786h35v-786z m105 0h-52v786h52v-786z m36 0h-18v786h18v-786z m52 0h-35v786h35v-786z" horiz-adv-x="1000" />
+
+<glyph glyph-name="droplet" unicode="&#xe802;" d="M290 822q14-118 60-219t92-159 82-136 36-160q0-114-83-196t-197-82-197 82-83 196q0 82 36 160t82 136 92 159 60 219q2 8 11 8t9-8z m-42-392q2 4-2 14-6 6-14 6t-12-6l-40-58q-32-46-48-70t-34-75-18-101q0-24 17-41t41-17q58 0 58 68 0 94 42 246 2 6 5 17t5 17z" horiz-adv-x="560" />
+
+<glyph glyph-name="warning" unicode="&#xe803;" d="M514 701q-49 0-81-55l-308-513q-32-55-11-95t87-40l625 0q65 0 87 40t-12 95l-307 513q-33 55-80 55z m0 105q106 0 169-107l308-513q63-105 12-199-52-93-177-93l-625 0q-123 0-177 93-53 92 11 199l309 513q62 107 170 107z m-69-652q0 69 69 69 67 0 67-69 0-67-67-67-69 0-69 67z m146 313q0-14-6-29l-71-179q-44 108-73 179-6 15-6 29 0 32 23 55t56 24 55-24 22-55z" horiz-adv-x="1026" />
+</font>
+</defs>
+</svg>

@@ -35,9 +35,12 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-.alcohol-wrapper, .water-wrapper {
+.alcohol-wrapper, .spirytus-wrapper, .sorghum-wrapper, .water-wrapper {
     margin: 100px auto 20px;
     position: relative;
+}
+.hide-bottle {
+    display: none;
 }
 #canvas {
     position: absolute;
@@ -56,7 +59,7 @@ html, body {
     overflow: hidden;
     /* background-color: rgba(240,240,240,0.5); */
 }
-.top {
+.alcohol-top {
     margin-top: 20px;
     width: 37px;
     height: 20px;
@@ -68,7 +71,7 @@ html, body {
     border: 1px solid #E1E2EF;
     border-radius: 2px;
 }
-.top::before {
+.alcohol-top::before {
     content: '';
     display: block;
     width: 15px;
@@ -81,7 +84,7 @@ html, body {
     border: 1px solid #E1E2EF;
     border-radius: 2px;
 }
-.top::after {
+.alcohol-top::after {
     content: '';
     display: block;
     width: 90px;
@@ -94,7 +97,7 @@ html, body {
     border: 1px solid #E1E2EF;
     border-radius: 2px;
 }
-.tag {
+.alcohol-tag {
     position: absolute;
     width: 100%;
     height: 78px;
@@ -107,7 +110,7 @@ html, body {
     border-right: none;
     z-index: 3;
 }
-.concentration {
+.alcohol-concentration {
     margin: 6px auto;
     text-align: center;
     letter-spacing: 4px;
@@ -116,12 +119,12 @@ html, body {
     font-weight: 800;
     z-index: 3;
 }
-.hr {
+.alcohol-hr {
     width: 70%;
     border: 0.5px solid #424C55;
     margin: 0 auto;
 }
-.label {
+.alcohol-label {
     position: absolute;
     width: 80px;
     height: 20px;
@@ -131,6 +134,280 @@ html, body {
     transform: translate(-50%,-50%);
     color: #424C55;
     z-index: 3;
+}
+.spirytus {
+    position: relative;
+    margin: 42px auto 20px;
+    width: 100px;
+    height: 180px;
+    border: 4px solid #ddd;
+    border-radius: 40% 40% 5px 5px;
+    overflow: hidden;
+    /* background-color: rgba(240,240,240,0.5); */
+}
+.spirytus-top {
+    margin-top: 20px;
+    width: 37px;
+    height: 100px;
+    position: absolute;
+    top: -74px;
+    left: 50%;
+    transform: translate(-50%,0);
+    /* background-image: linear-gradient(to right,#bbb, #eee , #bbb); */
+    border: 4px solid #ddd;
+    border-radius: 2px;
+}
+.spirytus-top::before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-image: linear-gradient(to right,#bbb, #eee , #bbb);
+    border: 1px solid #E1E2EF;
+    border-radius: 2px;
+}
+.alcohol-tag {
+    position: absolute;
+    width: 100%;
+    height: 78px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(240,240,240,0.4);
+    border: 4px solid rgb(216, 32, 12, 0.8);
+    border-left: none;
+    border-right: none;
+    z-index: 3;
+}
+.spirytus-tag {
+    position: absolute;
+    width: 90%;
+    height: 108px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(240,240,240,0.4);
+    border: 4px solid rgba(116,205,151, 0.9);
+    z-index: 3;
+}
+.spirytus-label {
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    line-height: 0.9;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #424C55;
+    z-index: 3;
+}
+.spir-title {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(116,205,151);
+    font-weight: 800;
+    font-size: 14px;
+}
+.spir-subtitle {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(116,205,151);
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 2;
+}
+.from {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(116,205,151);
+    font-weight: 800;
+    line-height: 1.2;
+    font-size: 10px;
+}
+.spirytus-hr {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    border: 0.5px solid rgba(116,205,151, 0.9);
+    margin: 0 auto;
+}
+.spirytus-concentration {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 6px auto;
+    text-align: center;
+    letter-spacing: 4px;
+    color: rgb(116,205,151);
+    font-size: 14px;
+    font-weight: 800;
+    z-index: 3;
+}
+.sorghum {
+    position: relative;
+    margin: 42px auto 20px;
+    width: 100px;
+    height: 180px;
+    border: 4px solid #ddd;
+    border-radius: 40% 40% 5px 5px;
+    overflow: hidden;
+    /* background-color: rgba(240,240,240,0.5); */
+}
+.sorghum-top {
+    margin-top: 20px;
+    width: 37px;
+    height: 100px;
+    position: absolute;
+    top: -74px;
+    left: 50%;
+    transform: translate(-50%,0);
+    /* background-image: linear-gradient(to right,#bbb, #eee , #bbb); */
+    border: 4px solid #ddd;
+    border-radius: 2px;
+}
+.sorghum-top::before {
+    content: '金門高粱酒';
+    word-break: keep-all;
+    line-height: 1.2;
+    font-size: 10px;
+    color: #fff;
+    display: block;
+    overflow: hidden;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-image: linear-gradient(to right,rgb(235, 209, 172), rgb(240, 216, 181) , rgb(235, 209, 172));
+    border: 1px solid #E5C79A;
+    border-radius: 2px;
+}
+.sorghum-top::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 7px;
+    left: -2px;
+    border: 2px dotted #eee;
+    border-radius: 2px;
+}
+.sorghum-tag {
+    position: absolute;
+    width: 85%;
+    height: 98px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(240,240,240,0.4);
+    border: 4px solid rgba(229,199,154, 0.9);
+    z-index: 3;
+}
+.fact {
+    margin-top: 4px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(53,75,141, 0.9);
+}
+.toku {
+    /* margin-left: 4px; */
+    display: inline-block;
+    font-size: 10px;
+    color: rgba(109, 109, 109, 0.8);
+}
+.toku::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: 12px;
+    height: 100%;
+    background-image: radial-gradient(rgba(229,199,154, 0.9) 60%, rgba(240,240,240,0.4) 40%);
+    background-size: 4px 4px;
+    z-index: -1;
+}
+.sorghum-concentration {
+    margin: 6px auto;
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 1px;
+    color: rgba(5,94,166, 0.8);
+    font-size: 12px;
+    font-weight: 800;
+    transform: scaleY(1.5);
+    z-index: 3;
+}
+/* .sorghum-concentration::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 50px;
+    height: 100%;
+    background-image: radial-gradient(rgba(229,199,154, 0.9) 50%, rgba(240,240,240,0.4) 50%);
+    background-size: 4px 4px;
+    z-index: -1;
+} */
+.kyu {
+    /* margin-right: 4px; */
+    display: inline-block;
+    font-size: 10px;
+    color: rgba(109, 109, 109, 0.8);
+}
+.kyu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    width: 12px;
+    height: 100%;
+    background-image: radial-gradient(rgba(229,199,154, 0.9) 60%, rgba(240,240,240,0.4) 40%);
+    background-size: 4px 4px;
+    z-index: -1;
+}
+.sorghum-title {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+    color: rgba(53,75,141, 0.9);
+}
+.sorghum-hr {
+    width: 70%;
+    border: 0.5px solid #424C55;
+    margin: 4px auto;
+    color: rgba(53,75,141, 0.9);
+}
+.degree {
+    font-size: 10px;
+    color: rgba(53,75,141, 0.9);
+}
+.sorghum-label {
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    line-height: 0.9;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #424C55;
+    z-index: 3;
+}
+.sorghum .icon-barcode {
+    position: absolute;
+    right: 10%;
 }
 .alc-liquid {
     width: 120px;
@@ -240,10 +517,13 @@ html, body {
 }
 .seventy {
     display: inline-block;
-    line-height: 1.4;
+    line-height: 1.6;
     height: 20px;
     background-color: #E1E2EF;
     border-radius: 2px;
+}
+.twonfive {
+    line-height: 1.6;
 }
 @media(max-width: 768px){
     .container {

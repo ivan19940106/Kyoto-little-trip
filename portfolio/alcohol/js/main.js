@@ -3,12 +3,24 @@ $(document).ready(function(){
         el: '#app',
         data: {
             alcVol: 200,
-            watVol: 60
+            watVol: 60,
+            spirytusVol: 300,
+            sorghumVol: 400,
+            alcTypes: ['95%酒精', '90°生命之水', '86°金門高粱酒'],
+            nowTpye: '95%酒精'
         },
         computed: {
             calcAlcCon: function(){
                 var alcCon = (this.alcVol*0.95/(this.alcVol+this.watVol)*100).toFixed(1);
                 return alcCon;
+            },
+            calcSpirCon: function(){
+                var SpirCon = (this.spirytusVol*0.9/(this.spirytusVol+this.watVol)*100).toFixed(1);
+                return SpirCon;
+            },
+            calcSorgCon: function(){
+                var SorgCon = (this.sorghumVol*0.86/(this.sorghumVol+this.watVol)*100).toFixed(1);
+                return SorgCon;
             }
         }
     });

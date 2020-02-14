@@ -29,13 +29,13 @@
         <div id="app">
             <div class="liquid-wrapper">
                 <canvas id="canvas"></canvas>
-                <div class="alcohol-wrapper">
-                    <div class="top"></div>
-                    <div class="alcohol">
-                        <div class="tag">
-                            <div class="concentration">{{calcAlcCon}}％</div>
-                            <div class="hr"></div>
-                            <div class="label">
+                <div class="alcohol-wrapper" v-if="nowTpye == '95%酒精'">
+                    <div class="top alcohol-top"></div>
+                    <div class="bottle alcohol">
+                        <div class="tag alcohol-tag">
+                            <div class="alcohol-concentration">{{calcAlcCon}}％</div>
+                            <div class="alcohol-hr"></div>
+                            <div class="alcohol-label">
                                 <i class="icon-warning"></i>
                                 <i class="icon-fire"></i>
                                 <i class="icon-barcode"></i>
@@ -51,7 +51,75 @@
                     </div>
                     <div class="alc-panel">
                         <input type="range" class="alc-vol" v-model.number="alcVol" min="0" max="500">
-                        <div class="scale">95%酒精體積：{{alcVol}} ml</div>
+                        <div class="scale">
+                            <select name="" id="" v-model="nowTpye">
+                                <option :value="alcType" v-for="(alcType, aid) in alcTypes">{{alcTypes[aid]}}</option>
+                            </select>
+                            {{alcVol}} ml
+                        </div>
+                    </div>
+                </div>
+                <div class="spirytus-wrapper" v-if="nowTpye == '90°生命之水'">
+                    <div class="top spirytus-top"></div>
+                    <div class="bottle spirytus">
+                        <div class="tag spirytus-tag">
+                            <div class="spirytus-label">
+                                <div class="spir-title">spirytus</div>
+                                <div class="spir-subtitle">rektyfikowany</div>
+                                <div class="from">product of poland</div>
+                            </div>
+                            <div class="hr"></div>
+                            <div class="spirytus-concentration">{{calcSpirCon}}％</div>
+                        </div>
+                        <div class="alc-liquid" :style="{height: spirytusVol/2.8 + 'px'}">
+                            <div class='box'>
+                                <div class='wave-alc -one'></div>
+                                <div class='wave-alc -two'></div>
+                                <div class='wave-alc -three'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alc-panel">
+                        <input type="range" class="alc-vol" v-model.number="spirytusVol" min="0" max="500">
+                        <div class="scale">
+                            <select name="" id="" v-model="nowTpye">
+                                <option :value="alcType" v-for="(alcType, aid) in alcTypes">{{alcTypes[aid]}}</option>
+                            </select>
+                            {{spirytusVol}} ml
+                        </div>
+                    </div>
+                </div>
+                <div class="sorghum-wrapper" v-if="nowTpye == '86°金門高粱酒'">
+                    <div class="top sorghum-top"></div>
+                    <div class="bottle sorghum">
+                        <div class="tag sorghum-tag">
+                            <div class="fact">金門酒廠</div>
+                            <div class="toku">特</div>
+                            <div class="sorghum-concentration">{{calcSorgCon}}°</div>
+                            <div class="kyu">級</div>
+                            <div class="sorghum-title">金門高粱酒</div>
+                            <div class="sorghum-hr"></div>
+                            <div class="degree">vol. 86°</div>
+                            <div class="sorghum-label">
+                                <i class="icon-barcode"></i>
+                            </div>
+                        </div>
+                        <div class="alc-liquid" :style="{height: sorghumVol/2.8 + 'px'}">
+                            <div class='box'>
+                                <div class='wave-alc -one'></div>
+                                <div class='wave-alc -two'></div>
+                                <div class='wave-alc -three'></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alc-panel">
+                        <input type="range" class="alc-vol" v-model.number="sorghumVol" min="0" max="500">
+                        <div class="scale">
+                            <select name="" id="" v-model="nowTpye">
+                                <option :value="alcType" v-for="(alcType, aid) in alcTypes">{{alcTypes[aid]}}</option>
+                            </select>
+                            {{sorghumVol}} ml
+                        </div>
                     </div>
                 </div>
                 <div class="water-wrapper">
@@ -75,7 +143,7 @@
                 
             </div>
         </div>
-        <h3 class="info">貼心提醒：酒精濃度介於<span class="seventy">&nbsp;70%至78%之間&nbsp;</span>，都兼具凝固和穿透細菌、病毒表的蛋白質，達到殺菌效果。民眾可上<a href="https://www.cdc.gov.tw/" class="cdc" target="_blank">衛福部疾管署全球資訊網</a>「<a href="https://www.cdc.gov.tw/Disease/SubIndex/N6XvFa1YP9CXYdB0kNSA9A" class="2019-nCov" target="_blank">2019新型冠狀病毒</a>」專區查詢，也可加入疾管署的官方Line好友帳號「<a href="https://page.line.me/vqv2007o" class="cdc-line">疾管家</a>」，以獲取最新消息。然而，酒精具有一定程度的可燃性，因此民眾在防疫之餘，也要格外注意消防安全喔！</h3>
+        <h3 class="info">貼心提醒：酒精濃度介於<span class="seventy">&nbsp;70%至78%之間&nbsp;</span>，都兼具凝固和穿透細菌、病毒表的蛋白質，達到殺菌效果。且要用<span class="seventy"><a class="twonfive" href="https://www.youtube.com/watch?v=bDJ-sNAYUCI&feature=youtu.be&fbclid=IwAR2aFmTedk1t9CmhW6oPnj-6UzFWWLo8DYdrBs9TM0yYxi3-YMhh_ngTSuo">&nbsp;第二類和第五類&nbsp;</a></span>的塑膠瓶來裝酒精喔!民眾可上<a href="https://www.cdc.gov.tw/" class="cdc" target="_blank">衛福部疾管署全球資訊網</a>「<a href="https://www.cdc.gov.tw/Disease/SubIndex/N6XvFa1YP9CXYdB0kNSA9A" class="2019-nCov" target="_blank">2019新型冠狀病毒</a>」專區查詢，也可加入疾管署的官方Line好友帳號「<a href="https://page.line.me/vqv2007o" class="cdc-line">疾管家</a>」，以獲取最新消息。然而，酒精具有一定程度的可燃性，因此民眾在防疫之餘，也要格外注意消防安全喔！</h3>
         <h4 class="source"><a href="https://health.udn.com/health/story/120952/4314256" class="link" target="_blank">資料來源：聯合報 | 記者鄭維真 台南即時報導 2020-01-31</a></h4>
     </div>
 </body>

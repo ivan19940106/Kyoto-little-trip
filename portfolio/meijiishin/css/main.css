@@ -139,6 +139,7 @@ html, body {
     top: 244px;
     left: 112px;
     width: 100px;
+    z-index: 1;
 }
 .eng-title {
     display: inline-block;

@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: serif;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #FCF9EC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cover {
+    position: relative;
+    padding: 10px;
+    width: 450px;
+    height: 612px;
+    background-color: #E3DEDB;
+    /* border: 1px solid #000; */
+    color: #222;
+    transition: all 0.5s;
+}
+.cover:hover {
+    transform: translate(0,-5px);
+    box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.4);
+}
+.title {
+    writing-mode: vertical-rl;
+    font-size: 56px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+.link {
+    text-decoration: none;
+    color: #222;
+}
+.two {
+    writing-mode: horizontal-tb;
+    font-size: 62px;
+    line-height: 1;
+}
+.meiji {
+    font-size: 72px;
+}
+.subtitle {
+    writing-mode: vertical-rl;
+    font-size: 30px;
+}
+.sunset {
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 170px;
+    height: 170px;
+    /* background-image: linear-gradient(#DF052A, rgb(219, 171, 83)); */
+    background-color: #DF052A;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 0;
+}
+.cloud-head {
+    position: absolute;
+    top: 25px;
+    left: 39%;
+    width: 55px;
+    height: 50px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.cloud-head::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: -7px;
+    width: 40px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.cloud-head::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    width: 40px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.cloud-tail {
+    position: absolute;
+    top: 33px;
+    left: 54%;
+    width: 50px;
+    height: 35px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.cloud-tail::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 50px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.cloud-tail::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -68px;
+    left: 26px;
+    width: 50px;
+    height: 100px;
+    background-color: #DF052A;
+    border-radius: 50%;
+}
+.sea {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background-color: #375162;
+}
+.black-ship {
+    position: absolute;
+    top: 244px;
+    left: 112px;
+    width: 100px;
+}
+.eng-title {
+    display: inline-block;
+    margin-top: 70px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    font-size: 44px;
+    line-height: 1;
+}
+.author {
+    margin-top: 70px;
+    margin-right: 10px;
+    writing-mode: vertical-rl;
+    font-size: 16px;
+    float: right;
+}
+.write {
+    font-size: 10px;
+}
+.desc-title {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.desc {
+    margin-top: 10px;
+    font-size: 12px;
+}
+/* waves */
+.box {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 112px;
+    overflow: hidden;
+    z-index: 1;
+}
+.wave-alc {
+    position: absolute;
+    bottom: 47%;
+    left: -78%;
+    background: #DF052A;
+    width: 444px;
+    height: 444px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 7000ms infinite linear;
+}
+.wave.-three {
+    animation: drift 9000ms infinite linear;
+}
+.wave.-two {
+    animation: drift 11000ms infinite linear;
+    opacity: .1;
+    background: #f8b195;
+}
+@keyframes drift {
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+}
+@media(max-width: 470px){
+    .cover {
+        width: 300px;
+        height: 402px;
+        overflow: hidden;
+    }
+    .title {
+        font-size: 39px;
+    }
+    .two {
+        font-size: 39px;
+        line-height: 0.8;
+    }
+    .meiji {
+        font-size: 48px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+    .sunset {
+        top: 24%;
+    }
+    .cloud-head {
+        left: 30%;
+    }
+    .cloud-tail {
+        left: 45%;
+    }
+    .black-ship {
+        top: 176px;
+        left: 56px;
+        width: 78px;
+    }
+    .eng-title {
+        margin-top: 50px;
+        font-size: 26px;
+    }
+    .author {
+        margin-top: 30px;
+        margin-right: 0;
+        font-size: 12px;
+    }
+    .desc-title {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+    .desc {
+        margin-top: 5px;
+        font-size: 12px;
+    }
+}

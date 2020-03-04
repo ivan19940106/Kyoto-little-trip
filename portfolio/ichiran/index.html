@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./js/main.js"></script>
+    <title>一蘭拉麵</title>
+</head>
+<body>
+    <h1 class="title">天然とんこつラーメン専門店 一蘭</h1>
+    <h2 class="subtitle">一次搞懂 Vue.js Component 之間資料傳遞的方式</h2>
+    <div id="app" class="ramen-container">
+        <div class="kaedama-container">
+            <div class="kaedama">替玉</div>
+        </div>
+        <div class="bowl">
+            <div class="mark">一蘭</div>
+            <div class="sokoji">この一滴が<br>最高の<br>喜びです</div>
+            <div class="ingradients">
+                <div class="soup-vice"></div>
+                <div class="soup-abura"></div>
+                <div class="soup">
+                <div class="noodle1">
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                </div>
+                <div class="middle">
+                    <div class="negi-container">
+                        <div class="negi" v-for="negi in negis"></div>
+                    </div>
+                    <div class="kara"></div>
+                    <div class="meat-container">
+                        <div class="meat" v-for="meat in meats">
+                            <div class="meat-texture"></div>
+                            <div class="meat-texture"></div>
+                            <div class="meat-texture"></div>
+                            <div class="meat-texture"></div>
+                            <div class="meat-texture"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="noodle2">
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                    <div class="noodle-texture"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="hashi-container">
+            <div class="hashi-wrapper">
+                <div class="rest"></div>
+                <div class="hashi"></div>
+                <div class="hashi"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

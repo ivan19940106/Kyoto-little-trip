@@ -259,6 +259,7 @@ html, body {
     }
     .kaedama-container {
         margin-top: 100px;
+        margin-bottom: 200px;
         order: 2;
     }
 }

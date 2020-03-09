@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/fontello.css">
 	<link rel="stylesheet" href="css/main.css">
-	<script src="jquery.js" type="text/javascript"></script>
-	<script src="main.js" type="text/javascript"></script>
+	<script src="./js/jquery.js" type="text/javascript"></script>
+	<script src="./js/main.js" type="text/javascript"></script>
 </head>
 <body>
 	
@@ -17,16 +17,16 @@
 		
 		<div class="container clearfix">
 			<div id="logo">
-				<img src="images/monster-trans.png" width="145px" alt="logo">
+				<a href="./index.html"><img src="images/monster-trans.png" width="145px" alt="logo"></a>
 			</div>
-			<h1 class="title-name">chang ko hsu</h1>
-			<h3 class="subtitle">&nbsp;- a guitarist / coder</h3>
+			<a href="./index.html"><h1 class="title-name">chang ko hsu</h1></a>
+			<a href="./portfolio.html"><h3 class="subtitle">&nbsp;- a guitarist / coder</h3></a>
 		</div>
 		
 		<div class="container clearfix">
 			
-			<div class="nav <!-- clearfix -->">
-				<ul class="<!-- clearfix -->">
+			<div class="nav clearfix">
+				<ul class="clearfix">
 					<li><a href="index.html" class="home">home</a></li>
 					<li><a href="about.html">about</a></li>
 					<li><a href="https://changko.weebly.com/blog" target="_blank">blog</a></li>
@@ -64,69 +64,72 @@
 				<div class="thumbnail">
 					<img src="images/umeda.jpg" alt="photo" width="100%">
 					<div class="thumbnail-cover">
-						<a href="#"><i class="icon-search"></i></a>
+						<a href="https://github.com/ivan19940106" target="_blank"><i class="icon-github"></i></a>
 					</div>
 				</div>
 			</div>
 			
-			<div class="info down">
-				
-				<h3>my works</h3>
-				<ol>
-					<ol class="">
-						<h3 class="">Project</h3>
-						<li><a href="portfolio/atelier koco./index.html" target="_blank">Atelier Koco. Official Website</a></li>
-					</ol>
-					<ol class="">
-						<h3 class="">HTML & CSS Layout</h3>
-						<li><a href="portfolio/layout practice/index.html" target="_blank">Home</a></li>
-						<li><a href="portfolio/layout practice/about.html" target="_blank">About</a></li>
-						<li><a href="portfolio/layout practice/service.html" target="_blank">Service</a></li>
-						<li><a href="portfolio/profile page/index.html" target="_blank">Profile Page</a></li>
-						<li><a href="portfolio/face mask/index.html" target="_blank">Face Mask</a></li>
-						<li><a href="portfolio/meijiishin/index.html" target="_blank">2小時讀懂明治維新：十九 世紀日本，翻轉國家命運的重生傳奇</a></li>
-					</ol>
-					<ol class="">
-						<h3 class="">jQuery</h3>
-						<li><a href="portfolio/todolist/todolist.html" target="_blank">to-do list</a></li>
-						<li><a href="portfolio/say it out loud/say it out loud.html" target="_blank">Say It Out Loud</a></li>
-						<li><a href="portfolio/latest article/latest article.html" target="_blank">Latest Article Card Stack</a></li>
-						<li><a href="./portfolio/guitar model card set/card set.html" target="_blank">Guitar Model Card Set</a></li>
-					</ol>
-					<ol class="">
-						<h3 class="">CSS3 Animation</h3>
-						<li><a href="portfolio/solar system/solar system.html" target="_blank">Solar System with the spacecraft Voyager 1</a></li>
-					</ol>
-					<ol class="">
-						<h3 class="">Ajax</h3>
-						<li><a href="portfolio/taipei taipei/taipei taipei.html" target="_blank">Weather report's just a click away</a></li>
-					</ol>
-					<ol class="">
-						<h3 class="">Vue.js</h3>
-						<li><a href="portfolio/one way ticket/one way ticket.html" target="_blank">One Way Ticket</a></li>
-						<li><a href="portfolio/bubble tea/bubble tea.html" target="_blank">Help yourself to a cup of bubble tea!</a></li>
-						<li><a href="portfolio/calendar/index.html" target="_blank">Traditional Calendar</a></li>
-						<li><a href="portfolio/alcohol/index.html" target="_blank">75% Alcohol Calculator</a></li>
-						<li><a href="portfolio/ichiran/index.html" target="_blank">天然とんこつラーメン専門店 一蘭</a></li>
-					</ol>
-					<ol class="">
-						<h3 class="">TweenMax.js.js</h3>
-						<li><a href="portfolio/record/index.html" target="_blank">魏如萱 waa wei【藏著並不等於遺忘 Hidden, Not Forgotten】唱機</a></li>
-					</ol>
-					<ol class="">
-						<h3 class="">SVG</h3>
-						<li><a href="portfolio/territory/index.html" target="_blank">台灣國土全域圖</a></li>
-					</ol>
-					<ol class="">
-						<h3 class="">HTML5 Canvas</h3>
-						<li><a href="portfolio/ctx/index.html" target="_blank">Castle & Car</a></li>
-					</ol>
-				</ol>
-				
-				<div class="input">
-					<input type="text" class="search">&nbsp;<a href="#"><i class="icon-search"></i></a>
+			<div class="filter">
+				<h3 class="info">my works</h3>
+				<div class="select">
+					<i class="icon-search"></i>
+					<div class="option">Project</div>
+					<div class="option">HTML&CSS</div>
+					<div class="option">JS, jQuery</div>
+					<div class="option">Vue.js</div>
+					<div class="option all">All works</div>
 				</div>
-				
+			</div>
+			
+			<div class="info filter-result">
+				<ol class="project">
+					<h3 class="">Project</h3>
+					<li><a href="portfolio/atelier koco./index.html" target="_blank">Atelier Koco. Official Website</a></li>
+				</ol>
+				<ol class="html">
+					<h3 class="">HTML & CSS Layout</h3>
+					<li><a href="portfolio/layout practice/index.html" target="_blank">Home</a></li>
+					<li><a href="portfolio/layout practice/about.html" target="_blank">About</a></li>
+					<li><a href="portfolio/layout practice/service.html" target="_blank">Service</a></li>
+					<li><a href="portfolio/profile page/index.html" target="_blank">Profile Page</a></li>
+					<li><a href="portfolio/face mask/index.html" target="_blank">Face Mask</a></li>
+					<li><a href="portfolio/meijiishin/index.html" target="_blank">2小時讀懂明治維新：十九 世紀日本，翻轉國家命運的重生傳奇</a></li>
+				</ol>
+				<ol class="jquery">
+					<h3 class="">jQuery</h3>
+					<li><a href="portfolio/todolist/todolist.html" target="_blank">to-do list</a></li>
+					<li><a href="portfolio/say it out loud/say it out loud.html" target="_blank">Say It Out Loud</a></li>
+					<li><a href="portfolio/latest article/latest article.html" target="_blank">Latest Article Card Stack</a></li>
+					<li><a href="./portfolio/guitar model card set/card set.html" target="_blank">Guitar Model Card Set</a></li>
+				</ol>
+				<ol class="css3">
+					<h3 class="">CSS3 Animation</h3>
+					<li><a href="portfolio/solar system/solar system.html" target="_blank">Solar System with the spacecraft Voyager 1</a></li>
+				</ol>
+				<ol class="ajax">
+					<h3 class="">Ajax</h3>
+					<li><a href="portfolio/taipei taipei/taipei taipei.html" target="_blank">Weather report's just a click away (still under constructure)</a></li>
+				</ol>
+				<ol class="vue">
+					<h3 class="">Vue.js</h3>
+					<li><a href="portfolio/one way ticket/one way ticket.html" target="_blank">One Way Ticket</a></li>
+					<li><a href="portfolio/bubble tea/bubble tea.html" target="_blank">Help yourself to a cup of bubble tea!</a></li>
+					<li><a href="portfolio/calendar/index.html" target="_blank">Traditional Calendar</a></li>
+					<li><a href="portfolio/alcohol/index.html" target="_blank">75% Alcohol Calculator</a></li>
+					<li><a href="portfolio/ichiran/index.html" target="_blank">天然とんこつラーメン専門店 一蘭</a></li>
+				</ol>
+				<ol class="tweenmax">
+					<h3 class="">TweenMax.js</h3>
+					<li><a href="portfolio/record/index.html" target="_blank">魏如萱 waa wei【藏著並不等於遺忘 Hidden, Not Forgotten】唱機</a></li>
+				</ol>
+				<ol class="svg">
+					<h3 class="">SVG</h3>
+					<li><a href="portfolio/territory/index.html" target="_blank">台灣國土全域圖</a></li>
+				</ol>
+				<ol class="canvas">
+					<h3 class="">HTML5 Canvas</h3>
+					<li><a href="portfolio/ctx/index.html" target="_blank">Castle & Car</a></li>
+				</ol>
 			</div>
 			
 		</div>
@@ -139,7 +142,7 @@
 		<div class="container">
 			
 			<div class="copyright">
-				<div class="title">&copy; <a href="index.html">chang ko hsu</a> 2019 | All Rights Reserved</div>
+				<div class="title">&copy; <a href="index.html">chang ko hsu</a> 2020 | All Rights Reserved</div>
 			</div>
 			
 		</div>

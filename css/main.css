@@ -26,6 +26,50 @@
 	margin: 0 auto;
 }
 
+.filter {
+	max-width: 750px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.icon-search {
+	margin-right: 28px;
+}
+
+.option {
+	text-align: center;
+	margin: 5px;
+	display: inline-block;
+	width: 15%;
+	letter-spacing: 2px;
+	font-size: 15px;
+	color: #444;
+	cursor: pointer;
+}
+
+.selected {
+	padding: 2px;
+	background-color: #553c8b;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	color: #eee;
+}
+
+.hide-result {
+	display: none;
+}
+
+.show-result {
+	display: block;
+}
+
+.filter-result {
+	max-width: 750px;
+	min-height: 400px;
+	margin: 0 auto;
+	padding: 0 70px;
+}
+
 .down {
 	max-width: 750px;
 	margin: 0 auto;
@@ -66,6 +110,7 @@ h3 {
 .info {
 	font-weight: 300;
 	font-size: 16px;
+	line-height: 2;
 	color: gray;
 	text-decoration: none;
 }
@@ -166,6 +211,18 @@ li{
 	color: #553c8b;
 }
 
+.quote-about q, .quote-about cite {
+	letter-spacing: 2px;
+	color: #333;
+	font-size: 12px;
+}
+
+.quote-index q, .quote-index cite {
+	letter-spacing: 2px;
+	color: #333;
+	font-size: 13px;
+}
+
 #latest-article {
 	position: absolute;
 	top: 50%;
@@ -242,7 +299,11 @@ li{
 
 .thumbnail .thumbnail-cover i {
 	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	position: absolute;
+	font-size: 45px;
+	color: #553c8b;
 }
 
 .thumbnail .thumbnail-cover:hover {
@@ -336,6 +397,28 @@ li{
 		float: none;
 		width: 100%;
 	}
+
+	.icon-search {
+		margin-right: 15px;
+	}
+	
+	.option {
+		margin: 4px;
+		display: inline-block;
+		width: 100%;
+		letter-spacing: 2px;
+		font-size: 16px;
+		color: #444;
+	}
+
+	.selected {
+		width: 100%;
+		padding: 2px;
+		background-color: #553c8b;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		color: #eee;
+	}
 }
 
 @media(max-width: 547px){
@@ -354,7 +437,6 @@ li{
 	h3.subtitle {
 		line-height: 7;
 	}
-	
 }
 
 @media(max-width: 355px){
@@ -378,7 +460,6 @@ li{
 		line-height: 1;
 		font-size: 10px;
 	}
-	
 }
 
 

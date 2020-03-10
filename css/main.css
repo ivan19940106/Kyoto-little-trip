@@ -322,6 +322,7 @@ li{
 #footer .title {
 	margin: 10px auto;
 	text-align: center;
+	letter-spacing: 1px;
 	color: #222;
 }
 
@@ -347,10 +348,6 @@ li{
 
 body {
   font: normal 16px/1.5 "Helvetica Neue", sans-serif;
-  color: #444;
-  font-weight: 300;
-  letter-spacing: 1px;
-  font-size: 15px;
   overflow-x: hidden;
 }  /* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -408,6 +405,10 @@ body {
   width: 400px;
   padding: 15px;
   background: #E5C79A;
+  color: #444;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 15px;
 }
 
 .timeline ul li div::before {

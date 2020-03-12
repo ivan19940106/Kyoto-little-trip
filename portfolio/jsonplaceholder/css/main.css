@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    margin: 0 auto;
+    width: 70%;
+}
+.title {
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: serif;
+    font-size: 48px;
+    color: #444;
+}
+.jsonplaceholder {
+    text-decoration: none;
+    color: #444;
+}
+.info {
+    margin-bottom: 100px;
+    padding: 10px;
+    background-color: #ff7;
+    letter-spacing: 2px;
+    font-family: serif;
+    font-size: 30px;
+    color: #444;
+}
+.get-json {
+    width: 100px;
+    margin: 10px auto 30px;
+    padding: 10px;
+    text-transform: capitalize;
+    font-family: serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: 1px solid #000;
+    cursor: pointer;
+}

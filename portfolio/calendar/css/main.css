@@ -141,7 +141,11 @@ html, body {
     color: #60463B;
 }
 .someday {
+    text-align: left;
     margin-top: 20px;
+}
+.wishes {
+    text-align: left;
 }
 .icon-calendar {
     font-size: 18px;

@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #d8aa78;
+    background-color: #d4b088;
     font-family: serif;
 }
 .title {
@@ -164,7 +164,7 @@ html, body {
 .kara {
     width: 70px;
     height: 70px;
-    background-image: radial-gradient(#632A16, rgb(148, 75, 49));
+    background-image: radial-gradient(rgb(148, 75, 49), #632A16);
     border-radius: 50%;
     position: absolute;
     top: 50%;

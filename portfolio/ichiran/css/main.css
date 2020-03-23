@@ -122,16 +122,8 @@ html, body {
 .middle {
     font-size: 0;
 }
-.noodle1 {
-    margin: 40px auto;
-    width: 150px;
-    height: 50px;
-    border-radius: 30px;
-    background-color: #E6D8A0;
-    z-index: -1;
-}
-.noodle2 {
-    margin: 90px auto;
+.noodle {
+    margin: 56px auto;
     width: 150px;
     height: 50px;
     border-radius: 30px;

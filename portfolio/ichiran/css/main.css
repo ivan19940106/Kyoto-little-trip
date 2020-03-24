@@ -191,6 +191,44 @@ html, body {
     border-radius: 5px;
 }
 /* accessories */
+.menu-container {
+    width: 320px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-title {
+    font-size: 28px;
+    color: #222;
+}
+.menu, table, tr, td {
+    padding: 8px;
+    text-align: center;
+    background-color: #eee;
+    border: 2px solid #444;
+    border-collapse: collapse;
+}
+input[type="radio"] {
+    display: none;
+}
+label {
+    margin: 0 10px;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+label.ordered {
+    width: 44px;
+}
+small {
+    font-size: 10px;
+}
+.circled {
+    border: 2px solid #e22;
+    border-radius: 50%;
+}
 .kaedama-container {
     width: 200px;
     display: flex;
@@ -207,9 +245,10 @@ html, body {
     border-left: 10px solid #8e8e91;
     text-align: center;
     line-height: 3;
+    cursor: pointer;
 }
 .hashi-container {
-    width: 200px;
+    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,7 +274,10 @@ html, body {
     top: 30px;
     left: -12px;
 }
-@media(max-width: 576px){
+.hide {
+    display: none;
+}
+@media(max-width: 927px){
     .title {
         font-size: 28px;
     }
@@ -252,6 +294,6 @@ html, body {
     .kaedama-container {
         margin-top: 100px;
         margin-bottom: 200px;
-        order: 2;
+        /* order: 2; */
     }
 }

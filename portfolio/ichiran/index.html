@@ -13,7 +13,37 @@
     <h1 class="title">天然とんこつラーメン専門店 一蘭</h1>
     <h2 class="subtitle">一次搞懂 Vue.js Component 之間資料傳遞的方式</h2>
     <div id="app" class="ramen-container">
-        <div class="kaedama-container">
+        <div class="menu-container" v-if="ordered == false">
+            <table class="menu">
+                <tr>
+                    <td colspan="4" class="menu-title">點餐用紙<small><label for="ordered" class="ordered"><input type="checkbox" id="ordered">完了</label></small></td>
+                </tr>
+                <tr>
+                    <td colspan="3">蔥<br><small>ねぎ</small></td>
+                    <td class="negi-row">
+                        <label for="no"><input type="radio" id="no" name="negi" value="0">無</label>
+                        <label for="normal"><input type="radio" id="normal" name="negi" value="60">普通</label>
+                        <label for="lotsof"><input type="radio" id="lotsof" name="negi" value="100">多</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">叉燒<br><small>チャーシュー</small></td>
+                    <td class="meat-row">
+                        <label for="nashi"><input type="radio" id="nashi" name="meat" value="0">無</label>
+                        <label for="ari"><input type="radio" id="ari" name="meat" value="2">有</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">赤紅醬汁<br><small>赤い秘伝のたれ</small></td>
+                    <td class="kara-row">
+                        <label for="half"><input type="radio" id="half" name="kara" value="35">1/2</label>
+                        <label for="one"><input type="radio" id="one" name="kara" value="70">1</label>
+                        <label for="two"><input type="radio" id="two" name="kara" value="90">2</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="kaedama-container" v-show="ordered">
             <div class="kaedama">替玉</div>
         </div>
         <div class="bowl">
@@ -42,7 +72,7 @@
                     <div class="negi-container">
                         <div class="negi" v-for="negi in negis"></div>
                     </div>
-                    <div class="kara"></div>
+                    <div class="kara" :style="{width: kara + 'px', height: kara + 'px'}"></div>
                     <div class="meat-container">
                         <div class="meat" v-for="meat in meats">
                             <div class="meat-texture"></div>

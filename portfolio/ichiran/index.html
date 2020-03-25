@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1 class="title">天然とんこつラーメン専門店 一蘭</h1>
-    <h2 class="subtitle">一次搞懂 Vue.js Component 之間資料傳遞的方式</h2>
+    <h2 class="subtitle">Vue.js event bus 的妙用，無限加麵好不快樂！</h2>
     <div id="app" class="ramen-container">
         <div class="menu-container" v-if="ordered == false">
             <table class="menu">
@@ -44,7 +44,47 @@
             </table>
         </div>
         <div class="kaedama-container" v-show="ordered">
-            <div class="kaedama">替玉</div>
+            <kaedama></kaedama>
+            <br>
+            <code>
+                //event bus<br>
+                var bus = new Vue();<br>
+                <br>
+                Vue.component('kaedama', {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;template: '<!--<div class="kaedama" @click="reset">替玉</div>-->',<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;methods: {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reset: function(){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if($('.ingradients').hasClass('eaten-up')){<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bus.$emit('reset');<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.ingradients').removeClass('eaten-up');<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                });<br>
+                <br>
+                var vm = new Vue({<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;el: '#app',<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;data: {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;negis: 100,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;meats: 2,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kara: 70,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ordered: false<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;methods: {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reset(){<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.negis = 0;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.meats = 0;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.kara = 0;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;created: function(){<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bus.$on('reset', this.reset);<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;},<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;beforeDestroy: function(){<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bus.$off('reset', this.reset);<br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                });<br>
+            </code>
         </div>
         <div class="bowl">
             <div class="mark">一蘭</div>

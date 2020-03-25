@@ -230,12 +230,14 @@ small {
     border-radius: 50%;
 }
 .kaedama-container {
-    width: 200px;
+    width: 300px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .kaedama {
+    margin-top: 50px;
     width: 100px;
     height: 50px;
     background-color: #F98F04;
@@ -246,6 +248,16 @@ small {
     text-align: center;
     line-height: 3;
     cursor: pointer;
+}
+code {
+    margin-top: 20px;
+    padding: 10px;
+    width: 75%;
+    height: 150px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    background-color: #ddd;
+    overflow-y: scroll;
 }
 .hashi-container {
     width: 300px;
@@ -292,8 +304,6 @@ small {
         margin-top: 100px;
     }
     .kaedama-container {
-        margin-top: 100px;
-        margin-bottom: 200px;
-        /* order: 2; */
+        margin-bottom: 70px;
     }
 }

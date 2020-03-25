@@ -1,4 +1,19 @@
 $(document).ready(function(){
+    //event bus
+    var bus = new Vue();
+
+    Vue.component('kaedama', {
+        template: '<div class="kaedama" @click="reset">替玉</div>',
+        methods: {
+            reset: function(){
+                if($('.ingradients').hasClass('eaten-up')){
+                    bus.$emit('reset');
+                    $('.ingradients').removeClass('eaten-up');
+                }
+            }
+        }
+    });
+    
     var vm = new Vue({
         el: '#app',
         data: {
@@ -7,7 +22,19 @@ $(document).ready(function(){
             kara: 70,
             ordered: false
         },
-        computed: {}
+        methods: {
+            reset(){
+                this.negis = 0;
+                this.meats = 0;
+                this.kara = 0;
+            }
+        },
+        created: function(){
+            bus.$on('reset', this.reset);
+        },
+        beforeDestroy: function(){
+            bus.$off('reset', this.reset);
+        }
     });
     window.vm = vm;
 
@@ -18,28 +45,19 @@ $(document).ready(function(){
     });
 
     $('.negi-row label').click(function(){
-        $('label').removeClass('circled');
+        $('.negi-row label').removeClass('circled');
         $(this).addClass('circled');
         vm.negis = parseInt($(`#${$(this).attr('for')}`).val());
     });
     $('.meat-row label').click(function(){
-        $('label').removeClass('circled');
+        $('.meat-row label').removeClass('circled');
         $(this).addClass('circled');
         vm.meats = parseInt($(`#${$(this).attr('for')}`).val());
     });
     $('.kara-row label').click(function(){
-        $('label').removeClass('circled');
+        $('.kara-row label').removeClass('circled');
         $(this).addClass('circled');
         vm.kara = parseInt($(`#${$(this).attr('for')}`).val());
-    });
-
-    $('.kaedama').click(function(){
-        if($('.ingradients').hasClass('eaten-up')){
-            vm.negis = 0;
-            vm.meats = 0;
-            vm.kara = 0;
-            $('.ingradients').removeClass('eaten-up');
-        }
     });
 
     $('.bowl').click(function(){

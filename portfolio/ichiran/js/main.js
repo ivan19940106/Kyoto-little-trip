@@ -61,6 +61,8 @@ $(document).ready(function(){
     });
 
     $('.bowl').click(function(){
-        $('.ingradients').addClass('eaten-up');
+        if(vm.ordered){
+            $('.ingradients').addClass('eaten-up');
+        }
     });
 });

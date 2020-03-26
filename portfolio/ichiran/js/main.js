@@ -17,16 +17,20 @@ $(document).ready(function(){
     var vm = new Vue({
         el: '#app',
         data: {
-            negis: 100,
+            negi: 100,
             meats: 2,
             kara: 70,
             ordered: false
         },
         methods: {
             reset(){
-                this.negis = 0;
+                this.negi = 0;
                 this.meats = 0;
                 this.kara = 0;
+            },
+            generate: function (event) {
+                const doodle = document.querySelector('css-doodle');
+                doodle.update();
             }
         },
         created: function(){
@@ -47,7 +51,7 @@ $(document).ready(function(){
     $('.negi-row label').click(function(){
         $('.negi-row label').removeClass('circled');
         $(this).addClass('circled');
-        vm.negis = parseInt($(`#${$(this).attr('for')}`).val());
+        vm.negi = parseInt($(`#${$(this).attr('for')}`).val());
     });
     $('.meat-row label').click(function(){
         $('.meat-row label').removeClass('circled');

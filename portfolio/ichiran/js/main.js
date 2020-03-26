@@ -67,6 +67,7 @@ $(document).ready(function(){
     $('.bowl').click(function(){
         if(vm.ordered){
             $('.ingradients').addClass('eaten-up');
+            $('css-doodle').addClass('eaten-up');
         }
     });
 });

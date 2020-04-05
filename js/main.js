@@ -41,7 +41,7 @@ $(document).ready(function(){
 			labels: ['RWD切版', 'JavaScript', 'JS套件應用', 'Vue.js'],
 			datasets: [{
 				label: 'Ability (Out of 10)',
-				data: [8, 7, 6, 5],
+				data: [10, 9, 8, 7],
 				backgroundColor: [
 					'rgba(255, 206, 86, 0.2)',
 					'rgba(75, 192, 192, 0.2)',

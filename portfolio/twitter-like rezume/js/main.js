@@ -21,9 +21,11 @@ window.addEventListener('load',function(){
                 $('#dark-mode').toggleClass('off');
                 if($('#dark-mode').hasClass('off')){
                     $('body').addClass('normal-background');
+                    $('.description').find('span').addClass('normal-font-color');
                     self.darkMode = 'off';
                 } else {
                     $('body').removeClass('normal-background');
+                    $('.description').find('span').removeClass('normal-font-color');
                     self.darkMode = 'on';
                 }
             }
@@ -31,5 +33,5 @@ window.addEventListener('load',function(){
     });
     window.vm = vm;
     //t.js typing effect
-    // $('.description').t();
+    $('.description').t();
 });

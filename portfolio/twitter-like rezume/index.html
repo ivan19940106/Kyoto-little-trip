@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontello.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Chang-Ko, Hsu</title>
+</head>
+<body>
+    <div class="container" id="app" :class="{'normal-borderColor': darkMode == 'off'}">
+        <div class="cover-photo-wrapper">
+            <minesweeper></minesweeper>
+        </div>
+        <div class="info-area">
+            <img src="./image/profile-photo.jpg" alt="profile-photo" class="profile-photo" :class="{'normal-profile-photo-color': darkMode == 'off'}">
+            <div class="social-media clearfix">
+                <a href="https://github.com/ivan19940106" class="github" target="_blank"><i class="icon-github"></i></a>
+                <a href="https://codepen.io/ivan19940106" class="codepen" target="_blank"><i class="icon-codepen"></i></a>
+                <a href="https://www.linkedin.com/in/%E6%9A%A2%E5%8F%AF-%E5%BE%90-393b19b3/" class="linkedin" target="_blank"><i class="icon-linkedin"></i></a>
+                <div class="follow">&nbsp;&nbsp;follow</div>
+            </div>
+            <div class="name-area">
+                <h1 class="name" :class="{'normal-font-color': darkMode == 'off'}">徐暢可(Chang-Ko, Hsu)<i class="icon-official" :class="{'normal-official-color': darkMode == 'off'}"></i></h1>
+                <h3 class="account" :class="{'normal-light-color': darkMode == 'off'}">@ivan19940106</h3>
+            </div>
+            <div class="description" :class="{'normal-font-color': darkMode == 'off'}">
+                因為大塚愛的一首歌 - 「プラネタリウム」，自高二起開始自學日文，大四時通過JLPT N1。總是覺得音樂和文字有著不可思議的力量。 最喜歡的吉他手是Sungha Jung、最喜歡的編劇是野木亞紀子、大學上過最喜歡的課是「人類文明起源史」和「日本近代歷史人物」。 2020的新年新希望是期望有朝一日可以藉由寫 code 做出對社會有貢獻的事。<br>
+                Every artist was first an amateur. 👨‍💻
+            </div>
+            <div class="addition">
+                <a href="https://en.wikipedia.org/wiki/Taipei" class="location" target="_blank" :class="{'normal-light-color': darkMode == 'off'}"><i class="icon-location" :class="{'normal-font-color': darkMode == 'off'}"></i>Taipei, Taiwan</a>
+                <a href="https://medium.com/@Ivan19940106" class="link" target="_blank"><i class="icon-link" :class="{'normal-font-color': darkMode == 'off'}"></i>medium.com/@Ivan19940106</a>
+                <a href="https://zh.wikipedia.org/wiki/%E9%B4%BB%E6%B5%B7%E7%B2%BE%E5%AF%86" class="calendar" target="_blank" :class="{'normal-light-color': darkMode == 'off'}"><i class="icon-calendar" :class="{'normal-font-color': darkMode == 'off'}"></i>已離職 2019/07/12</a>
+                <div class="custom-control custom-switch dark-mode-switch">
+                    <input type="checkbox" class="custom-control-input" id="dark-mode" checked @click="changeDarkMode">
+                    <label class="custom-control-label dark-mode-label" for="dark-mode" :class="{'normal-font-color': darkMode == 'off'}">護眼模式</label>
+                </div>
+            </div>
+            <div class="following-area">
+                <a href="" class="following" :class="{'normal-light-color': darkMode == 'off'}">2 位追縱中</a>
+                <a href="" class="follower" :class="{'normal-light-color': darkMode == 'off'}">0 位追蹤者</a>
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="work" :class="{'normal-font-color': darkMode == 'off'}">作品</div>
+            <div class="about" :class="{'normal-font-color': darkMode == 'off'}">關於我</div>
+            <div class="blog" :class="{'normal-font-color': darkMode == 'off'}">部落格</div>
+            <div class="feature" :class="{'normal-font-color': darkMode == 'off'}">推薦的內容</div>
+        </div>
+        <hr :class="{'normal-borderColor': darkMode == 'off'}">
+        <div class="content">
+
+        </div>
+        <div class="feather"><a href="https://drive.google.com/file/d/1GtgbzT7v33lS8wX9Z00WBBHHdKvRx3O9/view?usp=sharing" class="rezume" target="_blank"><img src="./image/ckh-logo-transparent.png" alt="feather" class="add"></a></div>
+        <footer>
+            <div class="copyright" :class="{'normal-font-color': darkMode == 'off'}">© <a href="http://ivan19940106.github.io/Kyoto-little-trip/about.html" class="chang-ko" target="_blank" :class="{'normal-light-color': darkMode == 'off'}">Chang Ko Hsu</a> 2020 | All Rights Reserved</div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-doodle/0.8.5/css-doodle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/t.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -14,6 +14,10 @@
 </head>
 <body>
     <div class="container" id="app" :class="{'normal-borderColor': darkMode == 'off'}">
+        <div class="header">
+            <div class="previous-page-arrow"><i class="icon-left"></i></div>
+            <div class="name" :class="{'normal-font-color': darkMode == 'off'}">徐暢可(Chang-Ko, Hsu)<i class="icon-official" :class="{'normal-official-color': darkMode == 'off'}"></i></div>
+        </div>
         <div class="cover-photo-wrapper">
             <minesweeper></minesweeper>
         </div>
@@ -23,7 +27,7 @@
                 <a href="https://github.com/ivan19940106" class="github" target="_blank"><i class="icon-github"></i></a>
                 <a href="https://codepen.io/ivan19940106" class="codepen" target="_blank"><i class="icon-codepen"></i></a>
                 <a href="https://www.linkedin.com/in/%E6%9A%A2%E5%8F%AF-%E5%BE%90-393b19b3/" class="linkedin" target="_blank"><i class="icon-linkedin"></i></a>
-                <div class="follow">&nbsp;&nbsp;follow</div>
+                <follow @add-bookmark="follower++"></follow>
             </div>
             <div class="name-area">
                 <h1 class="name" :class="{'normal-font-color': darkMode == 'off'}">徐暢可(Chang-Ko, Hsu)<i class="icon-official" :class="{'normal-official-color': darkMode == 'off'}"></i></h1>
@@ -35,6 +39,8 @@
             </div>
             <div class="addition">
                 <a href="https://en.wikipedia.org/wiki/Taipei" class="location" target="_blank" :class="{'normal-light-color': darkMode == 'off'}"><i class="icon-location" :class="{'normal-font-color': darkMode == 'off'}"></i>Taipei, Taiwan</a>
+                <a href="mailto:tanoshii06@gmail.com" class="email" :class="{'normal-light-color': darkMode == 'off'}"><i class="icon-mail" :class="{'normal-font-color': darkMode == 'off'}"></i>&nbsp;tanoshii06@gmail.com</a>
+                <br>
                 <a href="https://medium.com/@Ivan19940106" class="link" target="_blank"><i class="icon-link" :class="{'normal-font-color': darkMode == 'off'}"></i>medium.com/@Ivan19940106</a>
                 <a href="https://zh.wikipedia.org/wiki/%E9%B4%BB%E6%B5%B7%E7%B2%BE%E5%AF%86" class="calendar" target="_blank" :class="{'normal-light-color': darkMode == 'off'}"><i class="icon-calendar" :class="{'normal-font-color': darkMode == 'off'}"></i>已離職 2019/07/12</a>
                 <div class="custom-control custom-switch dark-mode-switch">
@@ -43,8 +49,8 @@
                 </div>
             </div>
             <div class="following-area">
-                <a href="" class="following" :class="{'normal-light-color': darkMode == 'off'}">2 位追縱中</a>
-                <a href="" class="follower" :class="{'normal-light-color': darkMode == 'off'}">0 位追蹤者</a>
+                <a href="" class="following" :class="{'normal-light-color': darkMode == 'off'}">{{following}} 位追縱中</a>
+                <a href="" class="follower" :class="{'normal-light-color': darkMode == 'off'}">{{follower}} 位追蹤者</a>
             </div>
         </div>
         <div class="tabs">

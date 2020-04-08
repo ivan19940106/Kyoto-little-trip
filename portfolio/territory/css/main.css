@@ -14,11 +14,6 @@ html, body {
     align-items: center;
 }
 .territory {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin: 0 auto; */
     width: 30%;
 }
 path {

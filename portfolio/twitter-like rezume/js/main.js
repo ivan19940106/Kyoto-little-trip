@@ -9,11 +9,27 @@ window.addEventListener('load',function(){
             }
         }
     });
+    Vue.component('follow', {
+        template: '<div class="follow" @click="addBookmark(); $emit(\'add-bookmark\')">&nbsp;&nbsp;跟隨</div>',
+        methods: {
+            addBookmark: function(title, url) {
+                if (window.sidebar && window.sidebar.addPanel) {
+                    window.sidebar.addPanel(title, url, "");
+                } else if (window.external.AddFavorite) {
+                    window.external.AddFavorite(url, title);
+                } else {
+                    alert("您的瀏覽器不支援加入我的最愛功能!");
+                }
+            }
+        }
+    });
     //Vue.js
     var vm = new Vue({
         el: '#app',
         data: {
-            darkMode: 'on'
+            darkMode: 'on',
+            following: 2,
+            follower: 0
         },
         methods: {
             changeDarkMode(){
@@ -33,5 +49,5 @@ window.addEventListener('load',function(){
     });
     window.vm = vm;
     //t.js typing effect
-    $('.description').t();
+    // $('.description').t();
 });

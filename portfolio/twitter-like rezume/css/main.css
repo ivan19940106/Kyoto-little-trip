@@ -1,10 +1,14 @@
+@font-face {
+    font-family: Nunito;
+    src: url(../font/Nunito-Regular.ttf);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    font-family: serif;
+    font-family: 'Nunito', 'Microsoft JhengHei';
     color: #eee;
     /* border: 1px solid #eee; */
 }
@@ -18,6 +22,16 @@ body {
     width: 50%;
     position: relative;
     border: 1px solid #37444C;
+}
+.header div {
+    margin: 10px;
+    display: inline-block;
+}
+.icon-left {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #1CA1F2;
+    cursor: pointer;
 }
 .cover-photo-wrapper {
     width: 100%;
@@ -67,57 +81,54 @@ css-doodle {
     clear: both;
 }
 .social-media a, .social-media div {
-    margin: 2px;
-    font-size: 25px;
+    margin: 2px 2px 0 0;
+    font-size: 30px;
 }
 .social-media i {
     color: #1CA1F2;
 }
-.social-media div {
+.social-media .follow {
     margin: 2px 15px 2px 28px;
     width: 45px;
     height: 30px;
-    line-height: 2.5;
-    background-color: #1CA1F2;
+    line-height: 1.8;
     display: inline-block;
+    top: -6px;
     position: relative;
     overflow: visible;
     cursor: pointer;
     text-transform: capitalize;
     font-size: 15px;
-    color: #eee;
+    font-weight: 600;
+    color: #1CA1F2;
+    border: 2px solid #1CA1F2;
+    border-left: none;
+    border-right: none;
 }
-.social-media div::before {
+.social-media .follow::before {
     content: '';
     width: 20px;
-    height: 100%;
-    background-color: #1CA1F2;
+    height: 114%;
     display: block;
+    top: -2px;
     position: absolute;
     left: -18px;
     border-radius: 20px 0 0 20px;
+    border: 2px solid #1CA1F2;
+    border-right: none;
 }
-.social-media div::after {
+.social-media .follow::after {
     content: '';
     width: 20px;
-    height: 100%;
-    background-color: #1CA1F2;
+    height: 114%;
     display: block;
     position: absolute;
-    top: 0;
+    top: -2px;
     right: -18px;
     border-radius: 0 20px 20px 0;
+    border: 2px solid #1CA1F2;
+    border-left: none;
 }
-/* .social-media div:hover {
-    background-color: #eee;
-    color: #1CA1F2;
-}
-.social-media div:hover div::before {
-    background-color: #eee;
-}
-.social-media div:hover div::after {
-    background-color: #eee;
-} */
 .name-area {
     position: relative;
     top: -40px;
@@ -148,6 +159,9 @@ css-doodle {
 .addition .link {
     color: #1CA1F2;
 }
+.addition .email {
+    color: #1CA1F2;
+}
 .dark-mode-switch {
     margin-top: 15px;
 }
@@ -165,7 +179,7 @@ css-doodle {
     margin-top: 15px;
 }
 .tabs div {
-    padding-bottom: 5px;
+    padding: 5px 0;
     width: 24%;
     display: inline-block;
     text-align: center;
@@ -195,7 +209,7 @@ hr {
     animation: beating 3s ease-in-out infinite;
 }
 .add {
-    width: 70px;
+    width: 50px;
 }
 footer {
     text-align: center;
@@ -253,9 +267,6 @@ footer {
     .addition a {
         margin-right: 4px;
         font-size: 15px;
-    }
-    .add {
-        width: 60px;
     }
     .feather {
         right: 10%;

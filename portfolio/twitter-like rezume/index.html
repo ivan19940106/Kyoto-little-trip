@@ -34,7 +34,7 @@
                 <h3 class="account" :class="{'normal-light-color': darkMode == 'off'}">@ivan19940106</h3>
             </div>
             <div class="description" :class="{'normal-font-color': darkMode == 'off'}">
-                因為大塚愛的一首歌 - 「プラネタリウム」，自高二起開始自學日文，大四時通過JLPT N1。總是覺得音樂和文字有著不可思議的力量。 最喜歡的吉他手是Sungha Jung、最喜歡的編劇是野木亞紀子、大學上過最喜歡的課是「人類文明起源史」和「日本近代歷史人物」。 2020的新年新希望是期望有朝一日可以藉由寫 code 做出對社會有貢獻的事。<br>
+                因為大塚愛的一首歌 - 「プラネタリウム」，自高二起開始自學日文，大四時通過 JLPT N1。總是覺得音樂和文字有著不可思議的力量。 最喜歡的吉他手是 Sungha Jung、最喜歡的編劇是野木亞紀子、大學上過最喜歡的課是「人類文明起源史」和「日本近代歷史人物」。 2020的新年新希望是期望有朝一日可以藉由寫 code 做出對社會有貢獻的事。<br>
                 Every artist was first an amateur. 👨‍💻
             </div>
             <div class="addition">
@@ -54,16 +54,100 @@
             </div>
         </div>
         <div class="tabs">
-            <div class="work" :class="{'normal-font-color': darkMode == 'off'}">作品</div>
-            <div class="about" :class="{'normal-font-color': darkMode == 'off'}">關於我</div>
-            <div class="blog" :class="{'normal-font-color': darkMode == 'off'}">部落格</div>
-            <div class="feature" :class="{'normal-font-color': darkMode == 'off'}">推薦的內容</div>
+            <div class="work" @click="nowTab='work'" :class="{'normal-font-color': darkMode == 'off'}">作品</div>
+            <div class="about" @click="nowTab='about'" :class="{'normal-font-color': darkMode == 'off'}">關於我</div>
+            <div class="blog" @click="nowTab='blog'" :class="{'normal-font-color': darkMode == 'off'}">部落格</div>
+            <div class="feature" @click="nowTab='feature'" :class="{'normal-font-color': darkMode == 'off'}">推薦的內容</div>
         </div>
         <hr :class="{'normal-borderColor': darkMode == 'off'}">
         <div class="content">
-
+            <div class="work-container" v-if="nowTab == 'work'">
+                <div class="work-wrapper" v-for="work in workData">
+                    <img src="./image/profile-photo.jpg" alt="post-profile-photo" class="post-profile-photo">
+                    <div class="work-info">
+                        <div class="name" :class="{'normal-font-color': darkMode == 'off'}">徐暢可(Chang-Ko, Hsu)</div>
+                        <div class="account" :class="{'normal-light-color': darkMode == 'off'}">@ivan19940106</div>
+                        <br>
+                        <span class="work-title" :class="{'normal-font-color': darkMode == 'off'}">{{work.title}}</span>
+                    </div>
+                    <div class="work-description" :class="{'normal-font-color': darkMode == 'off'}">
+                        {{work.desc}}
+                    </div>
+                    <a :href="work.url" target="_blank"><img :src="work.imgPath" alt="" class="work-cover"></a>
+                    <div class="social-panel">
+                        <a href="" class="comment" :class="{'normal-font-color': darkMode == 'off'}"><i class="icon-comment" :class="{'normal-font-color': darkMode == 'off'}"></i>2</a>
+                        <a href="" class="recycle" :class="{'normal-font-color': darkMode == 'off'}"><i class="icon-recycle" :class="{'normal-font-color': darkMode == 'off'}"></i>2</a>
+                        <a href="" class="heart" :class="{'normal-font-color': darkMode == 'off'}"><i class="icon-heart" :class="{'normal-font-color': darkMode == 'off'}"></i>2</a>
+                        <a href="" class="share" :class="{'normal-font-color': darkMode == 'off'}"><i class="icon-share" :class="{'normal-font-color': darkMode == 'off'}"></i></a>
+                    </div>
+                    <hr :class="{'normal-borderColor': darkMode == 'off'}">
+                </div>
+            </div>
+            <div class="about-container" v-if="nowTab == 'about'">
+                <section class="intro">
+                    <div class="container-timeline">
+                        <h1 class="title-timeline">Timeline About Me! &darr;</h1>
+                    </div>
+                </section>
+                <section class="timeline">
+                    <ul>
+                        <li>
+                        <div>
+                            <time>1994/01</time>生於台北市。
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <time>2016/09</time>赴德國阿沙芬堡科技大學 Aschaffenburg Hochschule 交換學生一個學期。搭乘歐洲統聯Flixbus窮遊10個國家。
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <time>2017/03</time>從國立臺灣科技大學工業管理系畢業。
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            time>2017/10</time>開始在鴻海精密工業股份有限公司擔任生產管理專員(Production Planner)。負責手機面板從原材料供給、製造、測試到成品出貨，供應鏈上所有環節之控管，以確保產品在交期內出貨。
+                        </div>
+                        /li>
+                        <li>
+                        <div>
+                            <time>2019/07</time>因感生命短暫如流星畫過天際，從鴻海離職回台灣生活，準備轉職。
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <time>2019/08</time>學習製作人生第一把手工吉他。
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            time>2019/10</time>資策會的夏天。
+                        </div>
+                        </li>
+                        <li>
+                        <div>
+                            <time>2020/04</time>資策會結訓。在訓期間學到了：<br>
+                            <br>1.對網路的運作有基礎的了解，擅長使用 SASS 等 CSS 預處理語言，規劃製作 RWD 網頁版型並使用 Gulp.js 優化工作流程。<br>
+                            <br>2.打下 JavaScript 基礎，能善用 jQuery Plugin 整合第三方插件動畫效果。<br>
+                            <br>3.會使用 Ajax/JSON 設計 SPA 架構。<br>
+                            <br>4.會使用前端框架 Vue.js 的資料雙向綁定、設計 Component 組件和 Vue-cli。<br>
+                            <br>5.Git觀念清晰，團體專題網站使用 GitHub 整合。
+                        </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div class="blog-container" v-if="nowTab == 'blog'">
+                <a href="https://changko.weebly.com/blog/category/all" target="_blank" style="color: #8899A6;">「嘿，凌晨三點還醒著的人。」</a>
+            </div>
+            <div class="feature-container" v-if="nowTab == 'feature'">
+                <div :class="{'normal-font-color': darkMode == 'off'}">Here's still under constructure!</div>
+            </div>
         </div>
         <div class="feather"><a href="https://drive.google.com/file/d/1GtgbzT7v33lS8wX9Z00WBBHHdKvRx3O9/view?usp=sharing" class="rezume" target="_blank"><img src="./image/ckh-logo-transparent.png" alt="feather" class="add"></a></div>
+        <hr :class="{'normal-borderColor': darkMode == 'off'}">
         <footer>
             <div class="copyright" :class="{'normal-font-color': darkMode == 'off'}">© <a href="http://ivan19940106.github.io/Kyoto-little-trip/about.html" class="chang-ko" target="_blank" :class="{'normal-light-color': darkMode == 'off'}">Chang Ko Hsu</a> 2020 | All Rights Reserved</div>
         </footer>

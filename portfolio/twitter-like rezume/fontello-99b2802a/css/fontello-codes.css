@@ -7,8 +7,15 @@
 .icon-mail:before { content: '\e805'; } /* '' */
 .icon-plus:before { content: '\e806'; } /* '' */
 .icon-feather:before { content: '\e807'; } /* '' */
+.icon-heart:before { content: '\e808'; } /* '' */
+.icon-heart-empty:before { content: '\e809'; } /* '' */
+.icon-comment:before { content: '\e80a'; } /* '' */
+.icon-share:before { content: '\e80b'; } /* '' */
+.icon-menu:before { content: '\e80c'; } /* '' */
 .icon-github-stamp:before { content: '\f056'; } /* '' */
 .icon-official:before { content: '\f06d'; } /* '' */
 .icon-github:before { content: '\f09b'; } /* '' */
+.icon-folder:before { content: '\f115'; } /* '' */
+.icon-recycle:before { content: '\f1b8'; } /* '' */
 .icon-linkedin:before { content: '\f31b'; } /* '' */
 .icon-codepen:before { content: '\f32c'; } /* '' */

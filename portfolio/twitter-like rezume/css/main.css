@@ -373,6 +373,10 @@ div.name, div.account {
     .feather {
         right: 10%;
     }
+    .under-constructure-margin {
+        margin: 50px;
+        margin-right: 0;
+    }
     /* work */
     /* .work-title {
         word-break: break-all;

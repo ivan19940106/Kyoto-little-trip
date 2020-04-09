@@ -12,6 +12,7 @@
 .icon-comment:before { content: '\e80a'; } /* '' */
 .icon-share:before { content: '\e80b'; } /* '' */
 .icon-menu:before { content: '\e80c'; } /* '' */
+.icon-cancel:before { content: '\e80e'; } /* '' */
 .icon-github-stamp:before { content: '\f056'; } /* '' */
 .icon-official:before { content: '\f06d'; } /* '' */
 .icon-github:before { content: '\f09b'; } /* '' */

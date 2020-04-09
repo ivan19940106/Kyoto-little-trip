@@ -33,6 +33,43 @@ body {
     color: #1CA1F2;
     cursor: pointer;
 }
+.modal {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: scroll;
+    z-index: 1;
+}
+.hide-modal {
+    display: none;
+}
+.scroll-lock {
+    overflow: hidden;
+}
+.icon-cancel {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.modal-content {
+    margin: 20px auto;
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.modal-content div, .modal-content img, .modal-content iframe {
+    width: 80%;
+}
+.modal-content iframe {
+    height: 400px;
+}
 .cover-photo-wrapper {
     width: 100%;
     height: 200px;
@@ -68,6 +105,7 @@ css-doodle {
     transform: translateY(-50%);
     border-radius: 50%;
     border: 2px solid #15202B;
+    cursor: pointer;
 }
 .social-media {
     margin: 10px 0;
@@ -90,8 +128,8 @@ css-doodle {
 .social-media .follow {
     margin: 2px 15px 2px 28px;
     width: 45px;
-    height: 30px;
-    line-height: 1.8;
+    height: 36px;
+    line-height: 2.2;
     display: inline-block;
     top: -6px;
     position: relative;
@@ -238,6 +276,14 @@ footer {
 .normal-official-color {
     color: #1CA1F2;
 }
+.active-tab-font-color {
+    color: #1CA1F2;
+    border-bottom: 1px solid #1CA1F2;
+}
+.under-constructure-margin {
+    margin: 100px;
+    margin-right: 0;
+}
 /* work */
 .work-wrapper {
     width: 100%;
@@ -300,6 +346,16 @@ div.name, div.account {
     .container {
         width: 100%;
         border: none;
+    }
+    .modal-content {
+        margin-top: 25vh;
+        width: 90vw;
+    }
+    .modal-content div, .modal-content img, .modal-content iframe {
+        width: 95%;
+    }
+    .modal-content iframe {
+        height: 180px;
     }
     .profile-photo {
         width: 30%;

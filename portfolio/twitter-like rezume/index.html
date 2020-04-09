@@ -18,6 +18,10 @@
             <div class="previous-page-arrow"><i class="icon-left"></i></div>
             <div class="name" :class="{'normal-font-color': darkMode == 'off'}">徐暢可(Chang-Ko, Hsu)<i class="icon-official" :class="{'normal-official-color': darkMode == 'off'}"></i></div>
         </div>
+        <div class="modal hide-modal">
+            <i class="icon-cancel"></i>
+            <div class="modal-content"></div>
+        </div>
         <div class="cover-photo-wrapper">
             <minesweeper></minesweeper>
         </div>
@@ -42,7 +46,7 @@
                 <a href="mailto:tanoshii06@gmail.com" class="email" :class="{'normal-light-color': darkMode == 'off'}"><i class="icon-mail" :class="{'normal-font-color': darkMode == 'off'}"></i>&nbsp;tanoshii06@gmail.com</a>
                 <br>
                 <a href="https://medium.com/@Ivan19940106" class="link" target="_blank"><i class="icon-link" :class="{'normal-font-color': darkMode == 'off'}"></i>medium.com/@Ivan19940106</a>
-                <a href="https://zh.wikipedia.org/wiki/%E9%B4%BB%E6%B5%B7%E7%B2%BE%E5%AF%86" class="calendar" target="_blank" :class="{'normal-light-color': darkMode == 'off'}"><i class="icon-calendar" :class="{'normal-font-color': darkMode == 'off'}"></i>已離職 2019/07/12</a>
+                <a href="https://www.vghtpe.gov.tw/Index.action" class="calendar" target="_blank" :class="{'normal-light-color': darkMode == 'off'}"><i class="icon-calendar" :class="{'normal-font-color': darkMode == 'off'}"></i>出生於 1994/01/06</a>
                 <div class="custom-control custom-switch dark-mode-switch">
                     <input type="checkbox" class="custom-control-input" id="dark-mode" checked @click="changeDarkMode">
                     <label class="custom-control-label dark-mode-label" for="dark-mode" :class="{'normal-font-color': darkMode == 'off'}">護眼模式</label>
@@ -54,10 +58,10 @@
             </div>
         </div>
         <div class="tabs">
-            <div class="work" @click="nowTab='work'" :class="{'normal-font-color': darkMode == 'off'}">作品</div>
-            <div class="about" @click="nowTab='about'" :class="{'normal-font-color': darkMode == 'off'}">關於我</div>
-            <div class="blog" @click="nowTab='blog'" :class="{'normal-font-color': darkMode == 'off'}">部落格</div>
-            <div class="feature" @click="nowTab='feature'" :class="{'normal-font-color': darkMode == 'off'}">推薦的內容</div>
+            <div class="work" @click="nowTab='work'" :class="{'normal-font-color': darkMode == 'off', 'active-tab-font-color': nowTab == 'work'}">作品</div>
+            <div class="about" @click="nowTab='about'" :class="{'normal-font-color': darkMode == 'off', 'active-tab-font-color': nowTab == 'about'}">關於我</div>
+            <div class="blog" @click="nowTab='blog'" :class="{'normal-font-color': darkMode == 'off', 'active-tab-font-color': nowTab == 'blog'}">部落格</div>
+            <div class="feature" @click="nowTab='feature'" :class="{'normal-font-color': darkMode == 'off', 'active-tab-font-color': nowTab == 'feature'}">推薦的內容</div>
         </div>
         <hr :class="{'normal-borderColor': darkMode == 'off'}">
         <div class="content">
@@ -108,7 +112,7 @@
                         </li>
                         <li>
                         <div>
-                            time>2017/10</time>開始在鴻海精密工業股份有限公司擔任生產管理專員(Production Planner)。負責手機面板從原材料供給、製造、測試到成品出貨，供應鏈上所有環節之控管，以確保產品在交期內出貨。
+                            <time>2017/10</time>開始在鴻海精密工業股份有限公司擔任生產管理專員(Production Planner)。負責手機面板從原材料供給、製造、測試到成品出貨，供應鏈上所有環節之控管，以確保產品在交期內出貨。
                         </div>
                         /li>
                         <li>
@@ -123,7 +127,7 @@
                         </li>
                         <li>
                         <div>
-                            time>2019/10</time>資策會的夏天。
+                            <time>2019/10</time>資策會的夏天。
                         </div>
                         </li>
                         <li>
@@ -140,13 +144,15 @@
                 </section>
             </div>
             <div class="blog-container" v-if="nowTab == 'blog'">
-                <a href="https://changko.weebly.com/blog/category/all" target="_blank" style="color: #8899A6;">「嘿，凌晨三點還醒著的人。」</a>
+                <div class="under-constructure-margin">
+                    <a href="https://changko.weebly.com/blog/category/all" target="_blank" style="color: #8899A6;">「嘿，凌晨三點還醒著的人。」</a>
+                </div>
             </div>
             <div class="feature-container" v-if="nowTab == 'feature'">
-                <div :class="{'normal-font-color': darkMode == 'off'}">Here's still under constructure!</div>
+                <div class="under-constructure-margin" :class="{'normal-font-color': darkMode == 'off'}">Here's still under constructure!</div>
             </div>
         </div>
-        <div class="feather"><a href="https://drive.google.com/file/d/1GtgbzT7v33lS8wX9Z00WBBHHdKvRx3O9/view?usp=sharing" class="rezume" target="_blank"><img src="./image/ckh-logo-transparent.png" alt="feather" class="add"></a></div>
+        <div class="feather"><a href="https://drive.google.com/file/d/1XvmvwNHS0O9YC8-lHrebhMVmRUPidg76/view?usp=sharing" class="rezume" target="_blank"><img src="./image/ckh-logo-transparent.png" alt="feather" class="add"></a></div>
         <hr :class="{'normal-borderColor': darkMode == 'off'}">
         <footer>
             <div class="copyright" :class="{'normal-font-color': darkMode == 'off'}">© <a href="http://ivan19940106.github.io/Kyoto-little-trip/about.html" class="chang-ko" target="_blank" :class="{'normal-light-color': darkMode == 'off'}">Chang Ko Hsu</a> 2020 | All Rights Reserved</div>

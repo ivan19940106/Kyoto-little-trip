@@ -84,6 +84,7 @@
                     </div>
                     <div class="work-description" :class="{'normal-font-color': darkMode == 'off'}">
                         {{work.desc}}
+                        <a :href="reference.url" class="work-reference" v-for="reference in work.references" :class="{'normal-light-color': darkMode == 'off'}" target="_blank">參考資料：{{reference.item}}</a>
                         <br>
                         <a href="" class="hashtag" v-for="hashtag in work.hashtags">#{{hashtag}}&nbsp;</a>
                     </div>
@@ -122,7 +123,7 @@
                         </li>
                         <li>
                         <div>
-                            <time>2017/10</time>開始在鴻海精密工業股份有限公司擔任生產管理專員(Production Planner)。負責手機面板從原材料供給、製造、測試到成品出貨，供應鏈上所有環節之控管，以確保產品在交期內出貨。
+                            <time>2017/10</time>開始在鴻海精密工業股份有限公司擔任生產管理專員(Production Planner)。負責手機面板從原材料供給、製造、測試到成品出貨，供應鏈上所有環節之控管，讓 Nokia 、華為的產品達成交期。
                         </div>
                         /li>
                         <li>

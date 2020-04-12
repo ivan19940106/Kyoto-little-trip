@@ -281,8 +281,9 @@ footer {
     border-bottom: 1px solid #1CA1F2;
 }
 .under-constructure-margin {
-    margin: 100px;
-    margin-right: 0;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: 100px;
 }
 /* work */
 .work-wrapper {
@@ -307,6 +308,11 @@ div.name, div.account {
     margin-top: 10px;
     margin-left: 74px;
     width: 80%;
+}
+.work-reference {
+    display: block;
+    font-size: 14px;
+    color: #8899A6;
 }
 .hashtag {
     color: #1CA1F2;
@@ -380,13 +386,11 @@ div.name, div.account {
         right: 10%;
     }
     .under-constructure-margin {
-        margin: 50px;
-        margin-right: 0;
+        margin-top: 200px;
+        margin-bottom: 200px;
+        margin-left: 50px;
     }
     /* work */
-    /* .work-title {
-        word-break: break-all;
-    } */
     .work-description {
         width: 75%;
     }

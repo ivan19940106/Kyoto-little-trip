@@ -1,5 +1,5 @@
 window.addEventListener('load',function(){
-    //cover photo minesweeper
+    //Cover photo 'minesweeper'
     Vue.component('minesweeper', {
         template: '<css-doodle class="minesweeper" use="var(--rule)" @click="refresh"></css-doodle>',
         methods: {
@@ -9,6 +9,8 @@ window.addEventListener('load',function(){
             }
         }
     });
+
+    //Follow button
     Vue.component('follow', {
         template: '<div class="follow" @click="$emit(\'add-bookmark\'); addBookmark();">&nbsp;&nbsp;跟隨</div>',
         methods: {
@@ -23,7 +25,8 @@ window.addEventListener('load',function(){
             }
         }
     });
-    //Vue.js
+
+    //Vue instance
     var vm = new Vue({
         el: '#app',
         data: {
@@ -50,59 +53,75 @@ window.addEventListener('load',function(){
             ]
         },
         methods: {
-            changeDarkMode(){
-                var self = this;
+            switchDarkMode(){
                 $('#dark-mode').toggleClass('off');
                 if($('#dark-mode').hasClass('off')){
                     $('body').addClass('normal-background');
                     $('.description').find('span').addClass('normal-font-color');
-                    self.darkMode = 'off';
+                    this.darkMode = 'off';
                 } else {
                     $('body').removeClass('normal-background');
                     $('.description').find('span').removeClass('normal-font-color');
-                    self.darkMode = 'on';
+                    this.darkMode = 'on';
                 }
             }
         }
     });
     window.vm = vm;
+
     //t.js typing effect
     $('.description').t();
-    //previous-page-arrow
+
+    //Previous page button
     $('.previous-page-arrow').click(function(){
         alert('不許你離開！！');
     });
-    //modal
+
+    //Modal
     function openModal(modalContent){
         $('.modal').removeClass('hide-modal');
         $('body').addClass('scroll-lock');
         $('.modal-content').append(modalContent);
     }
+    //Close modal
     $('.icon-cancel').click(function(){
         $('.modal').addClass('hide-modal');
         $('body').removeClass('scroll-lock');
         $('.modal-content').html('');
     });
-    //show profile photo
+
+    //Show profile photo
     $('.profile-photo').click(function(){
         var profilePhoto = '<img src="./image/profile-photo.jpg" alt="profile-photo">';
         openModal(profilePhoto);
     });
-    //following
+
+    //Following panel
     $('.following').click(function(e){
         e.preventDefault();
         var followings = '<iframe src="https://www.youtube.com/embed/tU3Ly2sEKCg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br><iframe src="https://www.youtube.com/embed/zFnNU7VPNbg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
         openModal(followings);
     });
-    //follower
+
+    //Follower panel
     $('.follower').click(function(e){
         e.preventDefault();
-        alert('快點兒去按「跟隨」！！');
+        alert('快點兒去按「跟隨」按鈕！！');
     });
-    //hashtag
+
+    //TODO social functions
+    $('.social-panel a').click(function(e){
+        e.preventDefault();
+        //Comment
+        //Retweet
+        //Like
+        //Share
+    });
+
+    //Hashtags
     $('.hashtag').click(function(e){
         e.preventDefault();
-        renewHashtags();
+        showAllWorks();
         var nowHashtag = $(this).text();
         for(var i=0;i<=$('.work-wrapper').length-1;i++){
             var everyHashtag = $('.work-wrapper').eq(i).find('a.hashtag').text();
@@ -111,12 +130,12 @@ window.addEventListener('load',function(){
             }
         }
     });
-    //show all hashtags
+    //Show all works
     $('.work').click(function(){
-        renewHashtags();
+        showAllWorks();
     });
-    //renew function
-    function renewHashtags(){
+    //Show all works function
+    function showAllWorks(){
         for(var i=0;i<=$('.work-wrapper').length-1;i++){
             document.getElementsByClassName('work-wrapper')[i].classList.remove('hide-work');
         }

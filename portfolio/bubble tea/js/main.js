@@ -15,7 +15,6 @@ $(document).ready(function(e){
             accTypes: ['top', 'straw'],
             computed: {
                 //adapt ingradients background color to milkTeas (with Vue.js)
-                // for html .ingradients: :style="{'backgroundColor': getIngradientColor}"
                 getIngradientColor: function(){
                     var ingradientColor = "";
                     var blackTeaHeight = Number(milkTea['black-tea']);
@@ -75,12 +74,6 @@ $(document).ready(function(e){
                 ingradientColor = '#eee';
             }
             $(".ingradients").eq(i).css('background-color', ingradientColor);
-            //prevent beverages overflow out of the cup
-            // if(blackTeaHeight+greenTeaHeight+milkHeight+foamHeight >= 70){
-            //     $(this).attr('disabled', 'disabled');
-            // } else {
-            //     $('input').removeAttr('disabled');
-            // }
         }
     });
 });

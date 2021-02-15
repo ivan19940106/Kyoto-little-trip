@@ -186,7 +186,7 @@ h1.title {
     transition:  0.7s;
 }
 .n95-mask:hover {
-    transform: translate(0,-10px);
+    transform: translate(0,-10px) rotate(-45deg);
     box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.4);
 }
 .n95-mask .iron-line-left {

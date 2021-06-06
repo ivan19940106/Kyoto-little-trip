@@ -18,11 +18,11 @@ export default {
     return {
       pages: 10,
       daibyaku: {name: '大百壽金', size: {width: '100px', height: '250px'}, image: {'background-image': 'url(../assets/images/jukin.jpg)', border: '8px solid #D1104C'}},
-      jukin: {name: '壽金', size: {width: '200px', height: '150px'}, image: {'background-image': 'url(/img/jukin.eb070586.jpg)', border: '15px solid #D1104C'}},
-      karikin: {name: '刈金', size: {width: '180px', height: '135px'}, image: {'background-image': 'radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #9f7928 62.5%, #8A6E2F 100%);', border: '15px solid #FF8C00'}},
-      fukukin: {name: '福金', size: {width: '150px', height: '112.5px'}, image: {'background-image': 'radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #9f7928 62.5%, #8A6E2F 100%);', border: '15px solid #FF8C00'}},
-      daigin: {name: '大銀紙', size: {width: '180px', height: '135px'}, image: {'background-image': 'radial-gradient(ellipse farthest-corner at right bottom, #D3D3D3 0%, #C0C0C0 8%, #A9A9A9 30%, #9c9c9c 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #D3D3D3 8%, #C0C0C0 25%, #A9A9A9 62.5%, #9c9c9c 100%);', border: '15px solid #FF8C00'}},
-      kogin: {name: '小銀紙', size: {width: '150px', height: '112.5px'}, image: {'background-image': 'radial-gradient(ellipse farthest-corner at right bottom, #D3D3D3 0%, #C0C0C0 8%, #A9A9A9 30%, #9c9c9c 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #D3D3D3 8%, #C0C0C0 25%, #A9A9A9 62.5%, #9c9c9c 100%);', border: '15px solid #FF8C00'}}
+      jukin: {name: '壽金', size: {width: '200px', height: '150px'}, image: {'background-image': 'url(./img/jukin.eb070586.jpg)', border: '15px solid #D1104C'}},
+      karikin: {name: '刈金', size: {width: '180px', height: '135px'}, image: {'background-color': '#FFD700', border: '15px solid #FF8C00'}},
+      fukukin: {name: '福金', size: {width: '150px', height: '112.5px'}, image: {'background-color': '#FFD700', border: '10px solid #FF8C00'}},
+      daigin: {name: '大銀紙', size: {width: '180px', height: '135px'}, image: {'background-color': '#C0C0C0', border: '15px solid #FF8C00'}},
+      kogin: {name: '小銀紙', size: {width: '150px', height: '112.5px'}, image: {'background-color': '#C0C0C0', border: '15px solid #FF8C00'}}
     }
   },
   methods: {

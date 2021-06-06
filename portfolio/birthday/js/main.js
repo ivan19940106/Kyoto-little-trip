@@ -478,6 +478,19 @@ $(document).ready(function(){
         $('body').addClass('scroll-lock');
     });
 
+    $('.kyufun').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.kyufun-card').addClass('show-card');
+        $('.kyufun-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
     $('.yangming').click(function(){
         var y = window.pageYOffset;
         $('.modal').css({
@@ -577,6 +590,32 @@ $(document).ready(function(){
         $('.modal').addClass('show-modal');
         $('.tainan-card').addClass('show-card');
         $('.tainan-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
+    $('.chiayi').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.chiayi-card').addClass('show-card');
+        $('.chiayi-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
+    $('.kaohsiung').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.kaohsiung-card').addClass('show-card');
+        $('.kaohsiung-card').eq(0).css({
             marginTop: '90px'
         });
         $('body').addClass('scroll-lock');

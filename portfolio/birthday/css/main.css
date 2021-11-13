@@ -442,7 +442,7 @@ h2 span {
 .tainan {
     position: absolute;
     top: 265px;
-    left: 107px;
+    left: 77px;
     width: 35px;
     height: 35px;
     background-image: url(../images/IMG_4582.JPG);
@@ -451,6 +451,20 @@ h2 span {
     transition: all 1s;
 }
 .tainan:hover {
+    transform: rotate(15deg);
+}
+.tainan-2021 {
+    position: absolute;
+    top: 275px;
+    left: 107px;
+    width: 35px;
+    height: 35px;
+    background-image: url(../images/tainan-2021/1.jpeg);
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: all 1s;
+}
+.tainan-2021:hover {
     transform: rotate(15deg);
 }
 .chiayi {

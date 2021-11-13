@@ -595,6 +595,19 @@ $(document).ready(function(){
         $('body').addClass('scroll-lock');
     });
 
+    $('.tainan-2021').click(function(){
+        var y = window.pageYOffset;
+        $('.modal').css({
+            top: y + 'px'
+        });
+        $('.modal').addClass('show-modal');
+        $('.tainan-2021-card').addClass('show-card');
+        $('.tainan-2021-card').eq(0).css({
+            marginTop: '90px'
+        });
+        $('body').addClass('scroll-lock');
+    });
+
     $('.chiayi').click(function(){
         var y = window.pageYOffset;
         $('.modal').css({
